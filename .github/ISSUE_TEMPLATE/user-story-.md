@@ -3,13 +3,13 @@ name: 'USER STORY '
 about: User Story Template
 title: ''
 labels: ''
-assignees: ''
+assignees: brodsa
 
 ---
 
 As a **role**
-I can **capability**
-so that **received benefit**
+I want to **capability**
+so that I can **received benefit**
 
 **ACCEPTANCE CRITERIA**
 - [ ]
