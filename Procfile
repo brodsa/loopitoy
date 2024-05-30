@@ -1,1 +1,1 @@
-web: gunicorn findmereadme.wsgi
+web: gunicorn loopitoy.wsgi

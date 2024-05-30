@@ -22,7 +22,7 @@ The workspace should be setup as follows:
 9. Build the logic to use the ElphantSQL Database in production environment (i.e. on Heroku) and the local sqlite database when developing the application.
 
 
-## Setup Database
+## Setup Production Database
 1. Login to [ElephantSQL](https://customer.elephantsql.com/instance), you see all created database instances.
 2. Click on the green button 'Create New Instance' at the rigt top corner.
 3. Fill out the form. Specify database name > Select Region > Leave the data center default > Review > Create Instance.
@@ -30,7 +30,15 @@ The workspace should be setup as follows:
 5. Copy the URL and assign it to the environment variable `DATABASE_URL` in `env.py`
 
 ## Setup Heroku
-
+1. Login to Heroku
+2. Go to Heroku personal Dashboard. In the left top, select 'New' > 'Create New App'
+3. Type a unique project name, i.e. findMEreadME. Select a region, i.e. Europe.
+4. After the Heroku app is created, navigate to the 'Settings' Tab > 'Config Vars'. Following variables were configured: `SECRET_KEY, DATABASE_URL, PORT`
+4. After the Heroku app is created, go to the Deploy Tab of the app and connect the app with app GitHub repository.
+5. Switch your database on local environment to production database, i.e delete `DEV` from `env.py`.
+5. Make initial migrations, create super user and load the city data set in production database.
+7. Create a Procfile file with the command to migrate automatically for Heroku and to start the web app.
+5. Deploy the app manually. After successful deployment, click on 'Enable automatic deployments'.
 
 ## Setu S3
 
