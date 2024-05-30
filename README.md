@@ -14,12 +14,12 @@ The workspace should be setup as follows:
 5. Use `.\venv\Scripts\activate` to active the virtual environment.
 6. Install the dependencies from the `requirements.txt` file `pip install -r requirements.txt`
 7. Set up the database key for ElephantSQL Database, see [Setup Database](#setup-database)
-7. Create `env.py` file to specify environment variables     
+8. Create `env.py` file to specify environment variables     
     - `SECRET_KEY` move the django secret key from `settings.py`
     - `DATABASE_URL` assign the generated database key
     - `os.environ["DEV"] = "True"`
     - `os.environ["DEBUG"] = "True"`
-
+9. Build the logic to use the ElphantSQL Database in production environment (i.e. on Heroku) and the local sqlite database when developing the application.
 
 
 ## Setup Database
