@@ -1,0 +1,42 @@
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!-- Menu Items -->
+    <ul class="navbar-nav">
+
+      <!-- Insert Book Key -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Products
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href=#>Toys</a></li>
+            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Books</a></li>
+            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Games</a></li>
+            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Accessories</a></li>
+        </ul>
+      </li>
+
+      <!-- Books -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Age Group
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href=#>Newborns & Infants</a></li>
+            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Toodles</a></li>
+            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Preschoolers</a></li>
+            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">School-aged Children</a></li>
+        </ul>
+      </li>
+
+      <!-- How it works -->
+      <li class="nav-item">
+        <a class="nav-link {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Sell Toys</a>
+      </li>
+      
+      <!-- Contact -->
+      <li class="nav-item">
+        <a class="nav-link {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">How it Works</a>
+      </li>
+
+    </ul>
+  </div>
