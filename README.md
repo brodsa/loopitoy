@@ -13,6 +13,11 @@ The final image by [Susan Holt Sumpson](https://unsplash.com/@shs521?utm_content
 ## Features
 CRUD functionality
 
+
+### Future & Left Features
+- Contact Us with the form and contact informations
+- About Us
+
 ## Business Model
 - project goals
 - purpose and value to users and Busnisess
@@ -81,3 +86,8 @@ The workspace should be setup as follows:
 ### Forking
 
 ### Cloning
+
+
+### Credits & Inspiration
+- [Django Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) by Daisy 
+- Boutiqu

@@ -35,6 +35,7 @@
     {% include 'includes/header.html' %}
 
 
+    <!-- Messages -->
     {% if messages %}
         <div class="message-container"></div>
     {% endif %}
@@ -44,6 +45,10 @@
 
     {% block content %}
     {% endblock %}
+
+
+    <!-- Footer -->
+    {% include 'includes/footer.html' %}
     
 
     <!-- Link Javascripts -->
