@@ -5,6 +5,9 @@
     - EDR Model
     - Apps and Logic Flow
 - Wireframes (Skeleton)
+- Images
+The final image by [Susan Holt Sumpson](https://unsplash.com/@shs521?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on the landing page was chosen on [unsplash]. Two keywords were given: playing children; to get the best suitable image for the second-hand toy e-shop.
+
 - Fonts & Colors (Surface)
 
 ## Features
@@ -28,6 +31,8 @@ CRUD functionality
 ### Bugs
 
 ## Technologies Used
+[Accessible color palette builder](https://toolness.github.io/accessible-color-matrix/)
+[Webp Converer](https://ezgif.com/png-to-webp?err=expired)
 
 ## Deployment & Forking & Cloning
 [Visual Studio Code](https://code.visualstudio.com/) and [GitHub](https://github.com/) have been used to build the web page. Make sure you have them installed.
