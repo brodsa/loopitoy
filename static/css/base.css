@@ -262,7 +262,9 @@ footer{
 }
 
 .btn-home{
-    width: 100px;
+    width: 200px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 
@@ -355,6 +357,10 @@ footer{
 
     .container{
         margin-top: 80px;
+    }
+
+    .home-wrapper{
+        max-width: 900px;
     }
 
     /* +++++++++++ How it works ++++++++++++++ */
