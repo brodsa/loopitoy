@@ -90,4 +90,4 @@ The workspace should be setup as follows:
 
 ### Credits & Inspiration
 - [Django Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) by Daisy 
-- Boutiqu
+- [Butique Ado](https://github.com/ckz8780/boutique_ado_v1) by CI

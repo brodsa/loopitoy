@@ -2,7 +2,7 @@
     <!-- Menu Items -->
     <ul class="navbar-nav">
 
-      <!-- Insert Book Key -->
+      <!-- Products-->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products
@@ -15,7 +15,7 @@
         </ul>
       </li>
 
-      <!-- Books -->
+      <!-- Age Group -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Age Group
@@ -28,14 +28,14 @@
         </ul>
       </li>
 
-      <!-- How it works -->
+      <!-- Sell Toys -->
       <li class="nav-item">
         <a class="nav-link {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Sell Toys</a>
       </li>
       
-      <!-- Contact -->
+      <!-- How It Works -->
       <li class="nav-item">
-        <a class="nav-link {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">How it Works</a>
+        <a class="nav-link {% if url_name == 'how' %}active{% endif %}" href="{% url 'how' %}">How it Works</a>
       </li>
 
     </ul>
