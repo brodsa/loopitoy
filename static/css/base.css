@@ -156,13 +156,19 @@ footer{
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
     border: solid var(--primary-color) 1px;
+    color: var(--white);
 }
 
-.btn:hover{
+.btn:hover,
+.btn:active{
     border-radius: var(--border-radius);
     background-color: var(--white);
     border: solid var(--primary-color) 1px;
     color: var(--primary-color);
+}
+
+.btn-border{
+    border-color: var(--white);
 }
 
 .icon {
@@ -221,18 +227,22 @@ footer{
 
 
 
- /* ***************** Home  ************** */
- .container{
+/* ***************** Home  ************** */
+.container{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
- }
+}
 
- .home-wrapper{
+.home-wrapper{
     max-width: 600px;
     margin: 5rem 1rem 0 1.5rem;
- }
+}
+
+.btn-home{
+    width: 100px;
+}
 
 
 @media screen and  (min-width: 767px){
