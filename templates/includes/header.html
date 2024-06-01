@@ -1,19 +1,19 @@
 {% load static %}
-<header class="container-fluid fixed-top">
+<header class="container-fluid fixed-top p-0">
 
   {% with request.resolver_match.url_name as url_name %}
     <!-- Navigation menu -->
     <div class="nav-wrapper">
-        <div class="nav-top">
+        <div class="nav-top p-2">
             <div class="nav-top__logo">
                 <a class="navbar-brand fs-2" href="{% url 'home' %}">
                     <span class="navbar-text navbar-text-bold">loop</span><span class="navbar-text">IT</span><span class="navbar-text navbar-text-bold">oy</span>
                 </a>
             </div>
             <div class="nav-top__search">
-                <form class="form d-flex flex-row">
-                    <input class="form-control  rounded-0 mr-sm-2 input-search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-black my-2 my-sm-0 w-30 border border-black rounded-0" type="submit">
+                <form class="form  d-flex flex-row">
+                    <input class="form-control .border-primary-color rounded-0 mr-sm-2 input-search" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn my-2 my-sm-0 w-30 rounded-0" type="submit">
                         <span class="icon">
                         <i class="fas fa-search"></i>
                     </span>
