@@ -11,7 +11,31 @@ The final image by [Susan Holt Sumpson](https://unsplash.com/@shs521?utm_content
 - Fonts & Colors (Surface)
 
 ## Features
-CRUD functionality
+The features of the web page were planned using Agile methodology to ensure Minimum Value Product and to address planned User Stories. The core features of this django-base webpage includes CRUD functionality for both Site Users and Site Owner, so that users can create, read, update and delete records.
+
+The sites of e-shop are categorized into severel groups:
+- **Landing & Informative Pages** includes Landing and How it Works Pages.
+
+
+The entire web page is also designed to be responsive to ensure that the e-shop is properly displayed on different devices (e.g. a mobile, a desktop). The designed follows commaon best practice of e-shop development. Each site has mutual components, i.e. header with a navigation menu and footer. The mutual components ensure that the user to easily navigates through the content of the e-shop.
+
+## Common Features
+- **Header**
+    - Header displays navigation menu and buttons. 
+    - The navigation buttons includes logo, search field and navigation buttons for profile and shopping bag
+    - On small devices the menu drops into a hamburger menu.
+    - The content sligthly changes depending on type of user.![Navigation](./docs/features/feature_navigation_menu.png)
+
+- **Footer**
+  - Footer is displayed on all pages, except the pages dedicated for user or book registration.
+  - Footer contains with social media links, terms and polices, newsletter sugnup link ![Footer](./docs/features/feature_footer.png)
+
+
+## Landing and Informatiove Pages
+- **Landing Page** displayes introductory text and two buttons to either proceed to purschase or sell toys. ![Landing Page](./docs/features/feature_landing_page.PNG) 
+
+- **How It Works Page** outlines the core sell procedure and offers users to register for selling toys.![How It Works Page](./docs/features/feature_how_it_works.PNG) 
+
 
 
 ### Future & Left Features
