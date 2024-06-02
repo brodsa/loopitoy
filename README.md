@@ -41,6 +41,7 @@ The entire web page is also designed to be responsive to ensure that the e-shop 
 ### Future & Left Features
 - Contact Us with the form and contact informations
 - About Us
+- Login with Social Media using allauth.cocialaccount and django.contrib.site apps
 
 ## Business Model
 - project goals
@@ -113,5 +114,5 @@ The workspace should be setup as follows:
 
 
 ### Credits & Inspiration
-- [Django Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) by Daisy 
-- [Butique Ado](https://github.com/ckz8780/boutique_ado_v1) by CI
+- [Django Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) by Daisy McGeer
+- [Butique Ado](https://github.com/ckz8780/boutique_ado_v1) by CI and all study material provided by CI
