@@ -32,6 +32,7 @@ html {
 
     /* Utils */
     --border-radius: 0;
+    --box-shadow: rgba(0, 0, 0, 0.24) 0px -1px 8px 3px;
   }
 
 body{
@@ -46,6 +47,7 @@ body{
     
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 footer{
@@ -132,6 +134,14 @@ footer{
     background-color: var(--white);
 }
 
+header{
+    border-bottom: solid  var(--primary-color) 1px;
+}
+
+footer{
+    border-top: solid  var(--primary-color) 1px;
+}
+
 .nav-top-mobile{
     display: flex;
     flex-direction: row;
@@ -214,6 +224,21 @@ footer{
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+}
+
+.bg-color-ter{
+    background-color: var(--ternary-color);
+    border-color: var(--ternary-color);
+}
+
+.bg-color-last{
+    background-color: var(--last-color);
+    border-color: var(--last-color);
+}
+
+.bg-color-sec{
+    background-color: var(--secondary-color);
+    background-color: var(--secondary-color);
 }
 
 
@@ -303,22 +328,61 @@ footer{
     max-width: 300px;
 }
 
-.bg-color-ter{
-    background-color: var(--ternary-color);
-    border-color: var(--ternary-color);
+/* ++++++++++++++++ Accounts +++++++++++++++++ */
+/* ++++++++++++++ Forms ++++++++++++++ */
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 350px;
+    background-color: var(--white);
+    padding: 30px;
+    margin: 100px auto 50px;
 }
 
-.bg-color-last{
-    background-color: var(--last-color);
-    border-color: var(--last-color);
+.form__title{
+    text-align: center;
+    padding: 0 0 10px;
+    color: var(--primary-color);
 }
 
-.bg-color-sec{
+.btn.form__button{
+    display: block;
+    margin: 2px;
+    margin-bottom: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+.form__button--primary{
+    width: 100%;
+    background-color: var(--primary-color);
+    color:var(--white);
+}
+
+.btn.form__button--primary:hover{
+    width: 100%;
+    border-color: var(--primary-color);
+}
+
+.form__button--secondary{
+    width: 100%;
     background-color: var(--secondary-color);
-    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn.form__button--secondary:hover{
+    color: var(--secondary-color);
+    background-color: var(--white);
+    border-color: var(--secondary-color);
 }
 
 
+/* ++++++++++++++ User Account ++++++++++++++ */
+
+
+#hint_id_password1 ul li{
+    font-size:10px;
+}
 
 
 @media screen and  (min-width: 767px){
@@ -349,6 +413,11 @@ footer{
     /* +++++++++++ How it works ++++++++++++++ */
     .how-card{
         max-width: 400px;
+    }
+
+    /* ++++++++++ Forms ++++++++++++++++*/
+    .form-container{
+        margin: 200px auto 50px;
     }
 }
 
