@@ -328,7 +328,6 @@ footer{
     max-width: 300px;
 }
 
-/* ++++++++++++++++ Accounts +++++++++++++++++ */
 /* ++++++++++++++ Forms ++++++++++++++ */
 .form-container{
     display: flex;
@@ -417,6 +416,7 @@ footer{
 
     /* ++++++++++ Forms ++++++++++++++++*/
     .form-container{
+        max-width: 400px;
         margin: 200px auto 50px;
     }
 }
@@ -446,5 +446,10 @@ footer{
 
     .how-card{
         width: 300px;
+    }
+
+    /* ++++++++++ Forms ++++++++++++++++*/
+    .form-container{
+        max-width: 450px;
     }
 }
