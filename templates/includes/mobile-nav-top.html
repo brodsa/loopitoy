@@ -25,18 +25,23 @@
         </div>
     </a>
     <ul class="dropdown-menu">
-      <!-- Profile -->
-      <li><a class="dropdown-item" href="{% url 'home' %}">Profile</a></li>
-      <!-- Add New Toy -->
-      <li><a class="dropdown-item" href="{% url 'home' %}">Add New Toy</a></li>
-      <!-- Received Toys -->
-      <li><a class="dropdown-item" href="{% url 'home' %}">Received Toys</a></li>
-      <!-- Log out -->
-      <li><a class="dropdown-item" href="/accounts/logout">Logout</a></li>
-      <!-- Login -->
-      <li><a class="dropdown-item" href="/accounts/login">Login</a></li>
-      <!-- Register -->
-      <li><a class="dropdown-item"  href="/accounts/signup">Register</a></li>
+        {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+                <!-- Add New Toy -->
+                <li><a class="dropdown-item" href="{% url 'home' %}">Add New Toy</a></li>
+                <!-- Received Toys -->
+                <li><a class="dropdown-item" href="{% url 'home' %}">Received Toys</a></li>
+            {% endif %}
+            <!-- Profile -->
+            <li><a class="dropdown-item" href="{% url 'home' %}"> My Profile</a></li>
+            <!-- Log out -->
+            <li><a class="dropdown-item" href="/accounts/logout">Logout</a></li>
+        {% else %}
+            <!-- Login -->
+            <li><a class="dropdown-item" href="/accounts/login">Login</a></li>
+            <!-- Register -->
+            <li><a class="dropdown-item"  href="/accounts/signup">Register</a></li>
+        {% endif %}
     </ul>
     <a class="nav-link d-inline-block " href="{% url 'home' %}">
         <div class="text-center">
