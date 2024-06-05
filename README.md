@@ -1,5 +1,61 @@
 # loopitoy
 ## UX
+
+## User Stories
+To plan all features and functionalities of the e-shop, the agile methodology was considered. The core of the methodology is to create epics that are broken down into user stories. Each user story was additionally prioritized using MOSCOW approach. The following epics and user stories were planned:
+ 
+<details>
+<summary>EPIC 1: Preperation & Deployment</summary>
+
+- #1: As a developer I want to plan the development of the e-shop so that I can smoothly develop the web page.
+- #2: As a developer I want to document the webpage and the development so that the provided solution is transparent and everybody can follow the development.
+- #3: As a developer I want to test and validate my webpage so that guarantee full functionality and development according to best practice.
+- #4: As a developer I wan to deploy the page so that guarantee that the web page is accessible to everyone.
+
+</details>
+
+<details>
+<summary>EPIC 2: SEO & Marketing</summary>
+- All pages were tested using Lighthouse with the primary goals of identifying performance and accessibility issues and ensuring adherance to best practices.
+</details>
+
+
+<details>
+<summary>EPIC 3: Viewing & Navigation</summary>
+
+- #5: As a first visitor I want to quickly see what the web-page offers so that I can easily purchase or sell toys.
+
+</details>
+
+
+<details>
+<summary>EPIC 4: Registration & User Account</summary>
+
+- #13: As a Site User I want to easily register so that I can have a personal account.
+- #14: As a Site User I want to easily login and logout so that I can access my account
+</details>
+
+
+<details>
+<summary>EPIC 5: Sorting & Searching</summary>
+- All pages were tested using Lighthouse with the primary goals of identifying performance and accessibility issues and ensuring adherance to best practices.
+</details>
+
+<details>
+<summary>EPIC 6: Purchasing & Checkout</summary>
+- All pages were tested using Lighthouse with the primary goals of identifying performance and accessibility issues and ensuring adherance to best practices.
+</details>
+
+<details>
+<summary>EPIC 7: Selling</summary>
+- All pages were tested using Lighthouse with the primary goals of identifying performance and accessibility issues and ensuring adherance to best practices.
+</details>
+
+<details>
+<summary>EPIC 8: Admin & Store Management</summary>
+- All pages were tested using Lighthouse with the primary goals of identifying performance and accessibility issues and ensuring adherance to best practices.
+</details>
+
 - Agile Development (Strategy)
     - User Stories
     - EDR Model
@@ -15,6 +71,7 @@ The features of the web page were planned using Agile methodology to ensure Mini
 
 The sites of e-shop are categorized into severel groups:
 - **Landing & Informative Pages** includes Landing and How it Works Pages.
+- **Account Pages** includes all sites related to allauth app, i.e. authentication app.
 
 
 The entire web page is also designed to be responsive to ensure that the e-shop is properly displayed on different devices (e.g. a mobile, a desktop). The designed follows commaon best practice of e-shop development. Each site has mutual components, i.e. header with a navigation menu and footer. The mutual components ensure that the user to easily navigates through the content of the e-shop.
@@ -35,6 +92,12 @@ The entire web page is also designed to be responsive to ensure that the e-shop 
 - **Landing Page** displayes introductory text and two buttons to either proceed to purschase or sell toys. ![Landing Page](./docs/features/feature_landing_page.PNG) 
 
 - **How It Works Page** outlines the core sell procedure and offers users to register for selling toys.![How It Works Page](./docs/features/feature_how_it_works.PNG) 
+
+## Account Pages
+The core authentication pages includes:
+- **Login Page** contains a form to log in via username or email into to the platform. Moreover, a user can choose to remember the login data. ![Login](./docs/features/feature_account_login.png)
+- **Sign Up Page** contains a form to create an account. User have to register using both username and email.![Sign Up](./docs/features/feature_account_register.png)
+- **Log Out Page** offers user to confirm logging out from the account or stay login. ![Log Out](./docs/features/feature_account_logout.png)
 
 
 
