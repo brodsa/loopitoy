@@ -131,6 +131,7 @@ The core authentication pages includes:
 [Visual Studio Code](https://code.visualstudio.com/) and [GitHub](https://github.com/) have been used to build the web page. Make sure you have them installed.
 
 ### Setup the workspace
+
 The workspace should be setup as follows:
 1. Open the terminal in Visual Studio Code (Navigation Menu > Terminal > New Terminal)
 2. Navigate to the location, where you would like to have the repository locally
@@ -148,6 +149,7 @@ The workspace should be setup as follows:
 
 
 ### Setup Production Database
+
 1. Login to [ElephantSQL](https://customer.elephantsql.com/instance), you see all created database instances.
 2. Click on the green button 'Create New Instance' at the rigt top corner.
 3. Fill out the form. Specify database name > Select Region > Leave the data center default > Review > Create Instance.
@@ -155,6 +157,7 @@ The workspace should be setup as follows:
 5. Copy the URL and assign it to the environment variable `DATABASE_URL` in `env.py`
 
 ### Setup Production Environment on Heroku
+
 1. Login to [Heroku](https://dashboard.heroku.com/apps).
 2. Go to Heroku personal Dashboard. At the left top corner, select 'New' > 'Create New App'
 3. Type a unique project name, i.e. loopitoy. Select a region, i.e. Europe.
@@ -166,7 +169,58 @@ The workspace should be setup as follows:
 5. Deploy the app manually. After successful deployment, click on 'Enable automatic deployments'.
 
 ### Setup AWS S3
+The AWS S3 Bucket was used to host the static files. The setup procedure includes setting up S3 Bucket and IAM Identity. Both procedures are describe below in more details:
 
+<details>
+<summary> Setup S3 Bucket</summary>
+
+1. Login to AWS Management Console.
+2. Find S3 Bucket Servis in the list of servises
+3. Click on Crete New Bucket Button at the top right corner.
+4. Set up the general configuration as follows
+    - Give the name to your bucket, e.g. loopitoy
+    - Object Ownership: Choose ACLs enabled > Choose Bucket owner preferred 
+    - Block Public Asses: Unchecked Block all public acces > Check 'I acknowledge that the current settings might result in this bucket and the objects within becoming public.'
+    - Click on Create Bucket
+5. You see the created bucket in the list of your buckets.
+6. Set up Bucket Setting as follows
+    - Click on the created bucket in the list.
+    - Click on the Properties Tab
+    - Scroll down and go to Static website hosting Section: Click on Edit > Chose Enable > Fill out index.html and error.html > Click on Save changes
+7. Set up Permission as follows
+    - Click on the Permission Tab
+    - Scroll down and Click on Cross-orgin resource sharing (CORS) Section: Click on Edit > Paste the configuration > Click on Save changes
+    - Go to Bucket Police Section: Click on Edit > Click on Policy Generator (Select Type of Policy: S3 Bucket Policy, Effect: Allow, Principal: *, AWS Servis: Amazon S3, Actions: GetObject, ARN: copy ARN from the Bucket Policy Section ) > Click on Add Statement > Click on Generate Policy > Copy the policy > Pase the policy in the Bucket Policy Section > Add "/**" in the end of the Resource > CLick on Save changes
+    - Go to Access control list (ACL) Section: Check the List for Everyone (public access) > Save Changes
+
+</details>
+
+
+
+<details>
+<summary> Setup IAM </summary>
+
+1. Find IAM Identity and Access Management in the list of servises.
+3. Create a Group:
+    - Select User groups on the sidebar menu
+    - Click on Create Group
+    - Give the name to user group, e.g. manage-loopitoy
+    - Click on Create Group
+4. Create Policy 
+    - Select Policy on the sidebar menu
+    - Click on Create Policy > Select JSON
+    - Go to Actions > Select Import Policy > AmozonS3FullAccess > Click on Import policy > Copy the ARN Code from the Bucket into the Resource list, i.e. `["arn","arn/*"]` > Click on Next > Give it name, i.e. loopitoy-policy > Add Description > Click on Create Policy
+4. Attached the Policy to the User Group
+    - Select User groups on the sidebar menu
+    - Select the created User group, i.e. manage-loopitoy
+    - Go to Permission Tab > Click on Add Permission > Select Attach Policy > Select created policy, i.e. loopitoy-policy > Click on Attach Policy
+5. Create a User
+    - Select User on the sidebar menu
+    - Click on Create User
+    - Give it name, i.e. loopitoy-staticfiles-user > Click on Next > Select the User Group, i.e. manage-loopitoy, > Next > Click on Create User
+6. Generate Access Key from the selected user, i.e. lopitoy-staticfiles-user
+
+</details>
 
 ### Setup Stripe & Webhook
 

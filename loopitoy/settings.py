@@ -126,7 +126,7 @@ WSGI_APPLICATION = 'loopitoy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'DEVELOPMENT' not in os.environ:
+if 'DEVELOPMENT' in os.environ:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -134,7 +134,6 @@ if 'DEVELOPMENT' not in os.environ:
         }
     }
 else:
-    print('PROD')
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
      }
