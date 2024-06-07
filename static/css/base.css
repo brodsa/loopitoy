@@ -78,7 +78,7 @@ h2{
     top: 0;
     left: 0;
     position: fixed;
-    background-color: var(--bg-white);
+    background-color: var(--white);
     z-index: -1;
 }
 
@@ -134,13 +134,11 @@ footer{
     background-color: var(--white);
 }
 
-header{
-    border-bottom: solid  var(--primary-color) 1px;
+header,
+footer{
+    box-shadow: var(--box-shadow);
 }
 
-footer{
-    border-top: solid  var(--primary-color) 1px;
-}
 
 .nav-top-mobile{
     display: flex;
