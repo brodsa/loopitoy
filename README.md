@@ -9,14 +9,14 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 - #1: As a developer I want to plan the development of the e-shop so that I can smoothly develop the web page.
 - #2: As a developer I want to document the webpage and the development so that the provided solution is transparent and everybody can follow the development.
-- #3: As a developer I want to test and validate my webpage so that guarantee full functionality and development according to best practice.
-- #4: As a developer I wan to deploy the page so that guarantee that the web page is accessible to everyone.
+- #3: As a developer I want to test and validate my webpage so that I can guarantee full functionality and development according to best practice.
+- #4: As a developer I wan to deploy the page so that I can guarantee that the web page is accessible to everyone.
 
 </details>
 
 <details>
 <summary>EPIC 2: SEO & Marketing</summary>
-- All pages were tested using Lighthouse with the primary goals of identifying performance and accessibility issues and ensuring adherance to best practices.
+-todo
 </details>
 
 
@@ -38,22 +38,25 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 <details>
 <summary>EPIC 5: Sorting & Searching</summary>
-- All pages were tested using Lighthouse with the primary goals of identifying performance and accessibility issues and ensuring adherance to best practices.
+-todo
 </details>
 
 <details>
 <summary>EPIC 6: Purchasing & Checkout</summary>
-- All pages were tested using Lighthouse with the primary goals of identifying performance and accessibility issues and ensuring adherance to best practices.
+-todo
 </details>
 
 <details>
 <summary>EPIC 7: Selling</summary>
-- All pages were tested using Lighthouse with the primary goals of identifying performance and accessibility issues and ensuring adherance to best practices.
+-todo
 </details>
+
 
 <details>
 <summary>EPIC 8: Admin & Store Management</summary>
-- All pages were tested using Lighthouse with the primary goals of identifying performance and accessibility issues and ensuring adherance to best practices.
+
+- #33: As a Store Owner I want to add a toy so that I can add new items to my store
+
 </details>
 
 - Agile Development (Strategy)

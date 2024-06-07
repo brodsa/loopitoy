@@ -28,7 +28,7 @@ html {
     --last-color: #1C304A;
     --white: #fff;
     --black: #0E0E0E;
-    --menu-hover-color:#e9ecef;
+    --bg-white:#e9ecef;
 
     /* Utils */
     --border-radius: 0;
@@ -38,7 +38,7 @@ html {
 body{
     background: url('/media/background_img.webp') rgba(116,48,26, 0.7);
     background-repeat: no-repeat;
-    background-position: fixed ;
+    background-attachment: fixed;
     background-position: center center;
     background-size: cover;
     height: 100%;
@@ -78,7 +78,7 @@ h2{
     top: 0;
     left: 0;
     position: fixed;
-    background-color: var(--white);
+    background-color: var(--bg-white);
     z-index: -1;
 }
 
@@ -223,8 +223,9 @@ footer{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
+
 
 .bg-color-ter{
     background-color: var(--ternary-color);
@@ -302,8 +303,13 @@ footer{
     align-items: center;
 }
 
+.container.container-how{
+    margin-top: 80px;
+}
+
 .how__intro{
     max-width: 500px;
+    margin-bottom: 20px;
 }
 
 .how__title{
@@ -319,7 +325,7 @@ footer{
     background-color: var(--secondary-color) ;
     text-align: center;
     color: var(--white);
-    padding: 2rem;
+    padding: 1rem;
     margin-top: 2rem;
     
 }
@@ -375,6 +381,10 @@ footer{
     border-color: var(--secondary-color);
 }
 
+.buttons{
+    margin-top: 20px;
+}
+
 
 /* ++++++++++++++ User Account ++++++++++++++ */
 
@@ -412,6 +422,10 @@ footer{
     /* +++++++++++ How it works ++++++++++++++ */
     .how-card{
         max-width: 400px;
+    }
+
+    .how__subtitle{
+        padding: 2rem;
     }
 
     /* ++++++++++ Forms ++++++++++++++++*/
