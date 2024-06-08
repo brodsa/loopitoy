@@ -1,3 +1,6 @@
+import random
+import string
+
 from django.db import models
 from django.contrib.auth.models import User
 from django_resized import ResizedImageField
@@ -33,6 +36,9 @@ class Category(models.Model):
 
     def __str__(self):
         return str(self.name)
+    
+    class Meta:
+        verbose_name_plural = 'Categories'
 
     def get_friendly_name(self):
         """Returns friendly name"""
@@ -46,8 +52,8 @@ class Toys(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     new_price = models.DecimalField(max_digits=6, decimal_places=2)
-    quality = models.CharField(max_length=50, choices=QUALITY, default='open')
-    age = models.CharField(max_length=50, choices=AGE_CATEGORY, default='open')
+    quality = models.CharField(max_length=50, choices=QUALITY, default='used_good')
+    age = models.CharField(max_length=50, choices=AGE_CATEGORY, default='newborn_infant')
     category = models.ForeignKey(
         Category,
         related_name='toy_category',
@@ -72,6 +78,30 @@ class Toys(models.Model):
 
     class Meta:
         ordering = ['-created_on','status']
+        verbose_name_plural = 'Toys'
 
     def __str__(self):
         return str(self.name)
+    
+
+    def save(self, *args, **kwargs):
+        print(self.id)
+
+        if self.id is None: 
+            last_toy = Toys.objects.order_by('id').last().id #get the last record that has the same combination.
+            print(last_toy)
+
+            id_seed = 0
+            if last_toy is None:
+                id_seed = 0
+            else:
+                id_seed = int(last_toy)
+
+            random.seed(id_seed)
+            chars = string.ascii_letters + string.digits
+            chars_selected = "".join(random.choices(chars, k=10))
+            self.number = f"PP-{chars_selected[:4]}-{chars_selected[4:-2]}-{chars_selected[-2:]}"
+        else:
+            self.number = self.number
+
+        super(Toys, self).save(*args, **kwargs)
