@@ -460,6 +460,10 @@ footer{
         width: 300px;
     }
 
+    .container.container-how{
+        margin-top: 120px;
+    }
+
     /* ++++++++++ Forms ++++++++++++++++*/
     .form-container{
         max-width: 450px;
