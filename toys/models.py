@@ -49,14 +49,15 @@ class Toys(models.Model):
     """A model to create and manage toy products"""
     number = models.CharField(max_length=30)
     name = models.CharField(max_length=254, null=False, blank=False)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    new_price = models.DecimalField(max_digits=6, decimal_places=2)
+    new_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     quality = models.CharField(max_length=50, choices=QUALITY, default='used_good')
     age = models.CharField(max_length=50, choices=AGE_CATEGORY, default='newborn_infant')
     category = models.ForeignKey(
         Category,
         related_name='toy_category',
+        default='toys',
         null=True, blank=True,
         on_delete=models.SET_NULL)
     image = ResizedImageField(
@@ -85,18 +86,17 @@ class Toys(models.Model):
     
 
     def save(self, *args, **kwargs):
-        print(self.id)
-
-        if self.id is None: 
-            last_toy = Toys.objects.order_by('id').last().id #get the last record that has the same combination.
-            print(last_toy)
-
-            id_seed = 0
-            if last_toy is None:
-                id_seed = 0
-            else:
-                id_seed = int(last_toy)
-
+        """
+            Overwrites save to generate toy number based on the toy id and
+            randomly generated code.
+            Inspiration: https://stackoverflow.com/questions/69365764/django-i-want-to-create-a-self-generated-code-based-on-previous-records-and-a-s
+        """
+        if self.id is None:
+            # get the toy ID
+            last_toy = Toys.objects.order_by('id').last().id
+            id_seed = int(last_toy) if last_toy is not None else 0
+            
+            # generate code for the specific toy ID
             random.seed(id_seed)
             chars = string.ascii_letters + string.digits
             chars_selected = "".join(random.choices(chars, k=10))
