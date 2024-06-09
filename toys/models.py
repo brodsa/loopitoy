@@ -63,9 +63,9 @@ class Toys(models.Model):
     image = ResizedImageField(
         size=[400, None],
         quality=75,
-        upload_to="media/books",
+        upload_to="media/toys",
         force_format="WEBP",
-        default='media/books/placeholder.placeholder.webp',
+        default='media/placeholder.placeholder.webp',
         blank=True
     )
     status = models.CharField(max_length=50, choices=TOY_STATUS, default='open')
