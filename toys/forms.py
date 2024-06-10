@@ -25,18 +25,18 @@ class ToyForm(forms.ModelForm):
 
         widgets = {
             "description": forms.Textarea(attrs={"cols": 3, "rows": 3}),
-            'user': forms.TextInput(attrs={'readonly': True}),
+            "name": forms.TextInput(attrs={'autofocus': True})
         }
 
-        labels = {
-            'name': 'Toy Name',
-            'description': 'Provide information about toy',
-            'price': 'Price',
+        placeholders = {
+            'name': 'Toy Name *',
+            'description': 'Provide information about toy, e.g. brand or material',
+            'price': 'Price *',
             'new_price': 'New Price for discounts',
-            'age': 'Select age category',
-            'quality': 'Select quality category',
+            'age': 'Select age category*',
+            'quality': 'Select quality category*',
             'image': 'Upload toy image',
-            'status': 'Toy status',
+            'status': 'Toy status*',
         }
 
 

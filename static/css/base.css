@@ -349,6 +349,10 @@ footer{
     color: var(--primary-color);
 }
 
+.form-label{
+    margin-bottom: 0;
+}
+
 .btn.form__button{
     display: block;
     margin: 2px;
@@ -476,6 +480,13 @@ div.card-body{
 .card-text-lg{
     font-size:1.5rem;
 }
+
+ /* ++++++++++++ Toys form - Add and Edit ++++++++++++++ */
+.form-toys.form-container{
+    box-shadow: var(--box-shadow);
+}
+
+
 
 
 

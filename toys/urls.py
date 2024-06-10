@@ -7,5 +7,5 @@ from .views import(
 
 urlpatterns = [
     path('', all_toys, name='toys'),
-    path('add/',AddToy.as_view(),name='create_book' ),
+    path('add/',AddToy.as_view(),name='add_toy' ),
 ]
