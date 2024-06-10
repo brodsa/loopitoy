@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Toys{% endblock %}
+
+{% block page_header %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<section id="toys">
+    <h2 class="toys__title">Toys</h2>
+    <div class="container">
+        
+        
+            {% for toy in toys %}
+                {% if toy.status == 'eshop' %}
+                    {% include 'toys_list.html' %}
+                {% endif %}
+            {% endfor %}
+
+        
+    </div>
+</section>
+{% endblock %}

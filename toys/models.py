@@ -93,9 +93,13 @@ class Toys(models.Model):
         """
         if self.id is None:
             # get the toy ID
-            last_toy = Toys.objects.order_by('id').last().id
-            id_seed = int(last_toy) if last_toy is not None else 0
+            if len(Toys.objects.all()) == 0:
+                last_toy = 0
+            else:
+                last_toy = Toys.objects.order_by('id').last().id
+            id_seed = 0 if last_toy is None else int(last_toy) 
             
+            print(id_seed)
             # generate code for the specific toy ID
             random.seed(id_seed)
             chars = string.ascii_letters + string.digits

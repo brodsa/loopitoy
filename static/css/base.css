@@ -27,7 +27,7 @@ html {
     --ternary-color: #B49532;
     --last-color: #1C304A;
     --white: #fff;
-    --black: #0E0E0E;
+    --black: #1d1c1c;
     --bg-white:#e9ecef;
 
     /* Utils */
@@ -391,6 +391,93 @@ footer{
     font-size:10px;
 }
 
+/* ++++++++++ Toys ++++++++++++++++*/
+
+#toys .container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 1.5rem;
+}
+
+.toys-card{
+    box-shadow: var(--box-shadow);
+    margin: auto;
+}
+
+.toys-card:hover,
+.toy:hover{
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transform: scale(1.01);
+    color: var(--last-color);
+}
+.toys__title{
+    color: var(--primary-color);
+    margin: 80px 0 20px;
+}
+
+.toy{
+    text-decoration: none;
+    color: var(--last-color);
+}
+
+
+.toys-buttons{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+.toy .card{
+    border: solid var(--bg-white) 0px;
+    
+}
+
+div.card{
+    height: 550px;
+    width: 18rem;
+}
+
+div.card-img-container{
+    flex: 0 0 350px;
+    height: 100px;
+}
+
+img.card-img-top{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+div.card-body{
+    flex: 0 1 250px;
+}
+
+
+.card-badge{
+    position: absolute;
+    right: -5%;
+    bottom: 40%;
+    background-color: var(--ternary-color);
+    display: inline-block;
+    color: var(--black);
+    font-weight: bold;
+    padding: 3px 6px;
+
+}
+
+.card-text{
+    margin: 0;
+    color: var(--last-color);
+    font-size: 0.95rem;
+}
+
+.card-text-lg{
+    font-size:1.5rem;
+}
+
+
 
 @media screen and  (min-width: 767px){
     .nav-top{
@@ -431,6 +518,16 @@ footer{
         max-width: 400px;
         margin: 200px auto 50px;
     }
+
+
+    /* ++++++++++ Toys ++++++++++++++++*/
+    #toys .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        max-width: 1400px;
+    }
 }
 
 
@@ -467,5 +564,10 @@ footer{
     /* ++++++++++ Forms ++++++++++++++++*/
     .form-container{
         max-width: 450px;
+    }
+
+    /* ++++++++++ Toys ++++++++++++++++*/
+    .toys__title{
+        margin-top: 120px;
     }
 }

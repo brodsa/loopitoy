@@ -8,10 +8,11 @@
             Products
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href=#>Toys</a></li>
-            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Books</a></li>
-            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Games</a></li>
-            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Accessories</a></li>
+            <li><a class="dropdown-item" href="{% url 'toys' %}">All Products</a></li>
+            <li><a class="dropdown-item" href="{% url 'home' %}">Toys</a></li>
+            <li><a class="dropdown-item" href="{% url 'home' %}">Books</a></li>
+            <li><a class="dropdown-item" href="{% url 'home' %}">Games</a></li>
+            <li><a class="dropdown-item" href="{% url 'home' %}">Accessories</a></li>
         </ul>
       </li>
 
@@ -21,10 +22,10 @@
             Age Group
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href=#>Newborns & Infants</a></li>
-            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Toodles</a></li>
-            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Preschoolers</a></li>
-            <li><a class="dropdown-item {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">School-aged Children</a></li>
+            <li><a class="dropdown-item" href=#>Newborns & Infants</a></li>
+            <li><a class="dropdown-item" href="{% url 'home' %}">Toodles</a></li>
+            <li><a class="dropdown-item" href="{% url 'home' %}">Preschoolers</a></li>
+            <li><a class="dropdown-item" href="{% url 'home' %}">School-aged Children</a></li>
         </ul>
       </li>
 
