@@ -24,6 +24,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 <summary>EPIC 3: Viewing & Navigation</summary>
 
 - #5: As a first visitor I want to quickly see what the web-page offers so that I can easily purchase or sell toys.
+- #9: As a Shopper I want to view a list of all toys so that I can see the whole e-shop offer and select some to purchase.
 
 </details>
 
