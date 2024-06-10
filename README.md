@@ -75,6 +75,7 @@ The features of the web page were planned using Agile methodology to ensure Mini
 The sites of e-shop are categorized into severel groups:
 - **Landing & Informative Pages** includes Landing and How it Works Pages.
 - **Account Pages** includes all sites related to allauth app, i.e. authentication app.
+- **Toys Pages** includes all pages related to toy app, e.g. overview of toys, toy detail.
 
 
 The entire web page is also designed to be responsive to ensure that the e-shop is properly displayed on different devices (e.g. a mobile, a desktop). The designed follows commaon best practice of e-shop development. Each site has mutual components, i.e. header with a navigation menu and footer. The mutual components ensure that the user to easily navigates through the content of the e-shop.
@@ -101,6 +102,10 @@ The core authentication pages includes:
 - **Login Page** contains a form to log in via username or email into to the platform. Moreover, a user can choose to remember the login data. ![Login](./docs/features/feature_account_login.png)
 - **Sign Up Page** contains a form to create an account. User have to register using both username and email.![Sign Up](./docs/features/feature_account_register.png)
 - **Log Out Page** offers user to confirm logging out from the account or stay login. ![Log Out](./docs/features/feature_account_logout.png)
+
+
+## Toy Pages
+- **Toys Page** presents all available toys in e-shop. Each toy is depicted in a card element showing the basic information about toy, such as name, price and categories. For Site Owner, there are two buttons in additon: Edit and Remove to edit toy information and delete toy, respectively. ![Toys](./docs/features/feature_toys.PNG)
 
 
 
@@ -236,3 +241,4 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
 ### Credits & Inspiration
 - [Django Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) by Daisy McGeer
 - [Butique Ado](https://github.com/ckz8780/boutique_ado_v1) by CI and all study material provided by CI
+- [Stack Overflow: Overwrite Save](https://stackoverflow.com/questions/69365764/django-i-want-to-create-a-self-generated-code-based-on-previous-records-and-a-s)

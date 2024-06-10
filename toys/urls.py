@@ -1,7 +1,11 @@
 from django.urls import path
 
-from . import views
+from .views import(
+    all_toys,
+    AddToy,
+)
 
 urlpatterns = [
-    path('', views.all_toys, name='toys'),
+    path('', all_toys, name='toys'),
+    path('add/',AddToy.as_view(),name='create_book' ),
 ]

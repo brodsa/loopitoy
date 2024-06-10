@@ -9,6 +9,18 @@ class ToyForm(forms.ModelForm):
     class Meta:
         """Define model, fields, widget and lables"""
         model = Toys
+
+        fields = [
+            'name',
+            'description',
+            'price',
+            'new_price',
+            'age',
+            'quality',
+            'image',
+            'status',
+        ]
+
         exclude = ('number','created_on')
 
         widgets = {
@@ -21,7 +33,8 @@ class ToyForm(forms.ModelForm):
             'description': 'Provide information about toy',
             'price': 'Price',
             'new_price': 'New Price for discounts',
-            'age': 'Suitable child age',
+            'age': 'Select age category',
+            'quality': 'Select quality category',
             'image': 'Upload toy image',
             'status': 'Toy status',
         }
