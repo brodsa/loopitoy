@@ -18,7 +18,7 @@
             <div class="card-body d-flex flex-column">
                 <h3 class="card-title">{{ toy.name|truncatechars:30 }}</h3>
                 <p class="card-text-lg">{{ toy.price }}€</p>
-                <p class="card-text"><i class="fas fa-tag mr-1"></i> {{ toy.category }}</p>
+                <p class="card-text"><i class="fas fa-tag mr-1"></i> {{ toy.category.friendly_name }}</p>
                 <p class="card-text"><i class="fas fa-star mr-1"></i> {{ toy.get_quality_display }}</p>
                 
             </div>
