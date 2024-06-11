@@ -58,6 +58,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 - #33: As a Store Owner I want to add a toy so that I can add new items to my store.
 - #34: As a Store Owner I want to update toy details so that I can change the information including toy status.
+- #35: As a Site Owner I want to delete a toy so that I can remove toys that are no longer for sale.
 
 </details>
 
@@ -108,6 +109,12 @@ The core authentication pages includes:
 
 ## Toy Pages
 - **Toys Page** presents all available toys in e-shop. Each toy is depicted in a card element showing the basic information about toy, such as name, price and categories. For Site Owner, there are two buttons in additon: Edit and Remove to edit toy information and delete toy, respectively. ![Toys](./docs/features/feature_toys.PNG)
+
+- **Toy Detail Page**
+
+- **New Toy Page** contains form to fill out in order to create new toy card. This page is only visible for Site Owner. ![New Toy](./docs/features/fetures_toys_add.png)
+- **Edit Toy Page** contains form to edit the toy info. This page is only visible for Site Owner. ![Edit Toy](./docs/features/fetures_toys_edit.png)
+- **Delete Toy Page** contains confirmation to delete the toy from e-shop. This page is only visible for Site Owner. ![Delete Toy](./docs/features/fetures_toys_delete.png)
 
 
 
