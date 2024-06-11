@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Toys
+from .models import Toys, Category
 
 
 class ToyForm(forms.ModelForm):
@@ -17,6 +17,7 @@ class ToyForm(forms.ModelForm):
             'new_price',
             'age',
             'quality',
+            'category',
             'image',
             'status',
         ]
@@ -35,8 +36,19 @@ class ToyForm(forms.ModelForm):
             'new_price': 'New Price for discounts',
             'age': 'Select age category*',
             'quality': 'Select quality category*',
+            'category': 'Select toy category',
             'image': 'Upload toy image',
             'status': 'Toy status*',
         }
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        categories = Category.objects.all()
+        friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
+        
+        # assign the category friendly names
+        self.fields['category'].choices = friendly_names
 
+        # give some css classes
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-black rounded-0'

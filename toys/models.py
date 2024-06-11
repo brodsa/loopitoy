@@ -91,15 +91,17 @@ class Toys(models.Model):
             randomly generated code.
             Inspiration: https://stackoverflow.com/questions/69365764/django-i-want-to-create-a-self-generated-code-based-on-previous-records-and-a-s
         """
+        
         if self.id is None:
             # get the toy ID
+            print(self.id)
             if len(Toys.objects.all()) == 0:
                 last_toy = 0
             else:
                 last_toy = Toys.objects.order_by('id').last().id
-            id_seed = 0 if last_toy is None else int(last_toy) 
+            id_seed = 0 if last_toy is None else int(last_toy)
             
-            print(id_seed)
+            #self.id = id_seed + 1
             # generate code for the specific toy ID
             random.seed(id_seed)
             chars = string.ascii_letters + string.digits
@@ -108,4 +110,5 @@ class Toys(models.Model):
         else:
             self.number = self.number
 
+        print(self.id, self.number, self.name, self.description)
         super(Toys, self).save(*args, **kwargs)

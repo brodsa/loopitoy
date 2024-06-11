@@ -13,7 +13,7 @@ from django.contrib.auth.mixins import (
     UserPassesTestMixin
 )
 
-from .models import Toys
+from .models import Toys, Category
 from .forms import ToyForm
 
 from django.contrib import messages
@@ -36,6 +36,8 @@ class AddToy(LoginRequiredMixin,UserPassesTestMixin,CreateView):
     template_name = 'toys/create_toy.html'
     model = Toys
     form_class = ToyForm
+    success_url = '/toys/'
+
 
     def test_func(self):
         """ Test user with logged user otherwise 403 """
