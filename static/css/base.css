@@ -539,6 +539,11 @@ div.card-body{
         margin-bottom: 40px;
         max-width: 1400px;
     }
+
+     /* ++++++++++++ Toys form - Add and Edit ++++++++++++++ */
+    .form-toys.form-container{
+        margin-top: 120px;
+    }   
 }
 
 
@@ -581,4 +586,9 @@ div.card-body{
     .toys__title{
         margin-top: 120px;
     }
+
+    /* ++++++++++++ Toys form - Add and Edit ++++++++++++++ */
+    .form-toys.form-container{
+        margin-top: 150px;
+    } 
 }

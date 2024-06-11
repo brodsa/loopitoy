@@ -48,7 +48,7 @@ class AddToy(LoginRequiredMixin,UserPassesTestMixin,CreateView):
         
         messages.success(
             self.request,
-            'Successfully created book'
+            'Successfully created toy'
         )
 
         return super(AddToy, self).form_valid(form)
@@ -56,3 +56,27 @@ class AddToy(LoginRequiredMixin,UserPassesTestMixin,CreateView):
     # def get_success_url(self):
     #     """ Set up the books/key/id as success url"""
     #     return reverse_lazy('toys', kwargs={'pk': self.pk})
+
+
+
+class EditToy(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
+    """ Edit Toy View """
+    template_name = 'toys/edit_toy.html'
+    model = Toys
+    form_class = ToyForm
+    success_url = '/toys/'
+
+
+    def test_func(self):
+        """ Test user with logged user otherwise 403 """
+        return self.request.user.is_superuser
+    
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        
+        messages.success(
+            self.request,
+            'Successfully updated toy info'
+        )
+
+        return super(EditToy, self).form_valid(form)
