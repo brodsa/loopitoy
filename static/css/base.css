@@ -224,6 +224,13 @@ footer{
     margin-top: 30px;
 }
 
+.btn.btn-fixed-width,
+.btn.btn-fixed-width:hover{
+    width: 120px;
+}
+
+
+
 
 .bg-color-ter{
     background-color: var(--ternary-color);

@@ -80,3 +80,22 @@ class EditToy(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
         )
 
         return super(EditToy, self).form_valid(form)
+    
+
+class DeleteToy(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """ Delete toy view """
+    model = Toys
+    success_url = '/toys/'
+
+    def test_func(self):
+        """ Test user with superuser otherwise 403 """
+        return self.request.user.is_superuser
+
+    def delete(self, request, *args, **kwargs):
+        """ Display toast success on form submit """
+
+        messages.success(
+            self.request,
+            'Successfully deleted toy'
+        )
+        return super().delete(request, *args, **kwargs)

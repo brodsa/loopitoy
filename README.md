@@ -57,6 +57,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 <summary>EPIC 8: Admin & Store Management</summary>
 
 - #33: As a Store Owner I want to add a toy so that I can add new items to my store.
+- #34: As a Store Owner I want to update toy details so that I can change the information including toy status.
 
 </details>
 

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Delete book: {{ object.title }}{% endblock title %}
+
+{% block content %}
+<div class="container form-container form-account">
+    <h1 class="form__title">Toy Deletion</h1>
+  
+    <p class="text-center">Are you sure you want to delete the toy?</p>
+    <p class="text-center text-uppercase mb-0 fw-bold">{{ object.name }}</p>
+    <p class="text-center">{{ object.number }}</p>
+    <div>
+      <form method="post">
+        {% csrf_token %}
+        <!-- Buttons -->
+        <div class="buttons d-flex flex-row align-items-center justify-content-md-center gap-2">
+          <button type="submit" class="btn btn-fixed-width form__button form__button--primary w-100 flex-grow-1">Delete</button>
+          <a class= "btn btn-fixed-width form__button form__button--secondary w-100 flex-grow-1" href="{{ request.META.HTTP_REFERER }}"> Back </a>
+        </div>
+  
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
