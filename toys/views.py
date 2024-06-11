@@ -2,21 +2,20 @@ from django.shortcuts import render
 
 from django.views.generic import (
     CreateView,
-    ListView,
     DetailView,
     DeleteView,
     UpdateView
     )
 
+from django.contrib import messages
 from django.contrib.auth.mixins import (
     LoginRequiredMixin,
     UserPassesTestMixin
 )
 
-from .models import Toys, Category
+from .models import Toys
 from .forms import ToyForm
 
-from django.contrib import messages
 
 # Create your views here.
 
@@ -70,17 +69,17 @@ class EditToy(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     def test_func(self):
         """ Test user with logged user otherwise 403 """
         return self.request.user.is_superuser
-    
+
     def form_valid(self, form):
         form.instance.user = self.request.user
-        
+
         messages.success(
             self.request,
             'Successfully updated toy info'
         )
 
         return super(EditToy, self).form_valid(form)
-    
+
 
 class DeleteToy(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """ Delete toy view """
@@ -99,3 +98,10 @@ class DeleteToy(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             'Successfully deleted toy'
         )
         return super().delete(request, *args, **kwargs)
+    
+
+class DetailToy(DetailView):
+    """ Toy Detail View to see toy details """
+    template_name = 'toys/toy_detail.html'
+    model = Toys
+    context_object_name = 'toy'

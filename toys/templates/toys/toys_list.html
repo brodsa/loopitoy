@@ -1,6 +1,6 @@
 <div class="toys-card">
 
-    <a href="" class="toy" aria-label="Click to see more details for {{ toy.name }}">
+    <a href="{% url 'toy_detail' toy.id %}" class="toy" aria-label="Click to see more details for {{ toy.name }}">
 
         <div class="card position-relative">
             <!-- Book Image: Default Image has to be set manually due to cloudinary -->

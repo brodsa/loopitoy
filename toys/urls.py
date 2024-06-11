@@ -4,7 +4,8 @@ from .views import(
     all_toys,
     AddToy,
     EditToy,
-    DeleteToy
+    DeleteToy,
+    DetailToy
 )
 
 urlpatterns = [
@@ -12,4 +13,5 @@ urlpatterns = [
     path('add/',AddToy.as_view(),name='add_toy' ),
     path('edit/<slug:pk>/',EditToy.as_view(),name='edit_toy' ),
     path('delete/<slug:pk>/', DeleteToy.as_view(), name='delete_toy'),
+    path('detail/<slug:pk>/', DetailToy.as_view(), name='toy_detail'),
 ]

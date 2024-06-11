@@ -27,7 +27,7 @@ html {
     --ternary-color: #B49532;
     --last-color: #1C304A;
     --white: #fff;
-    --black: #1d1c1c;
+    --black: #555555;
     --bg-white:#e9ecef;
 
     /* Utils */
@@ -44,6 +44,7 @@ body{
     height: 100%;
     background-blend-mode: multiply;
     font-family: var(--text-font);
+    color: var(--black);
     
     display: flex;
     flex-direction: column;
@@ -414,6 +415,7 @@ footer{
 .toys-card{
     box-shadow: var(--box-shadow);
     margin: auto;
+    color: var(--black);
 }
 
 .toys-card:hover,
@@ -421,16 +423,17 @@ footer{
     cursor: pointer;
     box-shadow: var(--box-shadow);
     transform: scale(1.01);
-    color: var(--last-color);
+    color: var(--black);
 }
 .toys__title{
     color: var(--primary-color);
     margin: 80px 0 20px;
+    color: var(--black);
 }
 
 .toy{
     text-decoration: none;
-    color: var(--last-color);
+    color: var(--black);
 }
 
 
@@ -472,7 +475,7 @@ div.card-body{
     bottom: 40%;
     background-color: var(--ternary-color);
     display: inline-block;
-    color: var(--black);
+    color: black;
     font-weight: bold;
     padding: 3px 6px;
 
@@ -480,7 +483,7 @@ div.card-body{
 
 .card-text{
     margin: 0;
-    color: var(--last-color);
+    color: var(--black);
     font-size: 0.95rem;
 }
 
@@ -488,11 +491,38 @@ div.card-body{
     font-size:1.5rem;
 }
 
- /* ++++++++++++ Toys form - Add and Edit ++++++++++++++ */
+/* ++++++++++++ Toys form - Add and Edit ++++++++++++++ */
 .form-toys.form-container{
     box-shadow: var(--box-shadow);
 }
 
+/* +++++++ Toy - Detail +++++++++++++++ */
+
+.toy-detail{
+    margin: 70px auto 30px;
+}
+
+.toy-container{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.toy-detail__picture{
+    width: 300px;
+    height: 400px;
+    align-self: center;
+}
+
+.toy-detail__picture img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.fa-child{
+    font-size: 23px;
+}
 
 
 
@@ -551,6 +581,35 @@ div.card-body{
     .form-toys.form-container{
         margin-top: 120px;
     }   
+
+    /* ++++++++++ Toy Detail ++++++++++++++++ */
+    .toy-container{
+        max-width: 400px;
+    }
+
+    .toy-detail__picture{
+        width: 400px;
+        height: 550px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and  (min-width: 950px){
+    /* +++++++ Toy - Detail +++++++++++++++ */
+    .toy-container{
+        max-width: 700px;
+    }
+
+    .toy-detail__picture{
+        width: 350px;
+        height: 450px;
+        margin: 0;
+    }
+
+    .toy-container{
+        flex-direction: row;
+        gap: 2rem;
+    }
 }
 
 
