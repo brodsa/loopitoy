@@ -16,6 +16,16 @@
 {% block content %}
 <section id="toys">
     <h2 class="toys__title">Toys</h2>
+    {% if search_term != None %}
+        <div class="toys__search">
+            <p class="text-muted text-center text-md-left">
+                {{ toys|length }} toys{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+            </p>
+            <div class="mb-4">
+                <a class="btn form__button--secondary" href="{% url 'toys' %}">Clear Search</a>
+            </div>
+        </div>
+    {% endif %}
     <div class="container">
         
         

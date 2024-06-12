@@ -1,4 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import (
+    render,
+    redirect,
+    reverse
+)
+
+from django.db.models import Q
 
 from django.views.generic import (
     CreateView,
@@ -23,8 +29,21 @@ def all_toys(request):
     "A view to show all toys"
 
     toys = Toys.objects.all()
+    query = None
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, 'You did not enter any search criteria!')
+                return redirect(reverse('toys'))
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            toys = toys.filter(queries)
+
+
     context = {
         'toys': toys,
+        'search_term': query
     }
 
     return render(request, 'toys/toys.html', context)

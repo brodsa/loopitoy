@@ -11,8 +11,8 @@
                 </a>
             </div>
             <div class="nav-top__search">
-                <form class="form  d-flex flex-row">
-                    <input class="form-control .border-primary-color rounded-0 mr-sm-2 input-search" type="search" placeholder="Search" aria-label="Search">
+                <form method="GET" action="{% url 'toys' %}" class="form  d-flex flex-row">
+                    <input class="form-control .border-primary-color rounded-0 mr-sm-2 input-search" type="text" name="q" placeholder="Search" aria-label="Search">
                     <button class="btn my-2 my-sm-0 w-30 rounded-0" type="submit">
                         <span class="icon">
                         <i class="fas fa-search"></i>
