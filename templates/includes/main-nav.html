@@ -1,18 +1,20 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <!-- Menu Items -->
     <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link {% if url_name == 'toys' %}active{% endif %}" href="{% url 'toys' %}">All Toys</a>
+      </li>
 
       <!-- Products-->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Products
+            Toys Category
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{% url 'toys' %}">All Products</a></li>
-            <li><a class="dropdown-item" href="{% url 'home' %}">Toys</a></li>
-            <li><a class="dropdown-item" href="{% url 'home' %}">Books</a></li>
-            <li><a class="dropdown-item" href="{% url 'home' %}">Games</a></li>
-            <li><a class="dropdown-item" href="{% url 'home' %}">Accessories</a></li>
+          <li><a class="dropdown-item" href="{% url 'toys' %}?category=cars,dolls,cuddle">Toys</a></li>
+          <li><a class="dropdown-item" href="{% url 'toys' %}?category=books,puzzles">Books & Puzzles</a></li>
+          <li><a class="dropdown-item" href="{% url 'toys' %}?category=fine_motor,gross_motor">Motor Activities</a></li>
+          <li><a class="dropdown-item" href="{% url 'toys' %}?category=accessories,furniture">Accessories & Furniture</a></li>
         </ul>
       </li>
 
@@ -22,10 +24,10 @@
             Age Group
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href=#>Newborns & Infants</a></li>
-            <li><a class="dropdown-item" href="{% url 'home' %}">Toodles</a></li>
-            <li><a class="dropdown-item" href="{% url 'home' %}">Preschoolers</a></li>
-            <li><a class="dropdown-item" href="{% url 'home' %}">School-aged Children</a></li>
+            <li><a class="dropdown-item" href="{% url 'toys' %}?age=newbor_infant">Newborns & Infants</a></li>
+            <li><a class="dropdown-item" href="{% url 'toys' %}?age=toodler">Toodlers</a></li>
+            <li><a class="dropdown-item" href="{% url 'toys' %}?age=preschooler">Preschoolers</a></li>
+            <li><a class="dropdown-item" href="{% url 'toys' %}?age=schooler">School-aged Children</a></li>
         </ul>
       </li>
 

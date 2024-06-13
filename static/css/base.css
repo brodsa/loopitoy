@@ -504,7 +504,19 @@ div.card-body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
+
+.btn-toys{
+    font-size: 0.9rem;
+    width: 120px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
 
 .toy-detail{
     margin: 70px auto 30px;
@@ -577,6 +589,11 @@ div.card-body{
 
 
     /* ++++++++++ Toys ++++++++++++++++*/
+    .btn-toys{
+        width: 150px;
+
+    }
+    
     #toys .container{
         display: flex;
         flex-direction: row;

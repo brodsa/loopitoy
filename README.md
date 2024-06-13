@@ -42,6 +42,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 <details>
 <summary>EPIC 5: Sorting & Searching</summary>
+- #20: As a Shopper I want to filter for specific toys categories so that I can easily find and see what I have searched for.
 - #21:  As a Shopper I want to search for toys by name or description so that I can find a specific toy I would like to purchase.
 </details>
 

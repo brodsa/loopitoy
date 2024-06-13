@@ -19,7 +19,7 @@ from django.contrib.auth.mixins import (
     UserPassesTestMixin
 )
 
-from .models import Toys
+from .models import Toys, Category
 from .forms import ToyForm
 
 
@@ -28,10 +28,24 @@ from .forms import ToyForm
 def all_toys(request):
     "A view to show all toys"
 
-    toys = Toys.objects.all()
+    toys = Toys.objects.filter(status='eshop')
+    categories = None
+    age_groups = None
     query = None
+    
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            toys = toys.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+            
+        if 'age' in request.GET:
+            age_groups = request.GET['age'].split(',')
+            toys = toys.filter(age__in=age_groups)
+            categories_ls = toys.values_list('category',flat=True)
+            categories = Category.objects.filter(pk__in=categories_ls)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -39,11 +53,13 @@ def all_toys(request):
                 return redirect(reverse('toys'))
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             toys = toys.filter(queries)
+            
 
 
     context = {
         'toys': toys,
-        'search_term': query
+        'search_term': query,
+        'selected_categories': categories,
     }
 
     return render(request, 'toys/toys.html', context)

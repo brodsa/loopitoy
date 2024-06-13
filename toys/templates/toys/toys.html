@@ -16,13 +16,21 @@
 {% block content %}
 <section id="toys">
     <h2 class="toys__title">Toys</h2>
-    {% if search_term != None %}
+    {% if search_term != None or selected_categories != None %}
         <div class="toys__search">
-            <p class="text-muted text-center text-md-left">
+            <p class="text-muted text-center text-md-left mb-0">
                 {{ toys|length }} toys{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                
             </p>
-            <div class="mb-4">
-                <a class="btn form__button--secondary" href="{% url 'toys' %}">Clear Search</a>
+            <div class="mb-2">
+                <a class="btn form__button--primary" href="{% url 'toys' %}">Clear Search</a>
+            </div>
+            <div class="mb-2 mb-md-4 d-flex flex-row gap-2 gap-md-3 flex-wrap ms-2 me-2">
+            {% for c in selected_categories %}
+                    <a class="btn btn-toys form__button--secondary" href="{% url 'toys' %}?category={{ c.name }}">
+                        <span>{{ c.friendly_name }}</span>
+                    </a>
+            {% endfor %}
             </div>
         </div>
     {% endif %}
