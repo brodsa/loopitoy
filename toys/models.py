@@ -11,7 +11,8 @@ TOY_STATUS = [
     ('declaim', 'DECLAIM'),
     ('eshop', 'E-SHOP'),
     ('sold', 'SOLD'),
-    ('paid', 'PAID')
+    ('paid', 'PAID'),
+    ('in_bag', 'IN_BAG')
 ]
 
 AGE_CATEGORY = [

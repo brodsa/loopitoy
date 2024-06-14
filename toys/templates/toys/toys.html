@@ -38,9 +38,7 @@
         
         
             {% for toy in toys %}
-                {% if toy.status == 'eshop' %}
                     {% include 'toys/toys_list.html' %}
-                {% endif %}
             {% endfor %}
 
         

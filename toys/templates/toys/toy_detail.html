@@ -49,19 +49,30 @@
 
                 <p>{{ toy.description }}</p>
                 
+                {% if toy.status == 'in_bag' %}
+                <p> <strong>INFO</strong>: This toy is currently in the shopping bag of yours or someone else!</p>
+                {% endif %}
             </div>
 
-            <!-- CRUD Buttons -->
+            <!-- TODO CRUD Buttons -->
             {% if request.user.is_staff %}
             <div class="d-flex flex-row gap-2 justify-content-end pb-2 pe-2">
                 <a class= "btn" href="{% url 'edit_toy' toy.id %}"> Edit</a>
                 <a class= "btn" href="{% url 'delete_toy' toy.id %}"> Remove</a>
             </div>
-            {% else %}
-            <div class="d-flex flex-row gap-2 justify-content-end pb-2 pe-2">
-                <a class= "btn form__button--secondary" href="{% url 'toys' %}"> <span><i class="fas fa-chevron-left mr-1"></i> </span> Back</a>
-                <a class= "btn form__button--primary" href="#"> Add To Bag</a>
-            </div>
+
+            <!-- TODO: Else -->
+            <!-- Add to Shopping and Back Shopping Buttons -->
+            <form class="form" action="{% url 'add_to_bag' toy.id %}" method="POST">
+                <div>
+                    {% csrf_token %}
+                    <div class="d-flex flex-row gap-2 justify-content-end pb-2 pe-2">
+                        <a class= "btn form__button--secondary" href="{% url 'toys' %}"> <span><i class="fas fa-chevron-left mr-1"></i> </span> Back</a>
+                        <input type="submit"  data-item_id = "{{ toy.id }}" class="btn form__button--primary {% if toy.status == 'in_bag' %} disabled {% endif %}" value="Add to Bag">
+                    </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </div>
+            </form>
             {% endif %}
         </div>
     </div> 

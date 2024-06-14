@@ -28,7 +28,7 @@ from .forms import ToyForm
 def all_toys(request):
     "A view to show all toys"
 
-    toys = Toys.objects.filter(status='eshop')
+    toys = Toys.objects.filter(status__in = ['eshop','in_bag'])
     categories = None
     age_groups = None
     query = None
