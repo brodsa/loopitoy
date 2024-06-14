@@ -59,8 +59,8 @@
             </div>
             {% else %}
             <div class="d-flex flex-row gap-2 justify-content-end pb-2 pe-2">
-                <a class= "btn form__button--secondary" href=""> <span><i class="fas fa-chevron-left mr-1"></i> </span> Back</a>
-                <a class= "btn form__button--primary" href="{% url 'delete_toy' toy.id %}"> Add To Bag</a>
+                <a class= "btn form__button--secondary" href="{% url 'toys' %}"> <span><i class="fas fa-chevron-left mr-1"></i> </span> Back</a>
+                <a class= "btn form__button--primary" href="#"> Add To Bag</a>
             </div>
             {% endif %}
         </div>

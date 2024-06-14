@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block title %}How it Works{% endblock %}
+
+{% block page_header %}
+
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+    <section id="bag">
+        <h2 class="text-center">
+            Shopping Bag
+        </h2>
+        <div class="bag__content">
+            {% if bag_items %}
+                <div>
+
+                </div>
+            {% else %}
+                <div>
+                    <p class="text-center">Your bag is empty</p>
+                    <div class="d-flex flex-column align-items-center flex-md-row gap-2 justify-content-center pb-2 pe-2">
+                        <a class= "btn btn-bag form__button--secondary flex-grow-0" href="{% url 'toys' %}"> <span><i class="fas fa-chevron-left mr-1"></i> </span> Back</a>
+                        <a class= "btn btn-bag form__button--primary flex-grow-0" href="#"> Secure Checkout</a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+</div>
+{% endblock %}

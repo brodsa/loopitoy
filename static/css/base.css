@@ -498,8 +498,6 @@ div.card-body{
 }
 
 /* +++++++ Toy - Detail +++++++++++++++ */
-
-
 .toys__search{
     display: flex;
     flex-direction: column;
@@ -545,6 +543,10 @@ div.card-body{
 }
 
 
+/* +++++++ Bag +++++++++++++++ */
+.btn-bag{
+    max-width: 150px;
+}
 
 
 @media screen and  (min-width: 767px){
