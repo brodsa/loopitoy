@@ -48,7 +48,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 <details>
 <summary>EPIC 6: Purchasing & Checkout</summary>
--todo
+- #23: As a Shopper I want to view my shopping bag so that I can identify the total cost of my purchase and all toys I will receive.
 </details>
 
 <details>

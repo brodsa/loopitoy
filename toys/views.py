@@ -38,7 +38,9 @@ def all_toys(request):
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             toys = toys.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+            categories_ls = toys.values_list('category',flat=True)
+            categories = Category.objects.filter(pk__in=categories_ls)
+            print(categories)
             
         if 'age' in request.GET:
             age_groups = request.GET['age'].split(',')
