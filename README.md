@@ -143,6 +143,7 @@ The core authentication pages includes:
 ## Testing & Validation
 
 ### Bugs
+- Filter category toys: useing category names to filter out displayed category buttons shows incorect category name. Solution: use pk of categories to filter out the displayed category. SOLVED
 
 ## Technologies Used
 [Accessible color palette builder](https://toolness.github.io/accessible-color-matrix/)
