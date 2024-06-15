@@ -28,6 +28,8 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 - #5: As a first visitor I want to quickly see what the web-page offers so that I can easily purchase or sell toys.
 - #9: As a Shopper I want to view a list of all toys so that I can see the whole e-shop offer and select some to purchase.
 - #10: As a Shopper I want to view individual toys details so that I can find the price, description, product image and quality.
+- #11: As a Shopper I want to quickly identify toys according to age group and toys categories so that I can easily find appropriate toys for my children.
+- #12: As a Shopper I want to quickly see the total of my purchases at any time so that I can avoid spending too much time.
 
 </details>
 
@@ -256,3 +258,4 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
 - [Django Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) by Daisy McGeer
 - [Butique Ado](https://github.com/ckz8780/boutique_ado_v1) by CI and all study material provided by CI
 - [Stack Overflow: Overwrite Save](https://stackoverflow.com/questions/69365764/django-i-want-to-create-a-self-generated-code-based-on-previous-records-and-a-s)
+- [Privacy Policy Generator](https://termify.io/dashboard/)

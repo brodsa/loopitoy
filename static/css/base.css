@@ -453,10 +453,9 @@ footer{
     color: var(--black);
 }
 
-.toys__title{
+h2.toys__title{
     color: var(--primary-color);
     margin: 80px 0 20px;
-    color: var(--black);
 }
 
 .toy{
