@@ -594,14 +594,27 @@ div.card-body{
     display: flex;
     flex-direction: column;
     margin: 20px auto;
-    padding: 0 15px;
     max-width: 300px;
+}
+
+th.menu__item.th-right{
+    text-align: right;
 }
 
 .checkout__buttons{
     display: flex;
     flex-direction: column;
     gap: 15px
+}
+
+/* Checkout  */
+.checkout__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 0 15px;
+    max-width: 300px;
 }
 
 
@@ -686,35 +699,20 @@ div.card-body{
 
      /* ++++++++++ Shopping Bag ++++++++++++++++ */
     .bag__content{
-        flex-direction: row;
-        max-width: 100%;
-        gap: 15px;
-        justify-content: space-between;
-        padding: 0 30px;
+        max-width: 600px;
     }
 
     .bag__checkout{
-        flex-direction: column;
-        max-width: 100%;
-        text-align: end;
-        padding: 0 30px;
-    }
-
-    .bag__table, .bag__form{
-        flex-basis: 40%; 
+        display: flex;
+        text-align: right;
+        max-width: 600px;
+        padding-right: 15px;
     }
 
     #bag h2{
         margin: 80px 0 30px;
     }
 
-    .bag__checkout{
-        margin-bottom: 20px;
-    }
-
-    .checkout__total{
-        padding-right: 8px;
-    }
 
     .checkout__buttons{
         display: flex;
@@ -722,6 +720,23 @@ div.card-body{
         justify-content: end;
         padding:0;
         gap:0;
+    }
+
+    .img-fluid.img-bag{
+        max-width: 55%;
+    }
+
+    /* Checkout  */
+    .checkout__content{
+        flex-direction: row;
+        max-width: 100%;
+        gap: 15px;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+
+    .checkout__table, .checkout__form{
+        flex-basis: 40%; 
     }
     
 }
@@ -743,14 +758,25 @@ div.card-body{
         gap: 2rem;
     }
 
+    /* Shopping Bag */
     #bag h2{
         margin: 110px 0 30px;
     }
 
-    .bag__table{
+    .bag__content{
+        max-width: 800px;
+    }
+
+    .bag__checkout{
+        max-width: 800px;
+    }
+
+    /* Chackout */
+
+    .checkout__table{
         flex-basis: 400px;
     }
-    .bag__form{
+    .checkout__form{
         flex-basis: 500px;
     }
 }
