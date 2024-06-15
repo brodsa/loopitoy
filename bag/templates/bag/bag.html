@@ -4,7 +4,6 @@
 {% block title %}How it Works{% endblock %}
 
 {% block page_header %}
-
 <div class="container">
     <div class="row">
         <div class="col"></div>
@@ -21,15 +20,51 @@
         </h2>
         <div class="bag__content">
             {% if bag_items %}
-                <div>
-
+                <div class="table-rensponsive bag__table">
+                    <table class="table table-sm table-borderless">
+                        <thead class="text-black">
+                            <tr>
+                                <th scope="'col"> Toy Info</th>
+                                <th scope="'col"> </th>
+                                <th scope="'col"> Price</th>
+                            </tr>
+                        </thead>               
+                        {% for item in bag_items %}
+                        <tr>
+                            <td class="p-3 w-20 w-md-15">
+                                {% include 'bag/includes/toy_image.html' %}
+                            </td>
+                            <td class="py-3">
+                                {% include 'bag/includes/toy_info.html' %}
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">{{ item.toy.price }}€</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    
                 </div>
+
+                <div class="bag__form">
+                    Please fill out the delivery form below
+                </div>
+        </div> 
+        <!-- Buttons -->
+        <div class="bag__checkout">
+            <div class="checkout__total">
+                {% include 'bag/includes/bag_total.html' %}
+            </div>
+            <div class="checkout__buttons">
+                {% include 'bag/includes/checkout_button.html' %}
+
+            </div>
+        </div>       
             {% else %}
                 <div>
                     <p class="text-center">Your bag is empty</p>
                     <div class="d-flex flex-column align-items-center flex-md-row gap-2 justify-content-center pb-2 pe-2">
                         <a class= "btn btn-bag form__button--secondary flex-grow-0" href="{% url 'toys' %}"> <span><i class="fas fa-chevron-left mr-1"></i> </span> Back</a>
-                        <a class= "btn btn-bag form__button--primary flex-grow-0" href="#"> Secure Checkout</a>
                     </div>
                 </div>
             {% endif %}

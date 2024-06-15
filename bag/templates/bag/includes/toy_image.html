@@ -1,0 +1,6 @@
+
+{% if item.toy.image == 'media/placeholder.placeholder.webp' %}
+<img class="img-fluid rounded" src="{{ MEDIA_URL }}placeholder.webp" alt="{{ item.toy.name }}">
+{% else %}
+<img class="img-fluid rounded" src="{{ item.toy.image.url }}" alt="{{ item.toy.name }}">
+{% endif %}
