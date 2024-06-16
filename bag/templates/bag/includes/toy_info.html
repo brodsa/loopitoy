@@ -1,2 +1,2 @@
-<p class="my-0"><strong>{{ item.toy.name }}</strong></p>
+<p class="my-0"><strong><a class="copyright__link" href="{% url 'toy_detail' item.toy.id %}">{{ item.toy.name }}</a></strong></p>
 <p class="my-0 small text-muted">{{ item.toy.number }}</p>

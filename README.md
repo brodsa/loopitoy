@@ -46,6 +46,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 <summary>EPIC 5: Sorting & Searching</summary>
 - #20: As a Shopper I want to filter for specific toys categories so that I can easily find and see what I have searched for.
 - #21:  As a Shopper I want to search for toys by name or description so that I can find a specific toy I would like to purchase.
+- #22: As a Shopper I want to easily add/delete a toy when purchasing it so that I can ensure that I select the correct toy.
 </details>
 
 <details>
@@ -85,7 +86,7 @@ The sites of e-shop are categorized into severel groups:
 - **Landing & Informative Pages** includes Landing and How it Works Pages.
 - **Account Pages** includes all sites related to allauth app, i.e. authentication app.
 - **Toys Pages** includes all pages related to toy app, e.g. overview of toys, toy detail.
-
+- **Purchasing Pages** includes both Shopping Bag and Checkout Pages. 
 
 The entire web page is also designed to be responsive to ensure that the e-shop is properly displayed on different devices (e.g. a mobile, a desktop). The designed follows commaon best practice of e-shop development. Each site has mutual components, i.e. header with a navigation menu and footer. The mutual components ensure that the user to easily navigates through the content of the e-shop.
 
@@ -114,14 +115,17 @@ The core authentication pages includes:
 
 
 ## Toy Pages
-- **Toys Page** presents all available toys in e-shop. Each toy is depicted in a card element showing the basic information about toy, such as name, price and categories. For Site Owner, there are two buttons in additon: Edit and Remove to edit toy information and delete toy, respectively. ![Toys](./docs/features/feature_toys.PNG)
+- **Toys Page** presents all available toys in e-shop. Each toy is depicted in a card element showing the basic information about toy, such as name, price and categories. For Site Owner, there are two buttons in additon: Edit and Remove to edit toy information and delete toy, respectively. ![Toys](./docs/features/features_toy_detail.PNG)
 
-- **Toy Detail Page**
+- **Toy Detail Page** displayes all toy details including buttons to add a toy into shopping bag or to return to all toys. For Site Owner, there are two buttons for adding toy information or toy deletion. ![Toys](./docs/features/feature_toys.PNG)
 
 - **New Toy Page** contains form to fill out in order to create new toy card. This page is only visible for Site Owner. ![New Toy](./docs/features/fetures_toys_add.png)
-- **Edit Toy Page** contains form to edit the toy info. This page is only visible for Site Owner. ![Edit Toy](./docs/features/fetures_toys_edit.png)
-- **Delete Toy Page** contains confirmation to delete the toy from e-shop. This page is only visible for Site Owner. ![Delete Toy](./docs/features/fetures_toys_delete.png)
+- **Edit Toy Page** contains form to edit the toy info. This page is only visible for Site Owner. ![Edit Toy](./docs/features/features_toys_edit.png)
+- **Delete Toy Page** contains confirmation to delete the toy from e-shop. This page is only visible for Site Owner. ![Delete Toy](./docs/features/features_toys_delete.png)
 
+
+## Purchasing Pages
+- **Shopping Bag Page** displayed the content of the shopping bag, including toy name with price, total and delivery costs. In addition, there are two buttons to either continue shopping or to proceed checkout. ![Shopping Bag](./docs/features/feature_bag.png).
 
 
 ### Future & Left Features

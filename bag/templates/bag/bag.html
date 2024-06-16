@@ -42,7 +42,7 @@
                                 <p class="my-0">{{ item.toy.price }}€</p>
                             </td>
                             <td>
-                                <!-- Add to Shopping and Back Shopping Buttons -->
+                                <!-- Remove Button -->
                                     <form class="form" action="{% url 'remove_from_bag' item.toy.id %}" method="POST">
                                         <div>
                                             {% csrf_token %}

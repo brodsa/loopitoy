@@ -550,6 +550,7 @@ div.card-body{
     max-width: 300px;
     display: flex;
     flex-direction: column;
+    margin: auto;
 }
 
 .toy-detail__picture{
@@ -605,6 +606,36 @@ th.menu__item.th-right{
     flex-direction: column;
     gap: 15px
 }
+
+/* ++++++ Toasts +++++++++ */
+.message-container {
+    position: fixed;
+    top: 100px;
+    right: 15px;
+    z-index: 999999;
+    max-width: 200px;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
 
 /* Checkout  */
 .checkout__content{
@@ -736,6 +767,11 @@ th.menu__item.th-right{
 
     .checkout__table, .checkout__form{
         flex-basis: 40%; 
+    }
+
+    /* ++++++ Toasts +++++++++ */
+    .message-container {
+        max-width: 350px;
     }
     
 }
