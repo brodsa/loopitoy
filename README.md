@@ -118,9 +118,9 @@ The entire web page is also designed to be responsive to ensure that the e-shop 
 
 ## Account Pages
 The core authentication pages includes:
-- **Login Page** contains a form to log in via username or email into to the platform. Moreover, a user can choose to remember the login data. ![Login](./docs/features/feature_account_login.png)
-- **Sign Up Page** contains a form to create an account. User have to register using both username and email.![Sign Up](./docs/features/feature_account_register.png)
-- **Log Out Page** offers user to confirm logging out from the account or stay login. ![Log Out](./docs/features/feature_account_logout.png)
+- **Login Page** contains a form to log in via username or email into to the platform. Moreover, a user can choose to remember the login data. ![Login](./docs/features/feature_account_login.PNG)
+- **Sign Up Page** contains a form to create an account. User have to register using both username and email.![Sign Up](./docs/features/feature_account_register.PNG)
+- **Log Out Page** offers user to confirm logging out from the account or stay login. ![Log Out](./docs/features/feature_account_logout.PNG)
 
 
 ## Toy Pages
