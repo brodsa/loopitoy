@@ -46,7 +46,7 @@ def remove_from_bag(request, item_id):
         toy_sold = Toys.objects.get(pk = int(item_id))
         toy_sold.status = 'eshop'
         toy_sold.save()
-        messages.success(request, f'Deleted {toy.name} from your bag')
+        messages.success(request, f'Removed {toy.name} from your bag')
         
         request.session['bag'] = bag
         return redirect(redirect_url)
