@@ -27,6 +27,7 @@
                                 <th scope="col" class="menu__item ps-3"> Toy Info</th>
                                 <th scope="col"> </th>
                                 <th scope="col" class="menu__item th-right pe-1"> Price</th>
+                                
                             </tr>
                         </thead>               
                         {% for item in bag_items %}
@@ -39,6 +40,20 @@
                             </td>
                             <td class="py-3" width="20%" align ="right">
                                 <p class="my-0">{{ item.toy.price }}€</p>
+                            </td>
+                            <td>
+                                <!-- Add to Shopping and Back Shopping Buttons -->
+                                    <form class="form" action="{% url 'remove_from_bag' item.toy.id %}" method="POST">
+                                        <div>
+                                            {% csrf_token %}
+                                            <div class="d-flex flex-row gap-2 justify-content-end pb-2 pe-2">
+                                                <button data-item_id = "{{ item.toy.id }}" class="btn form__button--primary">
+                                                    <i class="fa-regular fa-trash-can"></i>
+                                                </button>
+                                            </div>
+                                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        </div>
+                                    </form>
                             </td>
                         </tr>
                         {% endfor %}
