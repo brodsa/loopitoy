@@ -70,6 +70,15 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 </details>
 
 ### Scaleton: Wireframes 
+Wireframes were prepared for both mobile and desktop devices using balsamiqo program.
+
+| Pages            | Desktop | Mobile | 
+|-------------------|--------|------------------|
+| Informative Pages | <img src="./docs/ux/ux_wireframe_viewing_mobile.PNG" alt="ux_viewing_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_viewing_desktop.PNG" alt="ux_viewing_desktop" width="200"/> |
+| Toys Pages | <img src="./docs/ux/ux_wireframe_toys_mobile.PNG" alt="ux_toys_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_toys_desktop.PNG" alt="ux_toys_desktop" width="200"/> |
+| Purchasing Pages | <img src="./docs/ux/ux_wireframe_purchase_mobile.PNG" alt="ux_purchase_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_purchase_desktop.PNG" alt="ux_purchase_desktop" width="200"/> |
+| Authentication Pages | <img src="./docs/ux/ux_wireframe_authentication_mobile.PNG" alt="ux_authentication_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_authentication_desktop.PNG" alt="ux_authentication_desktop" width="200"/> |
+
 
 ### Surface: Fonts & Colors & Images
 
@@ -80,7 +89,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 **Image**: The final image by [Susan Holt Sumpson](https://unsplash.com/@shs521?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on the landing page was chosen on [unsplash]. Two keywords were given: playing children; to get the best suitable image for the second-hand toy e-shop.
 
 ## Features
-The features of the web page were planned using Agile methodology to ensure Minimum Value Product and to address planned User Stories. The core features of this django-base webpage includes CRUD functionality for both Site Users and Site Owner, so that users can create, read, update and delete records.
+The features of the web page were planned using Agile methodology to ensure Minimum Value Product and to address planned User Stories. The core features of this django-base webpage includes CRUD functionality for both Site Users and Site Owner, so that users can create, read, update and delete records. In additonal, messages are displayed after each CRUD activity.
 
 The sites of e-shop are categorized into severel groups:
 - **Landing & Informative Pages** includes Landing and How it Works Pages.
