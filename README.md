@@ -1,7 +1,21 @@
 # loopitoy
+
+# Content
+- [UX Design](#ux)
+    - [Strategy: User Stories](#strategy)
+    - [Structure: & ERD Model & App Logic Flow ](#structure)
+    - [Skeleton: Scaleton: Wireframes](#skeleton)
+    - [Surface: Surface: Fonts & Colors & Images](#surface)
+- [Features](#Features)
+- [Business Model: SEO & Marketing](#business-model)
+- [Testing & Validation](#testing--validation)
+- [Technologies Used](#technologies-used)
+- [Deployment & Forking & Cloning](#deployment--forking--cloning)
+- [Credits & Inspiration](#credits--inspiration)
+
 ## UX
 
-### Strategy: User Stories & ERD Model & App Logic Flow
+### Strategy
 
 #### User Stories
 To plan all features and functionalities of the e-shop, the agile methodology was considered. The core of the methodology is to create epics that are broken down into user stories. Each user story was additionally prioritized using MOSCOW approach. The following epics and user stories were planned:
@@ -69,7 +83,18 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 </details>
 
-### Scaleton: Wireframes 
+### Scope
+- Purpose: The purpose of the website is to provide a platform for users to share the highlight of their day, fostering gratitude and a positive outlook on life. The website aims to create a supportive online community where users can connect, inspire and uplift each other.
+- Target Audience: The target audience includes individuals who are interested in personal development, mindfulness, and self-improvement. This may include a diverse range of demographics, including young adults, professionals, parents, and students, who share a common interest in cultivating gratitude and positivity.
+- Core Functionality:
+    - Highlight sharing: Users can easily post and share the highlights of their day, including text descriptions, images, categories and things to improve your day.
+    - Interactive features: The website enables users to engage with each others highlights through likes and comments, fostering a sense of community and connection.
+    - Search and Discovery: Robust search functionality allows users to search for highlights by content, category, or user.
+    - User profiles: Users can view each others profiles and comment on individual highlights.
+
+
+
+### Skeleton 
 Wireframes were prepared for both mobile and desktop devices using balsamiqo program.
 
 | Pages            | Desktop | Mobile | 
@@ -80,7 +105,13 @@ Wireframes were prepared for both mobile and desktop devices using balsamiqo pro
 | Authentication Pages | <img src="./docs/ux/ux_wireframe_authentication_mobile.PNG" alt="ux_authentication_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_authentication_desktop.PNG" alt="ux_authentication_desktop" width="200"/> |
 
 
-### Surface: Fonts & Colors & Images
+### Structure 
+
+#### Logic Flow
+
+#### ERD Model
+
+### Surface
 
 **Colors**: The final color pallete was selected using [coolors](https://coolors.co/1c304a-b49532-30592c-74301a) online tool to refrect the colors on the landing page and to reflect the favourit children colors. The pallette consist of four colors. ![Colors](./docs/ux/ux_color.PNG) The colors were accessed by [accessible color matrix tool](https://toolness.github.io/accessible-color-matrix/). The accessable combination are depicted in the [accessibility matrix](./docs/ux/us_accessibilityPNG.PNG)
 
@@ -99,7 +130,7 @@ The sites of e-shop are categorized into severel groups:
 
 The entire web page is also designed to be responsive to ensure that the e-shop is properly displayed on different devices (e.g. a mobile, a desktop). The designed follows commaon best practice of e-shop development. Each site has mutual components, i.e. header with a navigation menu and footer. The mutual components ensure that the user to easily navigates through the content of the e-shop.
 
-## Common Features
+### Common Features
 - **Header**
     - Header displays navigation menu and buttons. 
     - The navigation buttons includes logo, search field and navigation buttons for profile and shopping bag
@@ -111,19 +142,19 @@ The entire web page is also designed to be responsive to ensure that the e-shop 
   - Footer contains with social media links, terms and polices, newsletter sugnup link ![Footer](./docs/features/feature_footer.png)
 
 
-## Landing and Informatiove Pages
+### Landing and Informatiove Pages
 - **Landing Page** displayes introductory text and two buttons to either proceed to purschase or sell toys. ![Landing Page](./docs/features/feature_landing_page.PNG) 
 
 - **How It Works Page** outlines the core sell procedure and offers users to register for selling toys.![How It Works Page](./docs/features/feature_how_it_works.PNG) 
 
-## Account Pages
+### Account Pages
 The core authentication pages includes:
 - **Login Page** contains a form to log in via username or email into to the platform. Moreover, a user can choose to remember the login data. ![Login](./docs/features/feature_account_login.PNG)
 - **Sign Up Page** contains a form to create an account. User have to register using both username and email.![Sign Up](./docs/features/feature_account_register.PNG)
 - **Log Out Page** offers user to confirm logging out from the account or stay login. ![Log Out](./docs/features/feature_account_logout.PNG)
 
 
-## Toy Pages
+### Toy Pages
 - **Toys Page** presents all available toys in e-shop. Each toy is depicted in a card element showing the basic information about toy, such as name, price and categories. For Site Owner, there are two buttons in additon: Edit and Remove to edit toy information and delete toy, respectively. ![Toys](./docs/features/features_toy_detail.PNG)
 
 - **Toy Detail Page** displayes all toy details including buttons to add a toy into shopping bag or to return to all toys. For Site Owner, there are two buttons for adding toy information or toy deletion. ![Toys](./docs/features/feature_toys.PNG)
@@ -133,8 +164,8 @@ The core authentication pages includes:
 - **Delete Toy Page** contains confirmation to delete the toy from e-shop. This page is only visible for Site Owner. ![Delete Toy](./docs/features/features_toys_delete.png)
 
 
-## Purchasing Pages
-- **Shopping Bag Page** displayed the content of the shopping bag, including toy name with price, total and delivery costs. In addition, there are two buttons to either continue shopping or to proceed checkout. ![Shopping Bag](./docs/features/feature_bag.png).
+### Purchasing Pages
+- **Shopping Bag Page** displayed the content of the shopping bag, including toy name with price, total and delivery costs. In addition, there are two buttons to either continue shopping or to proceed checkout. ![Shopping Bag](./docs/features/feature_bag.PNG).
 
 
 ### Future & Left Features
@@ -161,13 +192,32 @@ The core authentication pages includes:
 - Filter category toys: useing category names to filter out displayed category buttons shows incorect category name. Solution: use pk of categories to filter out the displayed category. SOLVED
 
 ## Technologies Used
-[Accessible color palette builder](https://toolness.github.io/accessible-color-matrix/)
-[Webp Converer](https://ezgif.com/png-to-webp?err=expired)
+- Python
+- HTML was used to create templates for the webpage.
+- CSS was used to style the webpage in addition to Bootstrap.
+- JavaScript
+- [Jinja Django Templating](https://jinja.palletsprojects.com/en/3.1.x/) was used to insert data from the database into the webpage.
+- [Bootstrap 5.2.3](https://getbootstrap.com/docs/5.2/getting-started/introduction/) was used for general layout and easy adjustments.
+- [AWS 3S](https://aws.amazon.com/pm/serv-s3/?gclid=CjwKCAjwmrqzBhAoEiwAXVpgorKmnL1jEmxwNvSm5OHfGKp_sMdz-ekcqdlAgms4_a9PfiEcgdvXiRoCaNMQAvD_BwE&trk=518a7bef-5b4f-4462-ad55-80e5c177f12b&sc_channel=ps&ef_id=CjwKCAjwmrqzBhAoEiwAXVpgorKmnL1jEmxwNvSm5OHfGKp_sMdz-ekcqdlAgms4_a9PfiEcgdvXiRoCaNMQAvD_BwE:G:s&s_kwcid=AL!4422!3!645186213484!e!!g!!aws%20s3!19579892800!143689755565) was used to store all static files.
+- [elephantSQL](https://www.elephantsql.com/) was used as the database for the production.
+- [Heroku](heroku.com) was used to deploy the webpage.
+- [fontawesome.com](https://fontawesome.com/search)
+- [Google Fonts]() was used to import the fonts into the style.css file.
+- [Color Pallete](https://coolors.co/353c3a-ffffff-967712-f7c31f-465963) was used to select accessible colors.
+- [Favicon](https://realfavicongenerator.net/) was used to generate the code and files for the webpage favicon.
+- [GitHub](https://github.com/) was used to store the code and host the website.
+- [Visual Studio Code](https://code.visualstudio.com/) is an IDE and was used to develop the website.
+- [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=CjwKCAjwg-GjBhBnEiwAMUvNW8jCWKFMpgnd5PZlvwNQGIt7xJ05Fes_JeSsBSzyr7ToVpReN5VdOBoC80UQAvD_BwE) was used to create wireframes.
+- [Markdown Generator](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/) was used to convert excel sheet tables to markdown tables.
+- Chrome LightHouse extension  was used for validating the webpage.
+- [Chrome WAVE Evaluation Tool extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) was used to evaluate accessibility of the webpage.
+
 
 ## Deployment & Forking & Cloning
-[Visual Studio Code](https://code.visualstudio.com/) and [GitHub](https://github.com/) have been used to build the web page. Make sure you have them installed.
+[Visual Studio Code](https://code.visualstudio.com/) and [GitHub](https://github.com/) have been used to build the web page. Make sure you have them installed or similar programs.
 
-### Setup the workspace
+### Deployment
+#### Setup the workspace
 
 The workspace should be setup as follows:
 1. Open the terminal in Visual Studio Code (Navigation Menu > Terminal > New Terminal)
@@ -185,7 +235,7 @@ The workspace should be setup as follows:
 9. Build the logic to use the ElphantSQL Database in production environment (i.e. on Heroku) and the local sqlite database when developing the application.
 
 
-### Setup Production Database
+#### Setup Production Database
 
 1. Login to [ElephantSQL](https://customer.elephantsql.com/instance), you see all created database instances.
 2. Click on the green button 'Create New Instance' at the rigt top corner.
@@ -193,7 +243,7 @@ The workspace should be setup as follows:
 4. You will be redirected to the overview off all instaces, click on the created database instance to see details about database.
 5. Copy the URL and assign it to the environment variable `DATABASE_URL` in `env.py`
 
-### Setup Production Environment on Heroku
+#### Setup Production Environment on Heroku
 
 1. Login to [Heroku](https://dashboard.heroku.com/apps).
 2. Go to Heroku personal Dashboard. At the left top corner, select 'New' > 'Create New App'
@@ -205,7 +255,7 @@ The workspace should be setup as follows:
 7. Create a Procfile file with the command to migrate automatically for Heroku and to start the web app.
 5. Deploy the app manually. After successful deployment, click on 'Enable automatic deployments'.
 
-### Setup AWS S3
+#### Setup AWS S3
 The AWS S3 Bucket was used to host the static files. The setup procedure includes setting up S3 Bucket and IAM Identity. Both procedures are describe below in more details:
 
 <details>
@@ -259,16 +309,33 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
 
 </details>
 
-### Setup Stripe & Webhook
+#### Setup Stripe & Webhook
 
 
 ### Forking
+To fork the repository to propose changes or use the code, follow the steps bellow:
+
+1. Go to the GitHub repository you would like to fork, i.e. https://github.com/brodsa/loopitoy.
+2. On the right hand side at the top, click on 'Fork' button.
+3. The fork repository is ready to use, after creating a full duplicate of the original repository. 
+4. Follow the steps to setup workspace & Co, see [Deployment](#deployment).
+
 
 ### Cloning
 
+To clone repository or to collaborate, following steps are required:
+1. Go to GitHub repository you would like to clone, i.e. https://github.com/brodsa/loopitoy.
+2. On the right side, click on 'Code' button.
+3. Copy the provided URL.
+4. Within the open terminal write, change the directory where to clone the repository and type `git clone <repository.url>`.
+5. Follow the steps to setup workspace & Co, see [Deployment](#deployment).
 
-### Credits & Inspiration
+
+
+## Credits & Inspiration
+
 - [Django Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) by Daisy McGeer
 - [Butique Ado](https://github.com/ckz8780/boutique_ado_v1) by CI and all study material provided by CI
 - [Stack Overflow: Overwrite Save](https://stackoverflow.com/questions/69365764/django-i-want-to-create-a-self-generated-code-based-on-previous-records-and-a-s)
 - [Privacy Policy Generator](https://termify.io/dashboard/)
+- [w3schools](https://www.w3schools.com/css/css_tooltip.asp) for code inspiration for info hover affect.
