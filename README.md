@@ -174,6 +174,17 @@ The core authentication pages includes:
 - Login with Social Media using allauth.cocialaccount and django.contrib.site apps
 
 ## Business Model
+loopitoy is B2C type of e-commerce application as it sells second-hand toys. It is a plotform which supports circular economy for toys. Customers can both buy and sell toys using secure single payment transactions.
+
+Customers (target audience) are mainly parents that are aware of the environemntal impact of toy production. But at the same time, they would like to offer their kids the variate of toys to support their creativity and development. These parents wish the same for other kids. Instead of throwing the old and not used toys away, they offer them to other families. Customers might include grandparents or family friends who share the same phylosophy. 
+
+Besides the typical e-commerce feature, to buy toys on loopitoy, users can create their accounts with delivery information to make the future purchasing more comftable. Users can also view their shopping or selling history to be well informed about their activities on e-shop. 
+
+The advantage over other second-hand platform lies in the concept that toys are collected in one place and not distributed over the selling users. This leads to reducing delivery cost for buying users. In addition, all toys are checked for their qualities or repaired to insure that customers will get what they see on e-shop.
+
+Users can enjoy intuitive shopping with a user-friendly and minimalistic interface that is ensure on both mobile and desktop devices. To increase the credibility of e-shop, loopitoy uses secure payments with stripe that is one of the most trusted payment gateways. 
+
+
 - project goals
 - purpose and value to users and Busnisess
 - target audiance - how their needs are addressed by the application
@@ -324,6 +335,7 @@ To fork the repository to propose changes or use the code, follow the steps bell
 ### Cloning
 
 To clone repository or to collaborate, following steps are required:
+
 1. Go to GitHub repository you would like to clone, i.e. https://github.com/brodsa/loopitoy.
 2. On the right side, click on 'Code' button.
 3. Copy the provided URL.
