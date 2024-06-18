@@ -3,7 +3,7 @@ from decimal import Decimal
 
 from django.db import models
 from django.conf import settings
-from django.db.models import Sum
+from django.db.models import Sum, Count
 
 #from django_countries.fields import CountryField
 
@@ -33,13 +33,13 @@ class Order(models.Model):
         """
         return uuid.uuid4().hex.upper()
 
-    def update_total(self):
+    def update_total(self):        
         """
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
-        product_count = self.lineitems.aggregate(len('lineitem_total'))['lineitem_total__sum'] or 0
+        product_count = self.lineitems.aggregate(Count('lineitem_total'))['lineitem_total__count'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = Decimal(settings.STANDARD_DELIVERY_FEE * product_count)
         else:
@@ -65,7 +65,6 @@ class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     toy = models.ForeignKey(Toys, null=False, blank=False, on_delete=models.CASCADE)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
-
 
     def save(self, *args, **kwargs):
         """
