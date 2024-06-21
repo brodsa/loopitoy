@@ -33,6 +33,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '.herokuapp.com',
     '8000-brodsa-loopitoy-g2gzx22sbdv.ws-eu114.gitpod.io',
+    '8000-brodsa-loopitoy-i49bjshj79k.ws-eu114.gitpod.io',
+    '8000-brodsa-loopitoy-i49bjshj79k.ws-eu114.gitpod.io',
     ]
 
 

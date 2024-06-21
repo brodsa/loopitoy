@@ -62,7 +62,7 @@
                 <a class= "btn" href="{% url 'delete_toy' toy.id %}"> Remove</a>
             </div>
 
-            <!-- TODO: Else -->
+            {% endif %}
             <!-- Add to Shopping and Back Shopping Buttons -->
             <form class="form" action="{% url 'add_to_bag' toy.id %}" method="POST">
                 <div>
@@ -74,7 +74,7 @@
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </div>
             </form>
-            {% endif %}
+            
         </div>
     </div> 
 </div>

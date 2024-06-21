@@ -18,8 +18,11 @@ from bag.contexts import bag_contents
 # Create your views here.
 
 def checkout(request):
+    print('checkout')
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+    print(stripe_public_key)
+    print(stripe_secret_key)
 
     if request.method == 'POST':
         print('method-post')
@@ -31,7 +34,7 @@ def checkout(request):
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
-            'street_address1': request.POST['street_address'],
+            'street_address': request.POST['street_address'],
             'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
@@ -59,6 +62,7 @@ def checkout(request):
 
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
+            print('redirect')
             return redirect(reverse('checkout_success', args=[order.order_number]))
         
         else:
@@ -77,16 +81,16 @@ def checkout(request):
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
-                amount=stripe_total,
-                currency=settings.STRIPE_CURRENCY,
-            )
-        print(intent)
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY
+        )
+        order_form = OrderForm()
         
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
     
-    order_form = OrderForm()
+    
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
@@ -102,9 +106,9 @@ def checkout_success(request, order_number):
     """
     A View to manage successful checkouts
     """
+    print('checkout_success')
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    print(order)
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
