@@ -25,9 +25,9 @@ def add_to_bag(request, item_id):
 
     bag = request.session.get('bag', {})
     bag[item_id] = 1
-    toy_sold = Toys.objects.get(pk = int(item_id))
-    toy_sold.status = 'in_bag'
-    toy_sold.save()
+    toy_in_bag = Toys.objects.get(pk = int(item_id))
+    toy_in_bag.status = 'in_bag'
+    toy_in_bag.save()
     messages.success(request, f'Added {toy.name} to your bag')
     
     request.session['bag'] = bag

@@ -723,6 +723,10 @@ th.menu__item.th-right{
     border: 1px solid var(--black);
 }
 
+.td-width{
+    width: 100px;
+}
+
 
 
 @media screen and  (min-width: 767px){

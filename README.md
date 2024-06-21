@@ -339,7 +339,7 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
     - Add stripe js script in the `base.html` into `corejs`block. 
     - Render the keys in `checkout.html` in `postload_js` block using djnago template syntax.
     - Create `stripe_elements.js` in checkout app and add the core logic payment and css style from the official stripe documentation. Additional Stripe CSS style can be inserted in a separated `checkout.css` file.
-    - Add a logic to handle error while payment into `stripe_elements.js`.
+    - Add a logic to handle error and submit event for payment into `stripe_elements.js`.
 
 3. Create a Group:
     - Select User groups on the sidebar menu
