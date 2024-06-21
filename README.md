@@ -184,14 +184,20 @@ The advantage over other second-hand platform lies in the concept that toys are 
 
 Users can enjoy intuitive shopping with a user-friendly and minimalistic interface that is ensure on both mobile and desktop devices. To increase the credibility of e-shop, loopitoy uses secure payments with stripe that is one of the most trusted payment gateways. 
 
-
-- project goals
-- purpose and value to users and Busnisess
-- target audiance - how their needs are addressed by the application
-- map project goals to user stories
-
 ### SEO
 - SEO (keywords, robots.txt, sitemap.xml)
+
+About 
+
+Hi, my name is Sarka and am glad that you come accross loopitoy. ... continue from How it works.
+
+
+title Story Behind 
+The orginal impulse to create loopitoy came from the Course. As in case of all other projects, I wanted to create something meanigfull. In Austria, we have a platform to buy second-hand products including toys, called Willhaben. Cool! But users are the one, who sells products not the platform. This means you have to pay delivery cost for each product separetely if they are sold by different users. In addition, the estimation of the product quality might differ accross various users. Sooo! 
+
+Here comes loopitoy - the platform with all toys centerilzed, with delivery cost payed once, with one quality estimation rule. Everything in one place, in Austria. 
+
+My Inspirations: hrej si, circle toy. 
 
 ### Marketing
 - Social
@@ -317,10 +323,44 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
     - Click on Create User
     - Give it name, i.e. loopitoy-staticfiles-user > Click on Next > Select the User Group, i.e. manage-loopitoy, > Next > Click on Create User
 6. Generate Access Key from the selected user, i.e. lopitoy-staticfiles-user
+7. Add the key into your environment variables and setup the logic and variable for using AWS in settings.py
 
 </details>
 
-#### Setup Stripe & Webhook
+
+<details>
+<summary> Setup Stripe & Webhook </summary>
+
+1. Login to Stripe or create an account if you dont have it yet.
+2. Search for API Keys. Currently, the keys are located in Developers Section. Add the following keys as environment variables in env.py: `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`. Then, define new corresponding variables in `settings.py` such as `STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')` and `STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')`, respectively.
+
+
+1. Setup Stripe Elements
+    - Add stripe js script in the `base.html` into `corejs`block. 
+    - Render the keys in `checkout.html` in `postload_js` block using djnago template syntax.
+    - Create `stripe_elements.js` in checkout app and add the core logic payment and css style from the official stripe documentation. Additional Stripe CSS style can be inserted in a separated `checkout.css` file.
+    - Add a logic to handle error while payment into `stripe_elements.js`.
+
+3. Create a Group:
+    - Select User groups on the sidebar menu
+    - Click on Create Group
+    - Give the name to user group, e.g. manage-loopitoy
+    - Click on Create Group
+4. Create Policy 
+    - Select Policy on the sidebar menu
+    - Click on Create Policy > Select JSON
+    - Go to Actions > Select Import Policy > AmozonS3FullAccess > Click on Import policy > Copy the ARN Code from the Bucket into the Resource list, i.e. `["arn","arn/*"]` > Click on Next > Give it name, i.e. loopitoy-policy > Add Description > Click on Create Policy
+4. Attached the Policy to the User Group
+    - Select User groups on the sidebar menu
+    - Select the created User group, i.e. manage-loopitoy
+    - Go to Permission Tab > Click on Add Permission > Select Attach Policy > Select created policy, i.e. loopitoy-policy > Click on Attach Policy
+5. Create a User
+    - Select User on the sidebar menu
+    - Click on Create User
+    - Give it name, i.e. loopitoy-staticfiles-user > Click on Next > Select the User Group, i.e. manage-loopitoy, > Next > Click on Create User
+6. Generate Access Key from the selected user, i.e. lopitoy-staticfiles-user
+
+</details>
 
 
 ### Forking

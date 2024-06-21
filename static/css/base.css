@@ -587,14 +587,15 @@ div.card-body{
     justify-content: center;
     margin: 10px auto;
     padding: 0 15px;
-    max-width: 300px;
+    max-width: 500px;
 }
 
 .bag__checkout{
     display: flex;
     flex-direction: column;
     margin: 20px auto;
-    max-width: 300px;
+    max-width: 500px;
+    padding: 0 15px;
 }
 
 th.menu__item.th-right{
@@ -707,6 +708,19 @@ th.menu__item.th-right{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-top: 40px;
+}
+
+/* form fields - customization */
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+#payment-form .form-control,
+#card-element {
+    color: var(--black);
+    border: 1px solid var(--black);
 }
 
 
