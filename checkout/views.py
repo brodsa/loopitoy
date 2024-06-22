@@ -18,14 +18,10 @@ from bag.contexts import bag_contents
 # Create your views here.
 
 def checkout(request):
-    print('checkout')
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-    print(stripe_public_key)
-    print(stripe_secret_key)
 
     if request.method == 'POST':
-        print('method-post')
         bag = request.session.get('bag', {})
         form_data = {
             'full_name': request.POST['full_name'],
@@ -40,13 +36,10 @@ def checkout(request):
         order_form = OrderForm(form_data)
 
         if order_form.is_valid():
-            print('form-valid')
             order = order_form.save()
-            print(bag.items())
             for item_id, item_data in bag.items():
                 try:
                     toy = Toys.objects.get(id=item_id)
-                    print(order)
                     order_line_item = OrderLineItem(
                         order=order,
                         toy=toy
@@ -62,15 +55,12 @@ def checkout(request):
 
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
-            print('redirect')
             return redirect(reverse('checkout_success', args=[order.order_number]))
         
         else:
-            print('form-valid not')
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
-        print('request GET')
         bag = request.session.get('bag', {})
         if not bag:
             messages.error(request, "There's nothing in your bag at the moment")
@@ -106,7 +96,6 @@ def checkout_success(request, order_number):
     """
     A View to manage successful checkouts
     """
-    print('checkout_success')
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(request, f'Order successfully processed! \
@@ -115,11 +104,9 @@ def checkout_success(request, order_number):
 
     # remove bag as the order is successfully proceede and update toy status
     if 'bag' in request.session:
-        print('bag')
         bag = request.session.get('bag', {})
         for item_id, item_data in bag.items():
             toy_sold = Toys.objects.get(pk = int(item_id))
-            print(toy_sold)
             toy_sold.status = 'sold'
             toy_sold.save()
 
