@@ -66,6 +66,8 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 <details>
 <summary>EPIC 6: Purchasing & Checkout</summary>
 - #23: As a Shopper I want to view my shopping bag so that I can identify the total cost of my purchase and all toys I will receive.
+- #25: As a Shopper I want to easily enter my payment information so that I can checkout quickly and with no hassies.
+- #27: As a Shopper I want to view an order confirmation after checkout so that I can verify that I have not made any mistakes.
 </details>
 
 <details>
@@ -82,6 +84,10 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 - #35: As a Site Owner I want to delete a toy so that I can remove toys that are no longer for sale.
 
 </details>
+
+To manage user stories and epics, a Kanban board was created as GitHub Project, see [here](https://github.com/users/brodsa/projects/6). The board has three columns, where the user stories are categorized into groups: Todo, In progress, or Done, as shown below ![board](./docs/board.PNG). Epics and priorities are shown as labels.
+
+Each user story was prioritized and implemented in 2 weeks long iterations. The iteration are defined as GitHub Milestones. The first iterations were mainly focused on the core features to ensure MVP functionality. During the later iterations additional features were implemented. The developer is aware of the fact that there should be a mix of all type of features within one iterations but due to the time pressure a different strategy was setup.
 
 ### Scope
 - Purpose: The purpose of the website is to provide a platform for users to share the highlight of their day, fostering gratitude and a positive outlook on life. The website aims to create a supportive online community where users can connect, inspire and uplift each other.
