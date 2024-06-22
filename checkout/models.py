@@ -72,7 +72,6 @@ class OrderLineItem(models.Model):
         and update the order total.
         """
         self.lineitem_total = self.toy.price
-        print(self.toy.price)
         super().save(*args, **kwargs)
 
     def __str__(self):

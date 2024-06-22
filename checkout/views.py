@@ -41,12 +41,12 @@ def checkout(request):
 
         if order_form.is_valid():
             print('form-valid')
-            order = order_form.save(commit=False)
+            order = order_form.save()
             print(bag.items())
             for item_id, item_data in bag.items():
                 try:
                     toy = Toys.objects.get(id=item_id)
-                    print(toy)
+                    print(order)
                     order_line_item = OrderLineItem(
                         order=order,
                         toy=toy
