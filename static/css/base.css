@@ -22,9 +22,9 @@ html {
     --text-font: "Roboto", sans-serif;
 
     /* Colors */
-    --primary-color: #30592C;
+    --primary-color: rgb(48, 89, 44);
     --secondary-color:#74301A;
-    --ternary-color: #B49532;
+    --ternary-color: rgb(180, 149, 50);
     --last-color: #1C304A;
     --white: #fff;
     --black: #555555;
