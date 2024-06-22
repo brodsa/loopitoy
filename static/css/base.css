@@ -852,16 +852,18 @@ th.menu__item.th-right{
     .checkout__content{
         flex-direction: row;
         max-width: 100%;
-        gap: 25px;
+        gap: 40px;
         padding: 0 30px;
     }
 
     .checkout__summary{
         flex: 1 0 50%;
+        max-width: 600px;
 
     }
     .checkout__form{
         flex: 1 0 50%; 
+        max-width: 600px;
         
     }
 
