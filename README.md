@@ -85,9 +85,9 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 </details>
 
-To manage user stories and epics, a Kanban board was created as GitHub Project, see [here](https://github.com/users/brodsa/projects/6). The board has three columns, where the user stories are categorized into groups: Todo, In progress, or Done, as shown below ![board](./docs/board.PNG). Epics and priorities are shown as labels.
+To manage user stories and epics, a Kanban board was created as GitHub Project, see [here](https://github.com/users/brodsa/projects/6). The board has three columns, where the user stories are categorized into groups: Todo, In progress, or Done, as shown below. ![board](./docs/board.PNG)
 
-Each user story was prioritized and implemented in 2 weeks long iterations. The iteration are defined as GitHub Milestones. The first iterations were mainly focused on the core features to ensure MVP functionality. During the later iterations additional features were implemented. The developer is aware of the fact that there should be a mix of all type of features within one iterations but due to the time pressure a different strategy was setup.
+Each user story was prioritized and implemented in 2 weeks long iterations. The Priorities as well as Epics are shown as labels .The iterations are defined as GitHub Milestones. The first iterations were mainly focused on the core features to ensure MVP functionality. During the later iterations additional features were implemented. The developer is aware of the fact that there should be a mix of all type of features within one iterations but due to the time pressure a different strategy was setup.
 
 ### Scope
 - Purpose: The purpose of the website is to provide a platform for users to share the highlight of their day, fostering gratitude and a positive outlook on life. The website aims to create a supportive online community where users can connect, inspire and uplift each other.
@@ -171,7 +171,11 @@ The core authentication pages includes:
 
 
 ### Purchasing Pages
-- **Shopping Bag Page** displayed the content of the shopping bag, including toy name with price, total and delivery costs. In addition, there are two buttons to either continue shopping or to proceed checkout. ![Shopping Bag](./docs/features/feature_bag.PNG).
+- **Shopping Bag Page** displays the content of the shopping bag, including toy name with price, total and delivery costs. In addition, there are two buttons to either continue shopping or to proceed checkout. ![Shopping Bag](./docs/features/feature_bag.PNG).
+
+- **Checkout Page** shows the summary order and displays displayes form to fill out delivery and billing information. There are also two buttons to either return or to complete order. ![Checkout](./docs/features/features_checkout.png).
+
+- **Checkout - Thank You Page** shows the summary order  with delivery and billing information. User is also informed about receiving the confirmation email. In order to return to Hompage, there is a button. ![Checkout - Thank you](./docs/features/features_checkout_success.png).
 
 
 ### Future & Left Features
