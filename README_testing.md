@@ -38,6 +38,18 @@ The testing was grouped according to the epics to which user story belongs.
 The features testing was also conducted group-wise. The outcome and testing steps are described bellow in detail.
 
 
+### Testing Webhooks using Stripe CLI
+- Follow [official documentation](https://docs.stripe.com/stripe-cli) to setup Stripe CLI.
+- Open PowerShell and use command `stripe login` to log in to your stripe account.
+- To forward events to your webhook, type `stripe listen --forward to localhost:4242/webhook`
+- Test different type of events, e.g. using `stripe trigger payment_intent.succeeded`, more type events can be found [here](https://dashboard.stripe.com/test/webhooks/create?endpoint_location=local). 
+
+**Report**
+The Webhook was tested on both development and production environment. Two type of events were tested: `payment_intent.succeeded` and `payment_intent.payment_failed`. The outcome of testing is listed below
+- Development
+    - `payment_intent.payment_failed`: [terminal](./docs/), [dashboard](./docs/)
+
+
 
 ## Code Validation
 The webpage was validated from several perspectives:
