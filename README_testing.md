@@ -47,7 +47,8 @@ The features testing was also conducted group-wise. The outcome and testing step
 **Report**
 The Webhook was tested on both development and production environment. Two type of events were tested: `payment_intent.succeeded` and `payment_intent.payment_failed`. The outcome of testing is listed below
 - Development
-    - `payment_intent.payment_failed`: [terminal](./docs/), [dashboard](./docs/)
+    - `payment_intent.payment_failed`: [terminal](./docs/testing/wh/wh_payment_failed_terminal.PNG), [dashboard](./docs/testing/wh/wh_payment_failed_dashboard.PNG)
+    - `payment_intent.succeeded` : [terminal](./docs/testing/wh/wh_payment_successed_terminal.PNG), [dashboard](./docs/testing/wh/wh_payment_successed_dashboard.PNG)
 
 
 
