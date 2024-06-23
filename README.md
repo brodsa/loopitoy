@@ -119,33 +119,33 @@ Wireframes were prepared for both mobile and desktop devices using balsamiqo pro
 
 ### Surface
 
-**Colors**: The final color pallete was selected using [coolors](https://coolors.co/1c304a-b49532-30592c-74301a) online tool to refrect the colors on the landing page and to reflect the favourit children colors. The pallette consist of four colors. ![Colors](./docs/ux/ux_color.PNG) The colors were accessed by [accessible color matrix tool](https://toolness.github.io/accessible-color-matrix/). The accessable combination are depicted in the [accessibility matrix](./docs/ux/us_accessibilityPNG.PNG)
+**Colors**: The final color palette was selected using [coolors](https://coolors.co/1c304a-b49532-30592c-74301a) online tool to reflect the colors on the landing page and to reflect the favourite children colors. The pallette consist of four colors. ![Colors](./docs/ux/ux_color.PNG) The colors were accessed by [accessible color matrix tool](https://toolness.github.io/accessible-color-matrix/). The accessible combination are depicted in the [accessibility matrix](./docs/ux/us_accessibilityPNG.PNG)
 
 **Font**: Two pairing fonts were chosen base on the [elemnetor blog article](https://elementor.com/blog/font-pairing/). The final fonts are: Archivo Black & Roboto. Both fonts were imported from [Google Fonts](https://fonts.google.com/). 
 
 **Image**: The final image by [Susan Holt Sumpson](https://unsplash.com/@shs521?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on the landing page was chosen on [unsplash]. Two keywords were given: playing children; to get the best suitable image for the second-hand toy e-shop.
 
 ## Features
-The features of the web page were planned using Agile methodology to ensure Minimum Value Product and to address planned User Stories. The core features of this django-base webpage includes CRUD functionality for both Site Users and Site Owner, so that users can create, read, update and delete records. In additonal, messages are displayed after each CRUD activity.
+The features of the web page were planned using Agile methodology to ensure Minimum Value Product and to address planned User Stories. The core features of this django-base webpage includes CRUD functionality for both Site Users and Site Owner, so that users can create, read, update and delete records. In additon, messages are displayed after each CRUD activity.
 
-The sites of e-shop are categorized into severel groups:
+The sites of e-shop are categorized into several groups:
 - **Landing & Informative Pages** includes Landing and How it Works Pages.
 - **Account Pages** includes all sites related to allauth app, i.e. authentication app.
 - **Toys Pages** includes all pages related to toy app, e.g. overview of toys, toy detail.
 - **Purchasing Pages** includes both Shopping Bag and Checkout Pages. 
 
-The entire web page is also designed to be responsive to ensure that the e-shop is properly displayed on different devices (e.g. a mobile, a desktop). The designed follows commaon best practice of e-shop development. Each site has mutual components, i.e. header with a navigation menu and footer. The mutual components ensure that the user to easily navigates through the content of the e-shop.
+The entire web page is also designed to be responsive to ensure that the e-shop is properly displayed on different devices (e.g. a mobile, a desktop). The designed follows common best practice of e-shop development. Each site has mutual components, i.e. header with a navigation menu and footer. The mutual components ensure that the user to easily navigates through the content of the e-shop.
 
 ### Common Features
 - **Header**
     - Header displays navigation menu and buttons. 
     - The navigation buttons includes logo, search field and navigation buttons for profile and shopping bag
     - On small devices the menu drops into a hamburger menu.
-    - The content sligthly changes depending on type of user.![Navigation](./docs/features/feature_navigation_menu.png)
+    - The content slightly changes depending on type of user.![Navigation](./docs/features/feature_navigation_menu.png)
 
 - **Footer**
   - Footer is displayed on all pages, except the pages dedicated for user or book registration.
-  - Footer contains with social media links, terms and polices, newsletter sugnup link ![Footer](./docs/features/feature_footer.png)
+  - Footer contains with social media links, terms and polices, newsletter sign up link ![Footer](./docs/features/feature_footer.png)
 
 
 ### Landing and Informatiove Pages
@@ -161,7 +161,7 @@ The core authentication pages includes:
 
 
 ### Toy Pages
-- **Toys Page** presents all available toys in e-shop. Each toy is depicted in a card element showing the basic information about toy, such as name, price and categories. For Site Owner, there are two buttons in additon: Edit and Remove to edit toy information and delete toy, respectively. ![Toys](./docs/features/features_toy_detail.PNG)
+- **Toys Page** presents all available toys in e-shop. Each toy is depicted in a card element showing the basic information about toy, such as name, price and categories. For Site Owner, there are two buttons in addition: Edit and Remove to edit toy information and delete toy, respectively. ![Toys](./docs/features/features_toy_detail.PNG)
 
 - **Toy Detail Page** displayes all toy details including buttons to add a toy into shopping bag or to return to all toys. For Site Owner, there are two buttons for adding toy information or toy deletion. ![Toys](./docs/features/feature_toys.PNG)
 
@@ -173,9 +173,9 @@ The core authentication pages includes:
 ### Purchasing Pages
 - **Shopping Bag Page** displays the content of the shopping bag, including toy name with price, total and delivery costs. In addition, there are two buttons to either continue shopping or to proceed checkout. ![Shopping Bag](./docs/features/feature_bag.PNG).
 
-- **Checkout Page** shows the summary order and displays displayes form to fill out delivery and billing information. There are also two buttons to either return or to complete order. ![Checkout](./docs/features/features_checkout.png).
+- **Checkout Page** shows the summary order and displays displays form to fill out delivery and billing information. There are also two buttons to either return or to complete order. ![Checkout](./docs/features/features_checkout.png).
 
-- **Checkout - Thank You Page** shows the summary order  with delivery and billing information. User is also informed about receiving the confirmation email. In order to return to Hompage, there is a button. ![Checkout - Thank you](./docs/features/features_checkout_success.png).
+- **Checkout - Thank You Page** shows the summary order  with delivery and billing information. User is also informed about receiving the confirmation email. In order to return to Homepage, there is a button. ![Checkout - Thank you](./docs/features/features_checkout_success.png).
 
 
 ### Future & Left Features
@@ -184,7 +184,7 @@ The core authentication pages includes:
 - Login with Social Media using allauth.cocialaccount and django.contrib.site apps
 
 ## Business Model
-loopitoy is B2C type of e-commerce application as it sells second-hand toys. It is a plotform which supports circular economy for toys. Customers can both buy and sell toys using secure single payment transactions.
+loopitoy is B2C type of e-commerce application as it sells second-hand toys. It is a platform which supports circular economy for toys. Customers can both buy and sell toys using secure single payment transactions.
 
 Customers (target audience) are mainly parents that are aware of the environemntal impact of toy production. But at the same time, they would like to offer their kids the variate of toys to support their creativity and development. These parents wish the same for other kids. Instead of throwing the old and not used toys away, they offer them to other families. Customers might include grandparents or family friends who share the same phylosophy. 
 
@@ -265,9 +265,9 @@ The workspace should be setup as follows:
 #### Setup Production Database
 
 1. Login to [ElephantSQL](https://customer.elephantsql.com/instance), you see all created database instances.
-2. Click on the green button 'Create New Instance' at the rigt top corner.
+2. Click on the green button 'Create New Instance' at the right top corner.
 3. Fill out the form. Specify database name > Select Region > Leave the data center default > Review > Create Instance.
-4. You will be redirected to the overview off all instaces, click on the created database instance to see details about database.
+4. You will be redirected to the overview off all instances, click on the created database instance to see details about database.
 5. Copy the URL and assign it to the environment variable `DATABASE_URL` in `env.py`
 
 #### Setup Production Environment on Heroku
@@ -289,12 +289,12 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
 <summary> Setup S3 Bucket</summary>
 
 1. Login to AWS Management Console.
-2. Find S3 Bucket Servis in the list of servises
+2. Find S3 Bucket Service in the list of Services
 3. Click on Crete New Bucket Button at the top right corner.
 4. Set up the general configuration as follows
     - Give the name to your bucket, e.g. loopitoy
     - Object Ownership: Choose ACLs enabled > Choose Bucket owner preferred 
-    - Block Public Asses: Unchecked Block all public acces > Check 'I acknowledge that the current settings might result in this bucket and the objects within becoming public.'
+    - Block Public Asses: Unchecked Block all public access > Check 'I acknowledge that the current settings might result in this bucket and the objects within becoming public.'
     - Click on Create Bucket
 5. You see the created bucket in the list of your buckets.
 6. Set up Bucket Setting as follows
@@ -303,8 +303,8 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
     - Scroll down and go to Static website hosting Section: Click on Edit > Chose Enable > Fill out index.html and error.html > Click on Save changes
 7. Set up Permission as follows
     - Click on the Permission Tab
-    - Scroll down and Click on Cross-orgin resource sharing (CORS) Section: Click on Edit > Paste the configuration > Click on Save changes
-    - Go to Bucket Police Section: Click on Edit > Click on Policy Generator (Select Type of Policy: S3 Bucket Policy, Effect: Allow, Principal: *, AWS Servis: Amazon S3, Actions: GetObject, ARN: copy ARN from the Bucket Policy Section ) > Click on Add Statement > Click on Generate Policy > Copy the policy > Pase the policy in the Bucket Policy Section > Add "/**" in the end of the Resource > CLick on Save changes
+    - Scroll down and Click on Cross-origin resource sharing (CORS) Section: Click on Edit > Paste the configuration > Click on Save changes
+    - Go to Bucket Police Section: Click on Edit > Click on Policy Generator (Select Type of Policy: S3 Bucket Policy, Effect: Allow, Principal: *, AWS Service: Amazon S3, Actions: GetObject, ARN: copy ARN from the Bucket Policy Section ) > Click on Add Statement > Click on Generate Policy > Copy the policy > Pase the policy in the Bucket Policy Section > Add "/**" in the end of the Resource > CLick on Save changes
     - Go to Access control list (ACL) Section: Check the List for Everyone (public access) > Save Changes
 
 </details>
@@ -314,7 +314,7 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
 <details>
 <summary> Setup IAM </summary>
 
-1. Find IAM Identity and Access Management in the list of servises.
+1. Find IAM Identity and Access Management in the list of services.
 3. Create a Group:
     - Select User groups on the sidebar menu
     - Click on Create Group
@@ -341,13 +341,15 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
 <details>
 <summary> Setup Stripe & Webhook </summary>
 
-1. Login to Stripe or create an account if you dont have it yet.
+1. Login to Stripe or create an account if you do not have it yet.
 2. Search for API Keys. Currently, the keys are located in Developers Section. Add the following keys as environment variables in env.py: `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`. Then, define new corresponding variables in `settings.py` such as `STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')` and `STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')`, respectively.
 3. In Developers Section, go to Webhooks tabs and click on Add endpoint to generate `STRIPE_WH_SECRET`
     - Copy the url of the e-shop and insert it in the Endpoint URL input field
     - Add `checkout/wh/` to the end of the inserted url.
     - Select all events and click on Add events.
     - Finally, confirm by clicking on Add and endpoint.
+4. In the Webhooks tab, click on the inserted url > Click on Reveal secret. 
+5. Copy the key in your environment, i.e. assign it to the new environment variable `STRIPE_WH_SECRET`
 
 
 
