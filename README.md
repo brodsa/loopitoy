@@ -343,13 +343,14 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
 
 1. Login to Stripe or create an account if you dont have it yet.
 2. Search for API Keys. Currently, the keys are located in Developers Section. Add the following keys as environment variables in env.py: `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`. Then, define new corresponding variables in `settings.py` such as `STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')` and `STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')`, respectively.
+3. In Developers Section, go to Webhooks tabs and click on Add endpoint to generate `STRIPE_WH_SECRET`
+    - Copy the url of the e-shop and insert it in the Endpoint URL input field
+    - Add `checkout/wh/` to the end of the inserted url.
+    - Select all events and click on Add events.
+    - Finally, confirm by clicking on Add and endpoint.
 
 
-1. Setup Stripe Elements
-    - Add stripe js script in the `base.html` into `corejs`block. 
-    - Render the keys in `checkout.html` in `postload_js` block using djnago template syntax.
-    - Create `stripe_elements.js` in checkout app and add the core logic payment and css style from the official stripe documentation. Additional Stripe CSS style can be inserted in a separated `checkout.css` file.
-    - Add a logic to handle error and submit event for payment into `stripe_elements.js`.
+
 
 3. Create a Group:
     - Select User groups on the sidebar menu
@@ -396,8 +397,8 @@ To clone repository or to collaborate, following steps are required:
 
 ## Credits & Inspiration
 
-- [Django Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) by Daisy McGeer
-- [Butique Ado](https://github.com/ckz8780/boutique_ado_v1) by CI and all study material provided by CI
+- [Django Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) by Daisy McGeer was helpful to understand the Django in general and to make development much easier
+- [Butique Ado](https://github.com/ckz8780/boutique_ado_v1) by CI and all study material provided by CI was benefitial to setup Stripe and Webhook
 - [Stack Overflow: Overwrite Save](https://stackoverflow.com/questions/69365764/django-i-want-to-create-a-self-generated-code-based-on-previous-records-and-a-s)
 - [Privacy Policy Generator](https://termify.io/dashboard/)
 - [w3schools](https://www.w3schools.com/css/css_tooltip.asp) for code inspiration for info hover affect.
