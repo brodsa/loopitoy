@@ -67,7 +67,9 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 <summary>EPIC 6: Purchasing & Checkout</summary>
 - #23: As a Shopper I want to view my shopping bag so that I can identify the total cost of my purchase and all toys I will receive.
 - #25: As a Shopper I want to easily enter my payment information so that I can checkout quickly and with no hassies.
+- #26: As a Shopper I want to feel my personal and payment Information is safe and secure so that I can confidently provide the needed information to make a purchase.
 - #27: As a Shopper I want to view an order confirmation after checkout so that I can verify that I have not made any mistakes.
+- 
 </details>
 
 <details>
