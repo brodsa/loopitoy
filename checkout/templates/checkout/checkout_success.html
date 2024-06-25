@@ -14,6 +14,7 @@
 
 {% block content %}
 <div class="overlay"></div>
+<div>
     <section id="checkout_success">
         <h2 class="text-center">
             Thank You
@@ -32,8 +33,8 @@
                     <table class="table table-sm table-borderless">
                         <thead>
                             <tr>
-                                <th scope="'col"> Toy</th>
-                                <th scope="'col" style="text-align:right"> Price</th>
+                                <th scope="col"> Toy</th>
+                                <th scope="col" style="text-align:right"> Price</th>
                             </tr>
                         </thead>               
                         {% for item in order.lineitems.all %}

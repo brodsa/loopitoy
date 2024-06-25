@@ -14,6 +14,7 @@
 
 {% block content %}
 <div class="overlay"></div>
+<div>
     <section id="bag">
         <h2 class="text-center">
             Shopping Bag
@@ -27,21 +28,22 @@
                                 <th scope="col" class="menu__item ps-3"> Toy Info</th>
                                 <th scope="col"> </th>
                                 <th scope="col" class="menu__item th-right pe-1"> Price</th>
+                                <th scope="col"> </th>
                                 
                             </tr>
                         </thead>               
                         {% for item in bag_items %}
                         <tr>
-                            <td class="p-3" width="35%">
+                            <td class="p-3">
                                 {% include 'bag/includes/toy_image.html' %}
                             </td>
-                            <td class="py-3" width="45%">
+                            <td class="py-3">
                                 {% include 'bag/includes/toy_info.html' %}
                             </td>
-                            <td class="py-3" width="20%" align ="right">
+                            <td class="py-3">
                                 <p class="my-0">{{ item.toy.price }}€</p>
                             </td>
-                            <td>
+                            <td class="bag-trash">
                                 <!-- Remove Button -->
                                     <form class="form" action="{% url 'remove_from_bag' item.toy.id %}" method="POST">
                                         <div>
@@ -79,7 +81,7 @@
                     </div>
                 </div>
             {% endif %}
-        </div>
+        
     </section>
 </div>
 {% endblock %}

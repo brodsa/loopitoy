@@ -20,6 +20,7 @@
 
 {% block content %}
 <div class="overlay"></div>
+<div>
     <section id="checkout">
         <h2 class="text-center">
             Checkout 
@@ -33,17 +34,17 @@
                     <table class="table table-sm table-borderless">
                         <thead>
                             <tr>
-                                <th scope="'col"> Toy Info</th>
-                                <th scope="'col"> </th>
-                                <th scope="'col"> Price</th>
+                                <th scope="col"> Toy Info</th>
+                                <th scope="col"> </th>
+                                <th scope="col"> Price</th>
                             </tr>
                         </thead>               
                         {% for item in bag_items %}
                         <tr>
-                            <td class="p-3" width="25%">
+                            <td class="p-3">
                                 {% include 'bag/includes/toy_image.html' %}
                             </td>
-                            <td class="py-3 w-5">
+                            <td class="py-3">
                                 {% include 'bag/includes/toy_info.html' %}
                             </td>
                             <td class="py-3">
@@ -124,8 +125,7 @@
                         <p class="text-end"><span>Your card will be charged <strong>{{ grand_total|floatformat:2 }}€</strong></span></p>
                     </form>
                 </div>
-            </div>
-        </div>    
+            </div>  
             {% else %}
                 <div>
                     <p class="text-center">Your bag is empty</p>
@@ -137,11 +137,7 @@
         </div>
     </section>
     <div id="loading-overlay">
-        <h1 class="text-light loading-spinner">
-            <span>
-                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-            </span>
-        </h1>
+        <h1 class="text-light loading-spinner"><span><i class="fas fa-3x fa-sync-alt fa-spin"></i></span></h1>
     </div>
 </div>
 {% endblock %}
