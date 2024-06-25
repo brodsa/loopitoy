@@ -84,15 +84,10 @@ class AddToy(LoginRequiredMixin,UserPassesTestMixin,CreateView):
         
         messages.success(
             self.request,
-            'Successfully created toy'
+            f'Successfully created toy {form.instance.name}.'
         )
 
         return super(AddToy, self).form_valid(form)
-    
-    # def get_success_url(self):
-    #     """ Set up the books/key/id as success url"""
-    #     return reverse_lazy('toys', kwargs={'pk': self.pk})
-
 
 
 class EditToy(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
@@ -112,7 +107,7 @@ class EditToy(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
 
         messages.success(
             self.request,
-            'Successfully updated toy info'
+            f'Successfully updated toy info of {form.instance.name}.'
         )
 
         return super(EditToy, self).form_valid(form)
@@ -132,7 +127,7 @@ class DeleteToy(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
         messages.success(
             self.request,
-            'Successfully deleted toy'
+            'Successfully deleted toy.'
         )
         return super().delete(request, *args, **kwargs)
     
