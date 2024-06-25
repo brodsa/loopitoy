@@ -76,7 +76,12 @@ The [Nu Html Checker](https://validator.w3.org/nu/) web-based tool by W3 was use
 The [JShint](https://jshint.com/) static tool was considered to check the code rules of the Javascript source code.
 
 ### CSS
-The [jigsaw](https://jigsaw.w3.org/css-validator/) web-based tool by W3 was used to validate the CSS of the webpage. The core `base.css` file was directly uploaded on [the webpage](https://jigsaw.w3.org/css-validator/#validate_by_upload).
+The [jigsaw](https://jigsaw.w3.org/css-validator/) web-based tool by W3 was used to validate the CSS of the webpage. The conent of `base.css` and `checkout.css` was directly insertet on [the webpage](https://jigsaw.w3.org/css-validator/#validate_by_input). The CSS Validator did not detect any erros, see reports bellow.
+
+| CSS File | Report | Results   |
+|----------|--------|-----------|
+| `base.css` | <img src="./docs/testing/css/css_base.PNG" alt="findmereadme_urls" width="200"/> | no error |
+| `checkout.css` | <img src="./docs/testing/css/css_checkout.PNG" alt="findmereadme_urls" width="200"/> | no error |
 
 
 ### PEP8
