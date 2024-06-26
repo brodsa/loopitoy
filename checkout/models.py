@@ -8,10 +8,12 @@ from django.db.models import Sum, Count
 from django_countries.fields import CountryField
 
 from toys.models import Toys
+from profiles.models import UserProfile
 
 class Order(models.Model):
     """A model for the order """
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     street_address = models.CharField(max_length=80, null=False, blank=False)
