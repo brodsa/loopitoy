@@ -44,9 +44,9 @@
         {% endif %}
     </ul>
     <a class="nav-link d-inline-block " href="{% url 'view_bag' %}">
-        <div class="text-center {% if grand_total %}menu__itemhg{% else %}menu_item{% endif %}">
-            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-            <p class="my-0 ">
+        <div class="text-center {% if grand_total %}menu__itemhg{% else %}menu__item{% endif %}">
+            <div><i class="fas fa-shopping-bag fa-lg menu_item"></i></div>
+            <p class="my-0 menu_item ">
                 {% if grand_total %}
                     {{ grand_total|floatformat:2 }}€
                 {% else %}

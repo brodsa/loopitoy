@@ -554,9 +554,16 @@ div.card-body{
 }
 
 .toy-detail__picture{
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 350px;
     align-self: center;
+    margin: auto;
+}
+
+.toy-detail__panel{
+    max-width: 250px;
+    margin: auto;
+
 }
 
 .toy-detail__picture img{
@@ -831,6 +838,12 @@ th.menu__item.th-right{
     .toy-detail__picture{
         margin: 0 auto;
         gap: 20px;
+        width: 300px;
+    }
+    
+    .toy-detail__panel{
+        max-width: 300px;
+    
     }
 
      /* ++++++++++ Shopping Bag ++++++++++++++++ */
