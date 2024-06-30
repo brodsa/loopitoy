@@ -15,7 +15,8 @@ class ToysAdmin(admin.ModelAdmin):
         'age',
         'category',
         'status',
-        'user'
+        'user',
+        'user_profile'
     )
 
     list_filter = ('status','user')

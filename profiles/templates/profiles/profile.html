@@ -31,42 +31,85 @@
             <div class="checkout__summary">
                 <div class="orders-history">
                     <p class="checkout__subtitle fw-bold ">Order History</p>
-                <div class="table-rensponsive checkout__table">
+                <div class="table-orders table-rensponsive checkout__table">
                     <table class="table table-sm table-borderless">
                         <thead>
                             <tr>
-                                <th scope="col"> Order Number</th>
-                                <th scope="col">  Order Date</th>
-                                <th scope="col"> Grand Total</th>
+                                <th scope="col"> Number</th>
+                                <th scope="col" class="th-hide">  Date</th>
+                                <th scope="col"> Total</th>
                             </tr>
                         </thead>               
                 {% for order in orders %}
+                    {% if forloop.counter < 4 %}
                         <tr>
-                            <td class="p-3">
-                                {{ orders.order_number }}
+                            <td class="">
+                                <a href="{% url 'order_history' order.order_number %}"
+                                title="{{ order.order_number }}">
+                                {{ order.order_number|truncatechars:7 }}
+                                </a>
                             </td>
-                            <td class="py-3">
-                                
+                            <td class=" th-hide">
+                                {{ order.date }}
                             </td>
-                            <td class="py-3">
-                                <p class="my-0"></p>
+                            <td class="">
+                                {{ order.grand_total }}€
                             </td>
                         </tr>
+                        {% endif %}
                 {% endfor %}
                     </table>
-                    
+                    <div class="text-center">
+                        {% if orders|length >= 4 %}
+                        <a class="copyright__link" href="#">
+                            See older orders
+                        </a>
+                        {% endif %}
+                    </div>
                 </div>
                 </div>
-                <div class="sells-history">
+                <div class="sells-history mt-4">
                     <p class="checkout__subtitle fw-bold ">Sell History</p>
-                    {% for sell in sells %}
-                    <p>{{sell}}: {{sell.number}} | {{sell.status}} || {{sell.created_on}}</p>
-                {% endfor %}
+                    <div class="table-orders table-rensponsive checkout__table">
+                        <table class="table table-sm table-borderless">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> Number</th>
+                                    <th scope="col" class="th-hide">  Date</th>
+                                    <th scope="col"> Status</th>
+                                </tr>
+                            </thead>               
+                    {% for sell in sells  %}
+                        {% if forloop.counter < 4 %}
+                            <tr>
+                                <td class="">
+                                    <a href="#"
+                                    title="{{ sell.number }}">
+                                    {{ sell.number|truncatechars:7 }}
+                                    </a>
+                                </td>
+                                <td class=" th-hide">
+                                    {{ sell.created_on }}
+                                </td>
+                                <td class="">
+                                    {{ sell.get_status_display }}
+                                </td>
+                            </tr>
+                            {% endif %}
+                    {% endfor %}
+                        </table>
+                        <div class="text-center">
+                            {% if sells|length >= 4 %}
+                            <a class="copyright__link" href="#">
+                                See older sells
+                            </a>
+                            {% endif %}
+                        </div>
                 </div>
             </div>
             
             <!-- Form checkout -->
-            <div class="checkout__form">
+            <div class="checkout__form mt-4">
                 <p class="checkout__subtitle fw-bold ">Delivery Information</p>
                 <div>
                     <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
@@ -76,7 +119,7 @@
 
 
                             <!-- Buttons -->
-                        <div class="checkout__btns">   
+                        <div class="checkout__btns mb-4">   
                             <div>
                                 <button class="btn form__button--primary">
                                     <span class="font-weight-bold">Save Information</span>

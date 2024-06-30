@@ -52,7 +52,8 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 <summary>EPIC 4: Registration & User Account</summary>
 
 - #13: As a Site User I want to easily register so that I can have a personal account.
-- #14: As a Site User I want to easily login and logout so that I can access my account
+- #14: As a Site User I want to easily login and logout so that I can access my account.
+- #17: As a Site User I want to capability so that I can view/edit/ my personal information.
 </details>
 
 

@@ -2,7 +2,7 @@
 {% load static %}
 
 
-{% block title %}Thank You{% endblock %}
+{% block title %}{% if from_profile %} Order Details {% else %} Thank You {% endif %}{% endblock %}
 
 {% block page_header %}
 <div class="container">
@@ -17,10 +17,10 @@
 <div>
     <section id="checkout_success">
         <h2 class="text-center">
-            Thank You
+            {% if from_profile %} Order Details {% else %} Thank You {% endif %}
         </h2>
         <div class="mb-5">
-            <p class="text-center mx-2 mx-sm-5">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong></p>
+            <p class="text-center mx-2 mx-sm-5">Your order information is below. A confirmation email {% if from_profile %} was sent {% else %} will be sent {% endif %}  to <strong>{{ order.email }}</strong></p>
         </div>
         <div class="checkout__content mx-2 mx-sm-5">
             <!-- Summary checkout -->
@@ -158,11 +158,19 @@
         </div>
         <!-- Buttons -->
         <div class="checkout__btns align-items-center justify-content-md-center mx-2 mb-4">   
+            {% if from_profile %}
+            <div>
+                <a href="{% url 'profile' %}" class="btn form__button--secondary flex-grow-0">
+                    Back to Profile
+                </a>
+            </div>
+            {% else %}
             <div>
                 <a href="{% url 'home' %}" class="btn form__button--secondary flex-grow-0">
                     Return to Homepage
                 </a>
             </div>
+            {% endif %}
         </div>
     </section>
 </div>

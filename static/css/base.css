@@ -36,7 +36,7 @@ html {
   }
 
 body{
-    background: url('/media/background_img.webp') rgba(116,48,26, 0.7);
+    
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -762,6 +762,17 @@ th.menu__item.th-right{
 }
 
 
+/* +++++++++ Profile ++++++++++ */
+#profile h2{
+    margin: 80px 0 20px;
+}
+
+.orders-history,
+.sells-history{
+    margin-bottom: 50px;
+}
+
+
 /* +++++++++++ Media Query from 767px and higher ++++++++++++++ */
 @media screen and  (min-width: 767px){
     /* +++++++++++ Header ++++++++++++++ */
@@ -951,6 +962,11 @@ th.menu__item.th-right{
     /*  +++++++++ Checkout  +++++++++ */
     .checkout__content{
         margin: 0 50px;
+    }
+
+    /* +++++++++ Profile ++++++++++ */
+    #profile h2{
+        margin: 110px 0 30px;
     }
 }
 

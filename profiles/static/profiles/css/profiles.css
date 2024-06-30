@@ -16,3 +16,19 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+.table-orders{
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.th-hide{
+    display: none;
+}
+
+
+@media screen and  (min-width: 350px){
+    .th-hide{
+        display:inline-block;
+    }
+}

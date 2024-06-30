@@ -28,7 +28,7 @@
                         <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">{% if request.user.is.authenticated %} My Account {% else %} {{user.username}} {% endif %}</p>
+                                <p class="my-0"> {% if request.user.is_authenticated %}{{user.username}}{% else %} My Account{% endif %}</p>
                             </div>
                         </a>
                         <ul class="dropdown-menu">

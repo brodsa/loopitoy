@@ -80,7 +80,7 @@ class AddToy(LoginRequiredMixin,UserPassesTestMixin,CreateView):
         return self.request.user.is_superuser
     
     def form_valid(self, form):
-        form.instance.user = self.request.user
+        form.instance.UserProfile = self.request.user
         
         messages.success(
             self.request,
