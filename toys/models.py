@@ -71,13 +71,7 @@ class Toys(models.Model):
         blank=True
     )
     status = models.CharField(max_length=50, choices=TOY_STATUS, default='open')
-    user = models.ForeignKey(
-        User,
-        related_name='toy_seller',
-        null=True, blank=True,
-        on_delete=models.SET_NULL
-    )
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='sells')
+    user = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='sells')
     created_on = models.DateField(auto_now_add=True)
 
     class Meta:

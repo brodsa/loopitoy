@@ -1,7 +1,8 @@
 from django.shortcuts import (
     render,
     redirect,
-    reverse
+    reverse,
+    get_object_or_404
 )
 
 from django.db.models import Q
@@ -20,6 +21,7 @@ from django.contrib.auth.mixins import (
 )
 
 from .models import Toys, Category
+from profiles.models import UserProfile
 from .forms import ToyForm
 
 
@@ -80,7 +82,8 @@ class AddToy(LoginRequiredMixin,UserPassesTestMixin,CreateView):
         return self.request.user.is_superuser
     
     def form_valid(self, form):
-        form.instance.UserProfile = self.request.user
+        profile = get_object_or_404(UserProfile, user=self.request.user)
+        form.instance.user_profile = profile
         
         messages.success(
             self.request,
