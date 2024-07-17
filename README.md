@@ -260,7 +260,7 @@ The workspace should be setup as follows:
 8. Create `env.py` file to specify environment variables     
     - `SECRET_KEY` move the django secret key from `settings.py`
     - `DATABASE_URL` assign the generated database key
-    - `os.environ["DEV"] = "True"`
+    - `os.environ["DEVELOPMENT"] = "True"`
     - `os.environ["DEBUG"] = "True"`
 9. Build the logic to use the ElphantSQL Database in production environment (i.e. on Heroku) and the local sqlite database when developing the application.
 
@@ -271,7 +271,7 @@ The workspace should be setup as follows:
 2. Click on the green button 'Create New Instance' at the right top corner.
 3. Fill out the form. Specify database name > Select Region > Leave the data center default > Review > Create Instance.
 4. You will be redirected to the overview off all instances, click on the created database instance to see details about database.
-5. Copy the URL and assign it to the environment variable `DATABASE_URL` in `env.py`
+5. Copy the URL and assign it to the environment variable `DATABASE_URL` in `env.py` and add the logic to use the URL for production environment.
 
 #### Setup Production Environment on Heroku
 
@@ -337,6 +337,7 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
     - Give it name, i.e. loopitoy-staticfiles-user > Click on Next > Select the User Group, i.e. manage-loopitoy, > Next > Click on Create User
 6. Generate Access Key from the selected user, i.e. lopitoy-staticfiles-user
 7. Add the key into your environment variables and setup the logic and variable for using AWS in settings.py
+8. Setup the Config Vars in Heroku: `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. Configure `AWS_USE=True`
 
 </details>
 
@@ -353,12 +354,27 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
     - Finally, confirm by clicking on Add and endpoint.
 4. In the Webhooks tab, click on the inserted url > Click on Reveal secret. 
 5. Copy the key in your environment, i.e. assign it to the new environment variable `STRIPE_WH_SECRET`
-
-
+6. Repeat the procedure to generare the secret webhook key for the production, i.e. Heroku
+7. Setup the Config Vars in Heroku app.
 
 
 </details>
 
+
+<details>
+<summary> Email Confirmation Using Gmail Account </summary>
+
+1. Login to a Gmail account and go to settings.
+2. Select Accounts and Import Tab and continue to Other Google Account settings in Change account settings.
+3. Go to Security Tab and turn on Two step verification.
+3. Select App Password Section and create new password.
+4. Create new Config Vars in Heroku app:
+    - `EMAIL_HOST_PASS`
+    - `EMAIL_HOST_USER`
+5. Setup environment variables in `env.py` for both production and development environment.
+    - development: `EMAIL_BACKEND` and `DEFAULT_FROM_EMAIL`
+    - production: `EMAIL_BACKEND`, `DEFAULT_FROM_EMAIL`, `EMAIL_USE_TLS`, `EMAIL_PORT`, `EMAIL_HOST`, `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD`
+</details>
 
 ### Forking
 To fork the repository to propose changes or use the code, follow the steps bellow:
