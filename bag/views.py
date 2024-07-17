@@ -19,19 +19,24 @@ def view_bag(request):
 
 def add_to_bag(request, item_id):
     """A view to add a toy into shopping bag"""
+    try:
+        toy = get_object_or_404(Toys, pk=int(item_id))
+        redirect_url = request.POST.get('redirect_url')
 
-    toy = get_object_or_404(Toys, pk=int(item_id))
-    redirect_url = request.POST.get('redirect_url')
-
-    bag = request.session.get('bag', {})
-    bag[item_id] = 1
-    toy_in_bag = Toys.objects.get(pk = int(item_id))
-    toy_in_bag.status = 'in_bag'
-    toy_in_bag.save()
-    messages.success(request, f'Added {toy.name} to your bag')
+        bag = request.session.get('bag', {})
+        bag[item_id] = 1
+        print(bag)
+        toy_in_bag = Toys.objects.get(pk = int(item_id))
+        toy_in_bag.status = 'in_bag'
+        toy_in_bag.save()
+        messages.success(request, f'Added {toy.name} to your bag')
+        
+        request.session['bag'] = bag
+        return redirect(redirect_url)
     
-    request.session['bag'] = bag
-    return redirect(redirect_url)
+    except Exception as e:
+        messages.error(request, f'Error additing item: {e}')
+        return HttpResponse(status=500)
 
 
 

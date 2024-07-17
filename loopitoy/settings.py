@@ -32,9 +32,7 @@ DEBUG = 'DEBUG' in os.environ
 ALLOWED_HOSTS = [
     '127.0.0.1',
     '.herokuapp.com',
-    '8000-brodsa-loopitoy-g2gzx22sbdv.ws-eu114.gitpod.io',
-    '8000-brodsa-loopitoy-i49bjshj79k.ws-eu114.gitpod.io',
-    '8000-brodsa-loopitoy-i49bjshj79k.ws-eu114.gitpod.io',
+    '8000-brodsa-loopitoy-twh1q45coq5.ws.codeinstitute-ide.net',
     ]
 
 
@@ -235,3 +233,15 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 TAX_RATE = 20  #TODO
 REVENUE_PCT = 50  #TODO
+
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'loopitoy@example.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')

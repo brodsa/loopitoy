@@ -357,25 +357,6 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
 
 
 
-3. Create a Group:
-    - Select User groups on the sidebar menu
-    - Click on Create Group
-    - Give the name to user group, e.g. manage-loopitoy
-    - Click on Create Group
-4. Create Policy 
-    - Select Policy on the sidebar menu
-    - Click on Create Policy > Select JSON
-    - Go to Actions > Select Import Policy > AmozonS3FullAccess > Click on Import policy > Copy the ARN Code from the Bucket into the Resource list, i.e. `["arn","arn/*"]` > Click on Next > Give it name, i.e. loopitoy-policy > Add Description > Click on Create Policy
-4. Attached the Policy to the User Group
-    - Select User groups on the sidebar menu
-    - Select the created User group, i.e. manage-loopitoy
-    - Go to Permission Tab > Click on Add Permission > Select Attach Policy > Select created policy, i.e. loopitoy-policy > Click on Attach Policy
-5. Create a User
-    - Select User on the sidebar menu
-    - Click on Create User
-    - Give it name, i.e. loopitoy-staticfiles-user > Click on Next > Select the User Group, i.e. manage-loopitoy, > Next > Click on Create User
-6. Generate Access Key from the selected user, i.e. lopitoy-staticfiles-user
-
 </details>
 
 
