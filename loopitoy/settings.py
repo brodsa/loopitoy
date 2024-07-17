@@ -134,7 +134,7 @@ WSGI_APPLICATION = 'loopitoy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'DEVELOPMENT' not in os.environ:
+if 'DEVELOPMENT' in os.environ:
     print('DEV')
     DATABASES = {
         'default': {
