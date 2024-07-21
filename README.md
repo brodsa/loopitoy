@@ -3,9 +3,9 @@
 # Content
 - [UX Design](#ux)
     - [Strategy: User Stories](#strategy)
-    - [Structure: & ERD Model & App Logic Flow ](#structure)
-    - [Skeleton: Scaleton: Wireframes](#skeleton)
-    - [Surface: Surface: Fonts & Colors & Images](#surface)
+    - [Structure: ERD Model & App Logic Flow ](#structure)
+    - [Skeleton: Wireframes](#skeleton)
+    - [Surface: Fonts & Colors & Images](#surface)
 - [Features](#Features)
 - [Business Model: SEO & Marketing](#business-model)
 - [Testing & Validation](#testing--validation)
@@ -23,10 +23,10 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 <details>
 <summary>EPIC 1: Preperation & Deployment</summary>
 
-- #1: As a developer I want to plan the development of the e-shop so that I can smoothly develop the web page.
-- #2: As a developer I want to document the webpage and the development so that the provided solution is transparent and everybody can follow the development.
-- #3: As a developer I want to test and validate my webpage so that I can guarantee full functionality and development according to best practice.
-- #4: As a developer I wan to deploy the page so that I can guarantee that the web page is accessible to everyone.
+- [#1](https://github.com/brodsa/loopitoy/issues/1): As a developer I want to plan the development of the e-shop so that I can smoothly develop the web page.
+- [#2](https://github.com/brodsa/loopitoy/issues/2): As a developer I want to document the webpage and the development so that the provided solution is transparent and everybody can follow the development.
+- [#3](https://github.com/brodsa/loopitoy/issues/3): As a developer I want to test and validate my webpage so that I can guarantee full functionality and development according to best practice.
+- [#4](https://github.com/brodsa/loopitoy/issues/4): As a developer I wan to deploy the page so that I can guarantee that the web page is accessible to everyone.
 
 </details>
 
@@ -39,11 +39,11 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 <details>
 <summary>EPIC 3: Viewing & Navigation</summary>
 
-- #5: As a first visitor I want to quickly see what the web-page offers so that I can easily purchase or sell toys.
-- #9: As a Shopper I want to view a list of all toys so that I can see the whole e-shop offer and select some to purchase.
-- #10: As a Shopper I want to view individual toys details so that I can find the price, description, product image and quality.
-- #11: As a Shopper I want to quickly identify toys according to age group and toys categories so that I can easily find appropriate toys for my children.
-- #12: As a Shopper I want to quickly see the total of my purchases at any time so that I can avoid spending too much time.
+- [#5](https://github.com/brodsa/loopitoy/issues/5): As a first visitor I want to quickly see what the web-page offers so that I can easily purchase or sell toys.
+- [#9](https://github.com/brodsa/loopitoy/issues/9): As a Shopper I want to view a list of all toys so that I can see the whole e-shop offer and select some to purchase.
+- [#10](https://github.com/brodsa/loopitoy/issues/10): As a Shopper I want to view individual toys details so that I can find the price, description, product image and quality.
+- [#11](https://github.com/brodsa/loopitoy/issues/11): As a Shopper I want to quickly identify toys according to age group and toys categories so that I can easily find appropriate toys for my children.
+- [#12](https://github.com/brodsa/loopitoy/issues/12): As a Shopper I want to quickly see the total of my purchases at any time so that I can avoid spending too much time.
 
 </details>
 
@@ -51,26 +51,31 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 <details>
 <summary>EPIC 4: Registration & User Account</summary>
 
-- #13: As a Site User I want to easily register so that I can have a personal account.
-- #14: As a Site User I want to easily login and logout so that I can access my account.
-- #17: As a Site User I want to capability so that I can view/edit/ my personal information.
+- [#13](https://github.com/brodsa/loopitoy/issues/13): As a Site User I want to easily register so that I can have a personal account.
+- [#14](https://github.com/brodsa/loopitoy/issues/14): As a Site User I want to easily login and logout so that I can access my account.
+- [#15](https://github.com/brodsa/loopitoy/issues/15): As a Site User I want to easily recover my password in case I forget it so that I can recover access to my account
+- [#16](https://github.com/brodsa/loopitoy/issues/16): As a Site User I want to receive an email confirmation after registering so that I can verify that my account registration was successful.
+- [#17](https://github.com/brodsa/loopitoy/issues/17): As a Site User I want to capability so that I can view/edit/ my personal information.
+- [#24](https://github.com/brodsa/loopitoy/issues/24): As a Shopper I want to have the possibility to save my delivery information when checkout so that I do not have to fill the information several times
+
 </details>
 
 
 <details>
 <summary>EPIC 5: Sorting & Searching</summary>
-- #20: As a Shopper I want to filter for specific toys categories so that I can easily find and see what I have searched for.
-- #21:  As a Shopper I want to search for toys by name or description so that I can find a specific toy I would like to purchase.
-- #22: As a Shopper I want to easily add/delete a toy when purchasing it so that I can ensure that I select the correct toy.
+- [#20](https://github.com/brodsa/loopitoy/issues/20): As a Shopper I want to filter for specific toys categories so that I can easily find and see what I have searched for.
+- [#21](https://github.com/brodsa/loopitoy/issues/21): As a Shopper I want to search for toys by name or description so that I can find a specific toy I would like to purchase.
+- [#22](https://github.com/brodsa/loopitoy/issues/22): As a Shopper I want to easily add/delete a toy when purchasing it so that I can ensure that I select the correct toy.
 </details>
 
 <details>
 <summary>EPIC 6: Purchasing & Checkout</summary>
-- #23: As a Shopper I want to view my shopping bag so that I can identify the total cost of my purchase and all toys I will receive.
-- #25: As a Shopper I want to easily enter my payment information so that I can checkout quickly and with no hassies.
-- #26: As a Shopper I want to feel my personal and payment Information is safe and secure so that I can confidently provide the needed information to make a purchase.
-- #27: As a Shopper I want to view an order confirmation after checkout so that I can verify that I have not made any mistakes.
-- 
+- [#23](https://github.com/brodsa/loopitoy/issues/23): As a Shopper I want to view my shopping bag so that I can identify the total cost of my purchase and all toys I will receive.
+- [#25](https://github.com/brodsa/loopitoy/issues/25): As a Shopper I want to easily enter my payment information so that I can checkout quickly and with no hassies.
+- [#26](https://github.com/brodsa/loopitoy/issues/26): As a Shopper I want to feel my personal and payment Information is safe and secure so that I can confidently provide the needed information to make a purchase.
+- [#27](https://github.com/brodsa/loopitoy/issues/27):  As a Shopper I want to view an order confirmation after checkout so that I can verify that I have not made any mistakes.
+- [#28](https://github.com/brodsa/loopitoy/issues/28): As a Shopper I want to receive an email confirmation after checking out so that I can keep the confirmation of what I have purchased for my records.
+ 
 </details>
 
 <details>
@@ -82,9 +87,9 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 <details>
 <summary>EPIC 8: Admin & Store Management</summary>
 
-- #33: As a Store Owner I want to add a toy so that I can add new items to my store.
-- #34: As a Store Owner I want to update toy details so that I can change the information including toy status.
-- #35: As a Site Owner I want to delete a toy so that I can remove toys that are no longer for sale.
+- [#33](https://github.com/brodsa/loopitoy/issues/33): As a Store Owner I want to add a toy so that I can add new items to my store.
+- [#34](https://github.com/brodsa/loopitoy/issues/34): As a Store Owner I want to update toy details so that I can change the information including toy status.
+- [#35](https://github.com/brodsa/loopitoy/issues/35): As a Site Owner I want to delete a toy so that I can remove toys that are no longer for sale.
 
 </details>
 
@@ -144,11 +149,11 @@ The entire web page is also designed to be responsive to ensure that the e-shop 
     - Header displays navigation menu and buttons. 
     - The navigation buttons includes logo, search field and navigation buttons for profile and shopping bag
     - On small devices the menu drops into a hamburger menu.
-    - The content slightly changes depending on type of user.![Navigation](./docs/features/feature_navigation_menu.png)
+    - The content slightly changes depending on type of user.![Navigation](./docs/features/feature_navigation_menu.PNG)
 
 - **Footer**
   - Footer is displayed on all pages, except the pages dedicated for user or book registration.
-  - Footer contains with social media links, terms and polices, newsletter sign up link ![Footer](./docs/features/feature_footer.png)
+  - Footer contains with social media links, terms and polices, newsletter sign up link ![Footer](./docs/features/feature_footer.PNG)
 
 
 ### Landing and Informatiove Pages
@@ -164,11 +169,11 @@ The core authentication pages includes:
 
 
 ### Toy Pages
-- **Toys Page** presents all available toys in e-shop. Each toy is depicted in a card element showing the basic information about toy, such as name, price and categories. For Site Owner, there are two buttons in addition: Edit and Remove to edit toy information and delete toy, respectively. ![Toys](./docs/features/features_toy_detail.PNG)
+- **Toys Page** presents all available toys in e-shop. Each toy is depicted in a card element showing the basic information about toy, such as name, price and categories. For Site Owner, there are two buttons in addition: Edit and Remove to edit toy information and delete toy, respectively. ![Toys](./docs/features/feature_toys.PNG)
 
-- **Toy Detail Page** displayes all toy details including buttons to add a toy into shopping bag or to return to all toys. For Site Owner, there are two buttons for adding toy information or toy deletion. ![Toys](./docs/features/feature_toys.PNG)
+- **Toy Detail Page** displayes all toy details including buttons to add a toy into shopping bag or to return to all toys. For Site Owner, there are two buttons for adding toy information or toy deletion. ![Toys](./docs/features/features_toy_detail.png)
 
-- **New Toy Page** contains form to fill out in order to create new toy card. This page is only visible for Site Owner. ![New Toy](./docs/features/fetures_toys_add.png)
+- **New Toy Page** contains form to fill out in order to create new toy card. This page is only visible for Site Owner. ![New Toy](./docs/features/features_toys_add.png)
 - **Edit Toy Page** contains form to edit the toy info. This page is only visible for Site Owner. ![Edit Toy](./docs/features/features_toys_edit.png)
 - **Delete Toy Page** contains confirmation to delete the toy from e-shop. This page is only visible for Site Owner. ![Delete Toy](./docs/features/features_toys_delete.png)
 
@@ -346,7 +351,7 @@ The AWS S3 Bucket was used to host the static files. The setup procedure include
 <summary> Setup Stripe & Webhook </summary>
 
 1. Login to Stripe or create an account if you do not have it yet.
-2. Search for API Keys. Currently, the keys are located in Developers Section. Add the following keys as environment variables in env.py: `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`. Then, define new corresponding variables in `settings.py` such as `STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')` and `STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')`, respectively.
+2. Search for API Keys. Currently, the keys are located in Developers Section. Add the following keys as environment variables in env.py and heroku Confic Vars: `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`. Then, define new corresponding variables in `settings.py` such as `STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')` and `STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')`, respectively.
 3. In Developers Section, go to Webhooks tabs and click on Add endpoint to generate `STRIPE_WH_SECRET`
     - Copy the url of the e-shop and insert it in the Endpoint URL input field
     - Add `checkout/wh/` to the end of the inserted url.
