@@ -75,6 +75,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 - [#26](https://github.com/brodsa/loopitoy/issues/26): As a Shopper I want to feel my personal and payment Information is safe and secure so that I can confidently provide the needed information to make a purchase.
 - [#27](https://github.com/brodsa/loopitoy/issues/27):  As a Shopper I want to view an order confirmation after checkout so that I can verify that I have not made any mistakes.
 - [#28](https://github.com/brodsa/loopitoy/issues/28): As a Shopper I want to receive an email confirmation after checking out so that I can keep the confirmation of what I have purchased for my records.
+- [#29](https://github.com/brodsa/loopitoy/issues/29): As a Shopper I want to view shopping history so that I can see what I have purchased so far
  
 </details>
 
@@ -138,7 +139,7 @@ The features of the web page were planned using Agile methodology to ensure Mini
 
 The sites of e-shop are categorized into several groups:
 - **Landing & Informative Pages** includes Landing and How it Works Pages.
-- **Account Pages** includes all sites related to allauth app, i.e. authentication app.
+- **Account & Profile Pages** includes all sites related to allauth app, i.e. authentication app, or profile app.
 - **Toys Pages** includes all pages related to toy app, e.g. overview of toys, toy detail.
 - **Purchasing Pages** includes both Shopping Bag and Checkout Pages. 
 
@@ -161,11 +162,12 @@ The entire web page is also designed to be responsive to ensure that the e-shop 
 
 - **How It Works Page** outlines the core sell procedure and offers users to register for selling toys.![How It Works Page](./docs/features/feature_how_it_works.PNG) 
 
-### Account Pages
+### Account & Profile Pages
 The core authentication pages includes:
 - **Login Page** contains a form to log in via username or email into to the platform. Moreover, a user can choose to remember the login data. ![Login](./docs/features/feature_account_login.PNG)
 - **Sign Up Page** contains a form to create an account. User have to register using both username and email.![Sign Up](./docs/features/feature_account_register.PNG)
 - **Log Out Page** offers user to confirm logging out from the account or stay login. ![Log Out](./docs/features/feature_account_logout.PNG)
+- **My Profile Page** displayes history of user activities and form to save delivery information. ![Profile](./docs/features/features_profile.png)
 
 
 ### Toy Pages

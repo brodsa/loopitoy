@@ -770,6 +770,7 @@ th.menu__item.th-right{
 .orders-history,
 .sells-history{
     margin-bottom: 50px;
+    scroll-behavior: auto;
 }
 
 

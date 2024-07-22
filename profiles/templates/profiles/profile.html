@@ -42,22 +42,20 @@
                                 </tr>
                             </thead>               
                             {% for order in orders %}
-                                {% if forloop.counter < 4 %}
-                                    <tr>
-                                        <td class="">
-                                            <a href="{% url 'order_history' order.order_number %}"
-                                            title="{{ order.order_number }}">
-                                            {{ order.order_number|truncatechars:7 }}
-                                            </a>
-                                        </td>
-                                        <td class=" th-hide">
-                                            {{ order.date }}
-                                        </td>
-                                        <td class="">
-                                            {{ order.grand_total }}€
-                                        </td>
-                                    </tr>
-                                    {% endif %}
+                                <tr>
+                                    <td class="">
+                                        <a href="{% url 'order_history' order.order_number %}"
+                                        title="{{ order.order_number }}">
+                                        {{ order.order_number|truncatechars:7 }}
+                                        </a>
+                                    </td>
+                                    <td class=" th-hide">
+                                        {{ order.date }}
+                                    </td>
+                                    <td class="">
+                                        {{ order.grand_total }}€
+                                    </td>
+                                </tr>
                             {% endfor %}
                         </table>
                         <div class="text-center">
@@ -67,9 +65,8 @@
                             </a>
                             {% endif %}
                         </div>
-                        {% if orders|length >= 4 %} <p class="text-center"> <a class="copyright__link" href="#">See all orders</a></p> {% endif %}
                         {% else %}
-                        <p>You have no orders yet.</p>
+                            <p>You have no orders yet.</p>
                         {% endif %} 
                     </div>
                 </div>
@@ -86,22 +83,21 @@
                                     </tr>
                                 </thead>               
                                 {% for sell in sells  %}
-                                    {% if forloop.counter < 4 %}
-                                        <tr>
-                                            <td class="">
-                                                <a href="#"
-                                                title="{{ sell.number }}">
-                                                {{ sell.number|truncatechars:7 }}
-                                                </a>
-                                            </td>
-                                            <td class=" th-hide">
-                                                {{ sell.created_on }}
-                                            </td>
-                                            <td class="">
-                                                {{ sell.get_status_display }}
-                                            </td>
-                                        </tr>
-                                        {% endif %}
+                                    <tr>
+                                        <td class="">
+                                            <a href="#"
+                                            title="{{ sell.number }}">
+                                            {{ sell.number|truncatechars:7 }}
+                                            </a>
+                                        </td>
+                                        <td class=" th-hide">
+                                            {{ sell.created_on }}
+                                        </td>
+                                        <td class="">
+                                            {{ sell.get_status_display }}
+                                        </td>
+                                    </tr>
+                                        
                                 {% endfor %}
                             </table>
                             <div class="text-center">
@@ -111,7 +107,6 @@
                                 </a>
                                 {% endif %}
                             </div>
-                            {% if sells|length >= 4 %} <p class="text-center"> <a class="copyright__link" href="#">See all sells</a></p> {% endif %}
                         {% else %}
                             <p>There are no sells yet.</p>
                         {% endif %}
