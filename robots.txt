@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://loopitoy-2943fdc3b2bc.herokuapp.com/sitemap.xml

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/bag/</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=cars,dolls,cuddle</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=books,puzzles</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=fine_motor,gross_motor</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=accessories,furniture</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?age=newbor_infant</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?age=toodler</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?age=preschooler</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?age=schooler</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/how-it-works</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/privacy-policy</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/8/</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/6/</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/4/</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/3/</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/5/</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/7/</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=cars</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=cuddle</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=dolls</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=gross_motor</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=fine_motor</loc>
+  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
