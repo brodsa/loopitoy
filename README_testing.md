@@ -85,8 +85,9 @@ The [Nu Html Checker](https://validator.w3.org/nu/) web-based tool by W3 was use
 | | Edit Toy | [Report](./docs/testing/html/html_admin_edit_toy.PNG) | no erros |
 | | Delete Toy | [Report](./docs/testing/html/html_admin_delete_toy.PNG) | no erros |
 | Purchasing & Checkout| Shopping Bag | [Report](./docs/testing/html/html_bag.PNG) | no erros |
-|| Checkout | [Report](./docs/testing/html/html_checkout.PNG) | no erros |
-|| Checkout - Thank you| [Report](./docs/testing/html/html_checkout_thank_you.PNG) | no erros |
+| Checkout | [Report](./docs/testing/html/html_checkout.PNG) | no erros |
+| Checkout - Thank you| [Report](./docs/testing/html/html_checkout_thank_you.PNG) | no erros |
+| Profile | [Report](./docs/testing/html/html_profile.PNG) | no erros |
 
 
 

@@ -32,7 +32,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 <details>
 <summary>EPIC 2: SEO & Marketing</summary>
--todo
+- [#37](https://github.com/brodsa/loopitoy/issues/37): As a Site Owner I want to use some SEO techniques so that I can increase the chance to purchase on my e-shop.
 </details>
 
 
@@ -118,6 +118,7 @@ Wireframes were prepared for both mobile and desktop devices using balsamiqo pro
 | Toys Pages | <img src="./docs/ux/ux_wireframe_toys_mobile.PNG" alt="ux_toys_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_toys_desktop.PNG" alt="ux_toys_desktop" width="200"/> |
 | Purchasing Pages | <img src="./docs/ux/ux_wireframe_purchase_mobile.PNG" alt="ux_purchase_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_purchase_desktop.PNG" alt="ux_purchase_desktop" width="200"/> |
 | Authentication Pages | <img src="./docs/ux/ux_wireframe_authentication_mobile.PNG" alt="ux_authentication_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_authentication_desktop.PNG" alt="ux_authentication_desktop" width="200"/> |
+| Profile Pages | <img src="./docs/ux/ux_wireframe_profile_mobile.PNG" alt="ux_authentication_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_profile_desktop.PNG" alt="ux_authentication_desktop" width="200"/> |
 
 
 ### Structure 
@@ -167,7 +168,7 @@ The core authentication pages includes:
 - **Login Page** contains a form to log in via username or email into to the platform. Moreover, a user can choose to remember the login data. ![Login](./docs/features/feature_account_login.PNG)
 - **Sign Up Page** contains a form to create an account. User have to register using both username and email.![Sign Up](./docs/features/feature_account_register.PNG)
 - **Log Out Page** offers user to confirm logging out from the account or stay login. ![Log Out](./docs/features/feature_account_logout.PNG)
-- **My Profile Page** displayes history of user activities and form to save delivery information. ![Profile](./docs/features/features_profile.png)
+- **My Profile Page** displayes history of user activities and form to save delivery information. Each history activity can be viewed on a separated site. ![Profile](./docs/features/features_profile.png)
 
 
 ### Toy Pages
@@ -175,9 +176,9 @@ The core authentication pages includes:
 
 - **Toy Detail Page** displayes all toy details including buttons to add a toy into shopping bag or to return to all toys. For Site Owner, there are two buttons for adding toy information or toy deletion. ![Toys](./docs/features/features_toy_detail.png)
 
-- **New Toy Page** contains form to fill out in order to create new toy card. This page is only visible for Site Owner. ![New Toy](./docs/features/features_toys_add.png)
-- **Edit Toy Page** contains form to edit the toy info. This page is only visible for Site Owner. ![Edit Toy](./docs/features/features_toys_edit.png)
-- **Delete Toy Page** contains confirmation to delete the toy from e-shop. This page is only visible for Site Owner. ![Delete Toy](./docs/features/features_toys_delete.png)
+- **New Toy Page** displays a form to fill out in order to create new toy card. This page is only visible for Site Owner. ![New Toy](./docs/features/features_toys_add.png)
+- **Edit Toy Page** contains aform to edit the toy info. This page is only visible for Site Owner. ![Edit Toy](./docs/features/features_toys_edit.png)
+- **Delete Toy Page** shows a confirmation to delete the toy from e-shop. This page is only visible for Site Owner. ![Delete Toy](./docs/features/features_toys_delete.png)
 
 
 ### Purchasing Pages
