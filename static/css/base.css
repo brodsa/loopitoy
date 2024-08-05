@@ -297,6 +297,7 @@ footer{
 
 
 
+
 /* ***************** Home  ************** */
 .home-wrapper{
     max-width: 600px;
@@ -788,6 +789,14 @@ th.menu__item.th-right{
     background-color: var(--white);
     padding: 30px;
     margin: 100px auto 50px;
+}
+
+/* ++++++++++++++ Polices & Terms ++++++++++++++ */
+.container-info{
+    max-width: 800px;
+    padding: 20px 20px;
+    margin: 20px auto;
+
 }
 
 

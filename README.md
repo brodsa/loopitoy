@@ -44,6 +44,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 - [#10](https://github.com/brodsa/loopitoy/issues/10): As a Shopper I want to view individual toys details so that I can find the price, description, product image and quality.
 - [#11](https://github.com/brodsa/loopitoy/issues/11): As a Shopper I want to quickly identify toys according to age group and toys categories so that I can easily find appropriate toys for my children.
 - [#12](https://github.com/brodsa/loopitoy/issues/12): As a Shopper I want to quickly see the total of my purchases at any time so that I can avoid spending too much time.
+- [#40](https://github.com/brodsa/loopitoy/issues/40): As a User I want to have the possibility to write the site owner so that I can contact him/her in any matter.
 
 </details>
 
