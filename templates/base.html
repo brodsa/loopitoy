@@ -74,7 +74,14 @@
     </main>
 
     <!-- Footer -->
-    {% include 'includes/footer.html' %}
+    {% block footer_index %}
+        {% include 'includes/footer_index.html' %}
+    {% endblock footer_index %}
+
+    {% block footer %}
+        {% include 'includes/footer.html' %}
+    {% endblock footer %}
+    
     
     {% block postloadjs %}
     <script type="text/javascript">
