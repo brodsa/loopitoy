@@ -163,6 +163,8 @@ The entire web page is also designed to be responsive to ensure that the e-shop 
 
 - **How It Works Page** outlines the core sell procedure and offers users to register for selling toys.![How It Works Page](./docs/features/feature_how_it_works.PNG) 
 
+- **Contact Page** serves for contacting Site Owner and it displays the contact form. After sending a message a thank you page is displayed with the button to return home. ![Contact](./docs/features/features_contact.PNG)
+
 ### Account & Profile Pages
 The core authentication pages includes:
 - **Login Page** contains a form to log in via username or email into to the platform. Moreover, a user can choose to remember the login data. ![Login](./docs/features/feature_account_login.PNG)
