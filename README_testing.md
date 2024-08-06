@@ -123,7 +123,11 @@ To validate the Python code in terms of PEP8, the [CI Python Linter](https://pep
 
 | Module | Python file               | Report | Results   |
 |--------|---------------------------|--------|-----------|
-|`loopitoy` | `urls.py`          | <img src="./docs/testing/python/python_loopitoy_urls.png" alt="loopitoy_urls" width="200"/> | no error |
+|`bag` | `apps.py`          | <img src="./docs/testing/python/py_bag_apps.PNG" alt="loopitoy_apps" width="200"/> | no error |
+| | `contexts.py`          | <img src="./docs/testing/python/py_bag_contexts.PNG" alt="loopitoy_contexts" width="200"/> | no error |
+|  | `urls.py`          | <img src="./docs/testing/python/py_bag_urls.PNG" alt="loopitoy_urls" width="200"/> | no error |
+| | `views.py`          | <img src="./docs/testing/python/py_bag_views.PNG" alt="loopitoy_views" width="200"/> | no error |
+
 
 
 
