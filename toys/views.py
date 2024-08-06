@@ -25,8 +25,6 @@ from profiles.models import UserProfile
 from .forms import ToyForm
 
 
-# Create your views here.
-
 def all_toys(request):
     "A view to show all toys"
 

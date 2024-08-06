@@ -45,13 +45,9 @@ The features testing was also conducted group-wise. The outcome and testing step
 - Test different type of events, e.g. using `stripe trigger payment_intent.succeeded`, more type events can be found [here](https://dashboard.stripe.com/test/webhooks/create?endpoint_location=local). 
 
 **Report**
-The Webhook was tested on both development and production environment. Two type of events were tested: `payment_intent.succeeded` and `payment_intent.payment_failed`. The outcome of testing is listed below
-- Development
-    - `payment_intent.payment_failed`: [terminal](./docs/testing/wh/wh_payment_failed_terminal.PNG), [dashboard](./docs/testing/wh/wh_payment_failed_dashboard.PNG)
-    - `payment_intent.succeeded` : [terminal](./docs/testing/wh/wh_payment_successed_terminal.PNG), [dashboard](./docs/testing/wh/wh_payment_successed_dashboard.PNG), [cache data](./docs/testing/wh/cacha_data.PNG)
-- Production
- - `payment_intent.payment_failed`:
- - `payment_intent.succeeded` :
+The Webhook was tested on development environment. Two type of events were tested: `payment_intent.succeeded` and `payment_intent.payment_failed`. The outcome of testing is listed below
+  - `payment_intent.payment_failed`: [terminal](./docs/testing/wh/wh_payment_failed_terminal.PNG), [dashboard](./docs/testing/wh/wh_payment_failed_dashboard.PNG)
+  - `payment_intent.succeeded` : [terminal](./docs/testing/wh/wh_payment_successed_terminal.PNG), [dashboard](./docs/testing/wh/wh_payment_successed_dashboard.PNG), [cache data](./docs/testing/wh/cacha_data.PNG)
 
 There were additional webhook test performed, see the report of Features Testing, TODO: 
 
@@ -136,6 +132,11 @@ To validate the Python code in terms of PEP8, the [CI Python Linter](https://pep
 | | `views.py`          | <img src="./docs/testing/python/py_checkout_views.PNG" alt="loopitoy_checkout_views" width="200"/> | no error |
 | | `webhook_handler.py`          | <img src="./docs/testing/python/py_checkout_webhook_handler.PNG" alt="loopitoy_checkout_webhook_handler" width="200"/> | no error |
 | | `webhooks.py`          | <img src="./docs/testing/python/py_checkout_webhooks.PNG" alt="loopitoy_checkout_webhooks" width="200"/> | no error |
+|`contact` | `admin.py`          | <img src="./docs/testing/python/py_contact_admin.PNG" alt="loopitoy_contact_admin" width="200"/> | no error |
+| | `forms.py`          | <img src="./docs/testing/python/py_contact_forms.PNG" alt="loopitoy_contact_forms" width="200"/> | no error |
+| | `models.py`          | <img src="./docs/testing/python/py_contact_models.PNG" alt="loopitoy_contact_models" width="200"/> | no error |
+|  | `urls.py`          | <img src="./docs/testing/python/py_contact_urls.PNG" alt="loopitoy_contact_urls" width="200"/> | no error |
+| | `views.py`          | <img src="./docs/testing/python/py_contact_views.PNG" alt="loopitoy_contact_views" width="200"/> | no error |
 
 
 

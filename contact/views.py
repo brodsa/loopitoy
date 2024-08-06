@@ -23,6 +23,7 @@ class AddContact(CreateView):
             )
         return super(AddContact, self).form_valid(form)
 
+
 class ThankYouContact(TemplateView):
     """ A class for Thank you for contacting us view """
     template_name = 'contact/thank_you.html'
