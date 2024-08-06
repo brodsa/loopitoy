@@ -38,9 +38,10 @@
                                     <li><a class="dropdown-item" href="{% url 'add_toy' %}">Add New Toy</a></li>
                                     <!-- Received Toys -->
                                     <li><a class="dropdown-item" href="{% url 'home' %}">Received Toys</a></li>
+                                {% else %}
+                                    <!-- Profile -->
+                                    <li><a class="dropdown-item" href="{% url 'profile' %}"> My Profile</a></li>
                                 {% endif %}
-                                <!-- Profile -->
-                                <li><a class="dropdown-item" href="{% url 'profile' %}"> My Profile</a></li>
                                 <!-- Log out -->
                                 <li><a class="dropdown-item" href="/accounts/logout">Logout</a></li>
                             {% else %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import PermissionDenied
 
 from .models import UserProfile
 from .forms import UserProfileForm
@@ -43,6 +44,8 @@ def profile(request):
 @login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
+    if str(request.user) != str(order.user_profile):
+        raise PermissionDenied("Permission denied.")
 
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
