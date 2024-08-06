@@ -74,21 +74,25 @@ The [Nu Html Checker](https://validator.w3.org/nu/) web-based tool by W3 was use
 |------------|------|--------|---------|
 | Viewing & Navigation | Landing Page | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2F) | no errors |
 |  | How it Works| [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Fhow-it-works) | no errors |
-|  | Contact | [Online Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Fcontact%2F) |
+|  | Contact | [Online Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Fcontact%2F) | no errors |
 | Toys | Toys Overview | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Ftoys%2F) | no errors|
 |  | Toy Detail | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Ftoys%2Fdetail%2F6%2F) | no errors|
 |  | Toy Filter | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Ftoys%2F%3Fcategory%3Dfine_motor%2Cgross_motor) | no errors|
 | | Toy Search | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Ftoys%2F%3Fq%3Dwood) | no errors|
 | Account | Log In | [On-line Report](https://loopitoy-2943fdc3b2bc.herokuapp.com/accounts/login/) | no erros |
-|  | Log Out | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Faccounts%2Flogout%2F) | no erros |
+|  | Log Out | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Faccounts%2Flogout%2F) | no errors |
 |  | Sign Up | [On-line Report](https://loopitoy-2943fdc3b2bc.herokuapp.com/accounts/signup/) | no erros 
 | Admin & Site Owner | Add Toy | [Report](./docs/testing/html/html_admin_add_toy.PNG) | no erros |
 | | Edit Toy | [Report](./docs/testing/html/html_admin_edit_toy.PNG) | no erros |
 | | Delete Toy | [Report](./docs/testing/html/html_admin_delete_toy.PNG) | no erros |
 | Purchasing & Checkout| Shopping Bag | [Report](./docs/testing/html/html_bag.PNG) | no erros |
-| Checkout | [Report](./docs/testing/html/html_checkout.PNG) | no erros |
-| Checkout - Thank you| [Report](./docs/testing/html/html_checkout_thank_you.PNG) | no erros |
-| Profile | [Report](./docs/testing/html/html_profile.PNG) | no erros |
+| | Checkout | [Report](./docs/testing/html/html_checkout.PNG) | no erros |
+| | Checkout - Thank you| [Report](./docs/testing/html/html_checkout_thank_you.PNG) | no erros |
+| | Profile | [Report](./docs/testing/html/html_profile.PNG) | no erros |
+| Hidden Pages & Polices | Privacy Policy | [Online-Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Fprivacy-policy)| no errors |
+| | Return & Refund | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Freturn-and-refund) | no errors |
+| | Terms & Conditions | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Fterms-and-conditions) | no errors |
+
 
 
 
@@ -97,15 +101,21 @@ The [Nu Html Checker](https://validator.w3.org/nu/) web-based tool by W3 was use
 
 
 ### Javascript
-The [JShint](https://jshint.com/) static tool was considered to check the code rules of the Javascript source code.
+The [JShint](https://jshint.com/) static tool was considered to check the code rules of the JavaScript source code.
+
+| JS File | Report | Results   |
+|----------|--------|-----------|
+| `checkout/static/checkout/js/stripe_elements.js` | <img src="./docs/testing/js/js_stripe_element.PNG" alt="loopitoy_urls" width="200"/> | undefined variable Stripe - this is a function from stripe  |
+| `profiles/static/profiles/js/countryfield.js` | <img src="./docs/testing/js/js_contry_field.PNG" alt="loopitoy_urls" width="200"/> | no error |
+
 
 ### CSS
 The [jigsaw](https://jigsaw.w3.org/css-validator/) web-based tool by W3 was used to validate the CSS of the webpage. The conent of `base.css` and `checkout.css` was directly insertet on [the webpage](https://jigsaw.w3.org/css-validator/#validate_by_input). The CSS Validator did not detect any erros, see reports bellow.
 
 | CSS File | Report | Results   |
 |----------|--------|-----------|
-| `base.css` | <img src="./docs/testing/css/css_base.PNG" alt="findmereadme_urls" width="200"/> | no error |
-| `checkout.css` | <img src="./docs/testing/css/css_checkout.PNG" alt="findmereadme_urls" width="200"/> | no error |
+| `base.css` | <img src="./docs/testing/css/css_base.PNG" alt="loopitoy_urls" width="200"/> | no error |
+| `checkout.css` | <img src="./docs/testing/css/css_checkout.PNG" alt="loopitoy_urls" width="200"/> | no error |
 
 
 ### PEP8
@@ -113,7 +123,7 @@ To validate the Python code in terms of PEP8, the [CI Python Linter](https://pep
 
 | Module | Python file               | Report | Results   |
 |--------|---------------------------|--------|-----------|
-|`findmereadme` | `urls.py`          | <img src="./docs/testing/python/python_findmereadme_urls.png" alt="findmereadme_urls" width="200"/> | no error |
+|`loopitoy` | `urls.py`          | <img src="./docs/testing/python/python_loopitoy_urls.png" alt="loopitoy_urls" width="200"/> | no error |
 
 
 

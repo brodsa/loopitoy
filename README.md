@@ -32,7 +32,12 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 <details>
 <summary>EPIC 2: SEO & Marketing</summary>
-- [#37](https://github.com/brodsa/loopitoy/issues/37): As a Site Owner I want to use some SEO techniques so that I can increase the chance to purchase on my e-shop.
+- [#6](https://github.com/brodsa/loopitoy/issues/6): As a Site User I want to read delivery information so that I know what to expect regarding delivery and refund.
+- [#7](https://github.com/brodsa/loopitoy/issues/7) :As a role I want to know how my date are used so that I can decide which personal detail I provide.
+- [#8](https://github.com/brodsa/loopitoy/issues/8): As a Store Owner I want to send updates and new arrivals to my customers so that I can regular inform them and motivate to purchase.
+- [#37](https://github.com/brodsa/loopitoy/issues/37): As a Site Owner I want to use some SEO techniques so that I can increase the chance to purchase on my e-shop. 
+- [#39](https://github.com/brodsa/loopitoy/issues/39): As a Site User I want to read about Terms and Conditions so that I know what to expect when selling toys.
+
 </details>
 
 
