@@ -1,9 +1,9 @@
-from django.urls import path
+from django.urls import path, include
 
-from .views import AddContact, ThankYouContact
+from .views import AddContact
 
 
 urlpatterns = [
     path('', AddContact.as_view(), name='contact'),
-    path('thank_you/', ThankYouContact.as_view(), name='thank_you'),
+    path('home', include('home.urls'), name='home'),
 ]
