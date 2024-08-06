@@ -49,6 +49,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 - [#10](https://github.com/brodsa/loopitoy/issues/10): As a Shopper I want to view individual toys details so that I can find the price, description, product image and quality.
 - [#11](https://github.com/brodsa/loopitoy/issues/11): As a Shopper I want to quickly identify toys according to age group and toys categories so that I can easily find appropriate toys for my children.
 - [#12](https://github.com/brodsa/loopitoy/issues/12): As a Shopper I want to quickly see the total of my purchases at any time so that I can avoid spending too much time.
+- [#36](https://github.com/brodsa/loopitoy/issues/36): As a Site User I want to come back to home page in case I am unexpected request so that I can continue purchasing.
 - [#40](https://github.com/brodsa/loopitoy/issues/40): As a User I want to have the possibility to write the site owner so that I can contact him/her in any matter.
 
 </details>
@@ -135,11 +136,17 @@ Wireframes were prepared for both mobile and desktop devices using balsamiqo pro
 
 ### Surface
 
-**Colors**: The final color palette was selected using [coolors](https://coolors.co/1c304a-b49532-30592c-74301a) online tool to reflect the colors on the landing page and to reflect the favourite children colors. The pallette consist of four colors. ![Colors](./docs/ux/ux_color.PNG) The colors were accessed by [accessible color matrix tool](https://toolness.github.io/accessible-color-matrix/). The accessible combination are depicted in the [accessibility matrix](./docs/ux/us_accessibilityPNG.PNG)
+**Colors**
 
-**Font**: Two pairing fonts were chosen base on the [elemnetor blog article](https://elementor.com/blog/font-pairing/). The final fonts are: Archivo Black & Roboto. Both fonts were imported from [Google Fonts](https://fonts.google.com/). 
+The final color palette was selected using [coolors](https://coolors.co/1c304a-b49532-30592c-74301a) online tool to reflect the colors on the landing page and to reflect the favourite children colors. The pallette consist of four colors. ![Colors](./docs/ux/ux_color.PNG) The colors were accessed by [accessible color matrix tool](https://toolness.github.io/accessible-color-matrix/). The accessible combination are depicted in the [accessibility matrix](./docs/ux/us_accessibilityPNG.PNG)
 
-**Image**: The final image by [Susan Holt Sumpson](https://unsplash.com/@shs521?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on the landing page was chosen on [unsplash]. Two keywords were given: playing children; to get the best suitable image for the second-hand toy e-shop.
+**Font**
+
+Two pairing fonts were chosen base on the [elemnetor blog article](https://elementor.com/blog/font-pairing/). The final fonts are: Archivo Black & Roboto. Both fonts were imported from [Google Fonts](https://fonts.google.com/). 
+
+**Image**
+
+The final image by [Susan Holt Sumpson](https://unsplash.com/@shs521?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on the landing page was chosen on [unsplash]. Two keywords were given: playing children; to get the best suitable image for the second-hand toy e-shop.
 
 ## Features
 The features of the web page were planned using Agile methodology to ensure Minimum Value Product and to address planned User Stories. The core features of this django-base webpage includes CRUD functionality for both Site Users and Site Owner, so that users can create, read, update and delete records. In additon, messages are displayed after each CRUD activity.
@@ -180,6 +187,7 @@ The core authentication pages includes:
 
 
 ### Toy Pages
+
 - **Toys Page** presents all available toys in e-shop. Each toy is depicted in a card element showing the basic information about toy, such as name, price and categories. For Site Owner, there are two buttons in addition: Edit and Remove to edit toy information and delete toy, respectively. ![Toys](./docs/features/feature_toys.PNG)
 
 - **Toy Detail Page** displayes all toy details including buttons to add a toy into shopping bag or to return to all toys. For Site Owner, there are two buttons for adding toy information or toy deletion. ![Toys](./docs/features/features_toy_detail.png)
@@ -190,17 +198,22 @@ The core authentication pages includes:
 
 
 ### Purchasing Pages
+
 - **Shopping Bag Page** displays the content of the shopping bag, including toy name with price, total and delivery costs. In addition, there are two buttons to either continue shopping or to proceed checkout. ![Shopping Bag](./docs/features/feature_bag.PNG).
 
 - **Checkout Page** shows the summary order and displays displays form to fill out delivery and billing information. There are also two buttons to either return or to complete order. ![Checkout](./docs/features/features_checkout.png).
 
 - **Checkout - Thank You Page** shows the summary order  with delivery and billing information. User is also informed about receiving the confirmation email. In order to return to Homepage, there is a button. ![Checkout - Thank you](./docs/features/features_checkout_success.png).
 
+### Hidden Error & Policy Pages
+- **Hidden Error Pages** displayes the error status code, name and message. In addition, there is a button to return to the landing page. There are three pages implemented for the unexpected situations: Permission denied (`status=403`), Page not found (`status=404`), Server Error (`status=500`). The layout of all hidden pages is the same - it displayes the message code, text and button to return home. ![Hidden Page](./docs/features/feature_hidden_page.PNG).
+- **Policy Pages** displays information about various polices and terms, such as Privacy Policy, Return & Refund, Terms & Conditions. The layout of such pages is the same. ![Polices](./docs/features/feature_polices.PNG)
+
 
 ### Future & Left Features
-- Contact Us with the form and contact informations
 - About Us
 - Login with Social Media using allauth.cocialaccount and django.contrib.site apps
+- Unique Form style
 
 ## Business Model
 loopitoy is B2C type of e-commerce application as it sells second-hand toys. It is a platform which supports circular economy for toys. Customers can both buy and sell toys using secure single payment transactions.
@@ -257,7 +270,7 @@ My Inspirations: hrej si, circle toy.
 - [Markdown Generator](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/) was used to convert excel sheet tables to markdown tables.
 - Chrome LightHouse extension  was used for validating the webpage.
 - [Chrome WAVE Evaluation Tool extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) was used to evaluate accessibility of the webpage.
-
+- [Termify](https://termify.io/) was used to generate all the polices and terms.
 
 ## Deployment & Forking & Cloning
 [Visual Studio Code](https://code.visualstudio.com/) and [GitHub](https://github.com/) have been used to build the web page. Make sure you have them installed or similar programs.
