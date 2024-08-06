@@ -22,7 +22,7 @@ class ToyForm(forms.ModelForm):
             'status',
         ]
 
-        exclude = ('number','created_on')
+        exclude = ('number', 'created_on')
 
         widgets = {
             "description": forms.Textarea(attrs={"cols": 3, "rows": 3}),
@@ -31,7 +31,8 @@ class ToyForm(forms.ModelForm):
 
         placeholders = {
             'name': 'Toy Name *',
-            'description': 'Provide information about toy, e.g. brand or material',
+            'description':
+                'Provide information about toy, e.g. brand or material',
             'price': 'Price *',
             'new_price': 'New Price for discounts',
             'age': 'Select age category*',
@@ -45,7 +46,7 @@ class ToyForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
-        
+
         # assign the category friendly names
         self.fields['category'].choices = friendly_names
 

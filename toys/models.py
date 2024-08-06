@@ -24,12 +24,13 @@ AGE_CATEGORY = [
 ]
 
 QUALITY = [
-    ('new','New'),
+    ('new', 'New'),
     ('used_like_new', 'Used - Like New'),
     ('used_perfect', 'Used - Perfect'),
     ('used_good', 'Used - Good'),
     ('used_very_used', 'Used - Very Used')
 ]
+
 
 class Category(models.Model):
     """A model to create and mange toys categories"""
@@ -38,7 +39,7 @@ class Category(models.Model):
 
     def __str__(self):
         return str(self.name)
-    
+
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -53,9 +54,12 @@ class Toys(models.Model):
     name = models.CharField(max_length=254, null=False, blank=False)
     description = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    new_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    quality = models.CharField(max_length=50, choices=QUALITY, default='used_good')
-    age = models.CharField(max_length=50, choices=AGE_CATEGORY, default='newborn_infant')
+    new_price = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True)
+    quality = models.CharField(
+        max_length=50, choices=QUALITY, default='used_good')
+    age = models.CharField(
+        max_length=50, choices=AGE_CATEGORY, default='newborn_infant')
     category = models.ForeignKey(
         Category,
         related_name='toy_category',
@@ -70,23 +74,24 @@ class Toys(models.Model):
         default='media/placeholder.placeholder.webp',
         blank=True
     )
-    status = models.CharField(max_length=50, choices=TOY_STATUS, default='open')
-    user = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='sells')
+    status = models.CharField(
+        max_length=50, choices=TOY_STATUS, default='open')
+    user = models.ForeignKey(
+        UserProfile,
+        on_delete=models.SET_NULL, null=True, blank=True, related_name='sells')
     created_on = models.DateField(auto_now_add=True)
 
     class Meta:
-        ordering = ['-created_on','status']
+        ordering = ['-created_on', 'status']
         verbose_name_plural = 'Toys'
 
     def __str__(self):
         return str(self.name)
-    
 
     def save(self, *args, **kwargs):
         """
             Overwrites save to generate toy number based on the toy id and
             randomly generated code.
-            Inspiration: https://stackoverflow.com/questions/69365764/django-i-want-to-create-a-self-generated-code-based-on-previous-records-and-a-s
         """
         # get the toy ID
         if self.id is None:
@@ -95,12 +100,13 @@ class Toys(models.Model):
             else:
                 last_toy = Toys.objects.order_by('id').last().id
             id_seed = 0 if last_toy is None else int(last_toy)
-            
+
             # generate code for the specific toy ID
             random.seed(id_seed)
             chars = string.ascii_letters + string.digits
-            chars_selected = "".join(random.choices(chars, k=10))
-            self.number = f"PP-{chars_selected[:4]}-{chars_selected[4:-2]}-{chars_selected[-2:]}"
+            chars_s = "".join(random.choices(chars, k=10))
+            code = f"{chars_s[:4]}-{chars_s[4:-2]}-{chars_s[-2:]}"
+            self.number = code
         else:
             self.number = self.number
 

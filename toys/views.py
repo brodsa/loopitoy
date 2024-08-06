@@ -28,35 +28,33 @@ from .forms import ToyForm
 def all_toys(request):
     "A view to show all toys"
 
-    toys = Toys.objects.filter(status__in = ['eshop','in_bag'])
+    toys = Toys.objects.filter(status__in=['eshop', 'in_bag'])
     categories = None
     age_groups = None
     query = None
-    
 
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             toys = toys.filter(category__name__in=categories)
-            categories_ls = toys.values_list('category',flat=True)
+            categories_ls = toys.values_list('category', flat=True)
             categories = Category.objects.filter(pk__in=categories_ls)
-            print(categories)
-            
+
         if 'age' in request.GET:
             age_groups = request.GET['age'].split(',')
             toys = toys.filter(age__in=age_groups)
-            categories_ls = toys.values_list('category',flat=True)
+            categories_ls = toys.values_list('category', flat=True)
             categories = Category.objects.filter(pk__in=categories_ls)
 
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, 'You did not enter any search criteria!')
+                messages.error(
+                    request, 'You did not enter any search criteria!')
                 return redirect(reverse('toys'))
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             toys = toys.filter(queries)
-            
-
 
     context = {
         'toys': toys,
@@ -67,22 +65,21 @@ def all_toys(request):
     return render(request, 'toys/toys.html', context)
 
 
-class AddToy(LoginRequiredMixin,UserPassesTestMixin,CreateView):
+class AddToy(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     """ Add Toy View """
     template_name = 'toys/create_toy.html'
     model = Toys
     form_class = ToyForm
     success_url = '/toys/'
 
-
     def test_func(self):
         """ Test user with logged user otherwise 403 """
         return self.request.user.is_superuser
-    
+
     def form_valid(self, form):
         profile = get_object_or_404(UserProfile, user=self.request.user)
         form.instance.user_profile = profile
-        
+
         messages.success(
             self.request,
             f'Successfully created toy {form.instance.name}.'
@@ -91,13 +88,12 @@ class AddToy(LoginRequiredMixin,UserPassesTestMixin,CreateView):
         return super(AddToy, self).form_valid(form)
 
 
-class EditToy(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
+class EditToy(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """ Edit Toy View """
     template_name = 'toys/edit_toy.html'
     model = Toys
     form_class = ToyForm
     success_url = '/toys/'
-
 
     def test_func(self):
         """ Test user with logged user otherwise 403 """
@@ -131,7 +127,7 @@ class DeleteToy(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             'Successfully deleted toy.'
         )
         return super().delete(request, *args, **kwargs)
-    
+
 
 class DetailToy(DetailView):
     """ Toy Detail View to see toy details """

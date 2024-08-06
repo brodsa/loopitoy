@@ -140,15 +140,18 @@ To validate the Python code in terms of PEP8, the [CI Python Linter](https://pep
 | | `views.py`          | <img src="./docs/testing/python/py_contact_views.PNG" alt="loopitoy_contact_views" width="200"/> | no error |
 | `home` | `urls.py`          | <img src="./docs/testing/python/py_home_urls.PNG" alt="loopitoy_home_urls" width="200"/> | no error |
 | | `views.py`          | <img src="./docs/testing/python/py_home_views.PNG" alt="loopitoy_home_views" width="200"/> | no error |
-| `loopitoy` | `settings.py` | <img src="./docs/testing/python/py_lopitoy_settings.PNG" alt="loopitoy_lopitoy_settings" width="200"/> | no error |
-| | `urls.py`          | <img src="./docs/testing/python/py_lopitoy_urls.PNG" alt="loopitoy_lopitoy_urls" width="200"/> | no error |
-| | `views.py`          | <img src="./docs/testing/python/py_lopitoy_views.PNG" alt="loopitoy_lopitoy_views" width="200"/> | no error |
+| `loopitoy` | `settings.py` | <img src="./docs/testing/python/py_loopitoy_settings.PNG" alt="loopitoy_lopitoy_settings" width="200"/> | no error |
+| | `urls.py`          | <img src="./docs/testing/python/py_loopitoy_settings.PNG" alt="loopitoy_lopitoy_urls" width="200"/> | no error |
+| | `views.py`          | <img src="./docs/testing/python/py_loopitoy_views.PNG" alt="loopitoy_lopitoy_views" width="200"/> | no error |
 | `profiles` | `forms.py` | <img src="./docs/testing/python/py_profile_forms.PNG" alt="loopitoy_profile_forms" width="200"/> | no error |
 | | `models.py`          | <img src="./docs/testing/python/py_profile_models.PNG" alt="loopitoy_profile_models" width="200"/> | no error |
 | | `urls.py`          | <img src="./docs/testing/python/py_profile_urls.PNG" alt="loopitoy_profile_urls" width="200"/> | no error |
 | | `views.py`          | <img src="./docs/testing/python/py_profile_views.PNG" alt="loopitoy_profile_views" width="200"/> | no error |
-
-
+| `toys` | `admin.py` | <img src="./docs/testing/python/py_toys_admin.PNG" alt="loopitoy_toys_admin" width="200"/> | no error |
+|  | `forms.py` | <img src="./docs/testing/python/py_toys_forms.PNG" alt="loopitoy_toys_forms" width="200"/> | no error |
+| | `models.py`          | <img src="./docs/testing/python/py_toys_models.PNG" alt="loopitoy_toys_models" width="200"/> | no error |
+| | `urls.py`          | <img src="./docs/testing/python/py_toys_urls.PNG" alt="loopitoy_toys_urls" width="200"/> | no error |
+| | `views.py`          | <img src="./docs/testing/python/py_toys_views.PNG" alt="loopitoy_toys_views" width="200"/> | no error |
 
 
 ### Accessibility
