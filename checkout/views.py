@@ -20,6 +20,7 @@ from bag.contexts import bag_contents
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 
+
 @require_POST
 def cache_checkout_data(request):
     """A View to cache data from meta data"""
@@ -36,6 +37,7 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
+
 
 def checkout(request):
     """A view to manage checkout"""
@@ -72,7 +74,8 @@ def checkout(request):
                     order_line_item.save()
                 except Toys.DoesNotExist:
                     messages.error(request, (
-                        "One of the toys in your bag wasn't found in our database. "
+                        "One of the toys in your bag wasn't \
+                        found in our database. "
                         "Please contact us!")
                     )
                     order.delete()
@@ -80,7 +83,8 @@ def checkout(request):
 
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number]))
 
         else:
             messages.error(request, 'There was an error with your form. \
@@ -88,7 +92,8 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request, "There's nothing in your bag at the moment")
             return redirect(reverse('toys'))
 
         current_bag = bag_contents(request)
@@ -100,7 +105,8 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
+        # Attempt to prefill the form with
+        # any info the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -123,7 +129,6 @@ def checkout(request):
         messages.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
 
-
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
@@ -132,7 +137,6 @@ def checkout(request):
     }
 
     return render(request, template, context)
-
 
 
 def checkout_success(request, order_number):
@@ -170,7 +174,7 @@ def checkout_success(request, order_number):
     if 'bag' in request.session:
         bag = request.session.get('bag', {})
         for item_id, item_data in bag.items():
-            toy_sold = Toys.objects.get(pk = int(item_id))
+            toy_sold = Toys.objects.get(pk=int(item_id))
             toy_sold.status = 'sold'
             toy_sold.save()
 

@@ -3,12 +3,13 @@ from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """ Class to Fill in Delivery Information """
     class Meta:
         model = Order
-        fields = ('full_name', 'email', 
+        fields = ('full_name', 'email',
                   'street_address',
-                  'town_or_city', 'postcode', 
-                  'county','country',
+                  'town_or_city', 'postcode',
+                  'county', 'country',
                   'phone_number',)
 
     def __init__(self, *args, **kwargs):
@@ -35,5 +36,6 @@ class OrderForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'stripe-style-input rounded-0'
+            css_style = 'stripe-style-input rounded-0'
+            self.fields[field].widget.attrs['class'] = css_style
             self.fields[field].label = False

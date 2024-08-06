@@ -123,10 +123,19 @@ To validate the Python code in terms of PEP8, the [CI Python Linter](https://pep
 
 | Module | Python file               | Report | Results   |
 |--------|---------------------------|--------|-----------|
-|`bag` | `apps.py`          | <img src="./docs/testing/python/py_bag_apps.PNG" alt="loopitoy_apps" width="200"/> | no error |
-| | `contexts.py`          | <img src="./docs/testing/python/py_bag_contexts.PNG" alt="loopitoy_contexts" width="200"/> | no error |
-|  | `urls.py`          | <img src="./docs/testing/python/py_bag_urls.PNG" alt="loopitoy_urls" width="200"/> | no error |
-| | `views.py`          | <img src="./docs/testing/python/py_bag_views.PNG" alt="loopitoy_views" width="200"/> | no error |
+|`bag` | `apps.py`          | <img src="./docs/testing/python/py_bag_apps.PNG" alt="loopitoy_bag_apps" width="200"/> | no error |
+| | `contexts.py`          | <img src="./docs/testing/python/py_bag_contexts.PNG" alt="loopitoy_bag_contexts" width="200"/> | no error |
+|  | `urls.py`          | <img src="./docs/testing/python/py_bag_urls.PNG" alt="loopitoy_bag_urls" width="200"/> | no error |
+| | `views.py`          | <img src="./docs/testing/python/py_bag_views.PNG" alt="loopitoy_bag_views" width="200"/> | no error |
+|`checkout` | `admin.py`          | <img src="./docs/testing/python/py_checkout_admin.PNG" alt="loopitoy_checkout_admin" width="200"/> | no error |
+| | `apps.py`          | <img src="./docs/testing/python/py_checkout_apps.PNG" alt="loopitoy_checkout_apps" width="200"/> | no error |
+| | `forms.py`          | <img src="./docs/testing/python/py_checkout_forms.PNG" alt="loopitoy_checkout_forms" width="200"/> | no error |
+| | `models.py`          | <img src="./docs/testing/python/py_checkout_models.PNG" alt="loopitoy_checkout_models" width="200"/> | no error |
+| | `signals.py`          | <img src="./docs/testing/python/py_checkout_signals.PNG" alt="loopitoy_checkout_signals" width="200"/> | no error |
+|  | `urls.py`          | <img src="./docs/testing/python/py_checkout_urls.PNG" alt="loopitoy_checkout_urls" width="200"/> | no error |
+| | `views.py`          | <img src="./docs/testing/python/py_checkout_views.PNG" alt="loopitoy_checkout_views" width="200"/> | no error |
+| | `webhook_handler.py`          | <img src="./docs/testing/python/py_checkout_webhook_handler.PNG" alt="loopitoy_checkout_webhook_handler" width="200"/> | no error |
+| | `webhooks.py`          | <img src="./docs/testing/python/py_checkout_webhooks.PNG" alt="loopitoy_checkout_webhooks" width="200"/> | no error |
 
 
 
