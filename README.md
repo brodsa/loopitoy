@@ -248,7 +248,9 @@ My Inspirations: hrej si, circle toy.
 ## Testing & Validation
 
 ### Bugs
+Several bugs were releaved during the development. Bellow, all complex bugs that required more time, searching, trying to be solved:
 - Filter category toys: useing category names to filter out displayed category buttons shows incorect category name. Solution: use pk of categories to filter out the displayed category. SOLVED
+- Handler500: error message - (urls.E007) The custom handler500 view 'loopitoy.views.handler500' does not take the correct number of arguments (request). Solution found on stackoverflow  [Django wrong amount of arguments in custom handler](https://stackoverflow.com/questions/60507625/django-wrong-amount-of-arguments-in-custom-handler). SOLVED
 
 ## Technologies Used
 - Python
