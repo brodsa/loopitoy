@@ -26,9 +26,9 @@
                         <thead class="text-black">
                             <tr>
                                 <th scope="col" class="menu__item ps-3"> Toy Info</th>
-                                <th scope="col"> </th>
+                                <th scope="col"> <span class="hide-mobile"> Name</span> </th>
                                 <th scope="col" class="menu__item th-right pe-1"> Price</th>
-                                <th scope="col"> </th>
+                                <th scope="col"> <span class="hide-mobile"> Delete </span> </th>
                                 
                             </tr>
                         </thead>               
@@ -51,6 +51,7 @@
                                             <div class="d-flex flex-row gap-2 justify-content-end pb-2 pe-2">
                                                 <button data-item_id = "{{ item.toy.id }}" class="btn form__button--primary">
                                                     <i class="fa-regular fa-trash-can"></i>
+                                                    <span class="hide-mobile"> Delete Button</span>
                                                 </button>
                                             </div>
                                             <input type="hidden" name="redirect_url" value="{{ request.path }}">

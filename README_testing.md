@@ -49,8 +49,7 @@ The Webhook was tested on development environment. Two type of events were teste
   - `payment_intent.payment_failed`: [terminal](./docs/testing/wh/wh_payment_failed_terminal.PNG), [dashboard](./docs/testing/wh/wh_payment_failed_dashboard.PNG)
   - `payment_intent.succeeded` : [terminal](./docs/testing/wh/wh_payment_successed_terminal.PNG), [dashboard](./docs/testing/wh/wh_payment_successed_dashboard.PNG), [cache data](./docs/testing/wh/cacha_data.PNG)
 
-There were additional webhook test performed, see the report of Features Testing, TODO: 
-
+There were additional webhook test performed, see the report of Features Testing 
 
 
 ## Code Validation
@@ -89,12 +88,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) web-based tool by W3 was use
 | | Return & Refund | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Freturn-and-refund) | no errors |
 | | Terms & Conditions | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Fterms-and-conditions) | no errors |
 
-
-
-
-
-
-
+[Back to the content](#testing--validation)
 
 ### Javascript
 The [JShint](https://jshint.com/) static tool was considered to check the code rules of the JavaScript source code.
@@ -153,14 +147,33 @@ To validate the Python code in terms of PEP8, the [CI Python Linter](https://pep
 | | `urls.py`          | <img src="./docs/testing/python/py_toys_urls.PNG" alt="loopitoy_toys_urls" width="200"/> | no error |
 | | `views.py`          | <img src="./docs/testing/python/py_toys_views.PNG" alt="loopitoy_toys_views" width="200"/> | no error |
 
+[Back to the content](#testing--validation)
+
 
 ### Accessibility
-The [WAVE](https://wave.webaim.org/) web-based tool was considered for the evaluation of the web accessibility. For the pages required authentication chrome extension [WAVE Evaluation Tool](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) was used. In generally, the validation did not reveal any errors. Two alerts were noticed. A redundant link in navigation as there is a link to homepage attached to both logo and home. The home item and link was removed from the navigation menu. Second alert is related to the PDF link. To increase the accessibility an `arial-label` attribute is present. The detailed reports are below:
+The chrome extension [WAVE Evaluation Tool](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) was considered for the evaluation of the web accessibility. The validation revealed missing `arial-label` attributes in profile and checkout form. These were added. The final detailed reports are below:
 
 | Category | Page Report | Results |
 |----------|-------------|---------|
-| Homepage | [Home](https://wave.webaim.org/report#/https://loopitoy-2943fdc3b2bc.herokuapp.com/) | no errors
+| Info Pages | Landing Page         | <img src="./docs/testing/wave/wave_home.PNG" alt="wave_home" width="200"/> | no error |
+|  | How It Works Page         | <img src="./docs/testing/wave/wave_how.PNG" alt="wave_how" width="200"/> | no error |
+|  | Contact Page         | <img src="./docs/testing/wave/wave_contact.PNG" alt="wave_contact" width="200"/> | no error |
+|  | Hidden Page         | <img src="./docs/testing/wave/wave_hidden_page.PNG" alt="wave_hidden_page" width="200"/> | no error |
+|  | Polices Page         | <img src="./docs/testing/wave/wave_polices.PNG" alt="wave_polices" width="200"/> | no error |
+| Account Pages | Register Page         | <img src="./docs/testing/wave/wave_account_register.PNG" alt="wave_account_register" width="200"/> | no error |
+|  | Log In Page         | <img src="./docs/testing/wave/wave_account_login.PNG" alt="wave_account_login" width="200"/> | no error |
+|  | Log In Page         | <img src="./docs/testing/wave/wave_account_logout.PNG" alt="wave_account_logout" width="200"/> | no error |
+|  | Profile Page         | <img src="./docs/testing/wave/wave_profile.PNG" alt="wave_profile" width="200"/> | no error |
+| Shopping Pages | Shopping Bag Page         | <img src="./docs/testing/wave/wave_bag.PNG" alt="wave_bag" width="200"/> | no error |
+|  | Checkout Page         | <img src="./docs/testing/wave/wave_checkout.PNG" alt="wave_checkout" width="200"/> | no error |
+|  | Checkout Completed Page         | <img src="./docs/testing/wave/wave_checkout_completed.PNG" alt="wave_checkout_completed" width="200"/> | no error |
+| Toy Pages | Add Toy Page         | <img src="./docs/testing/wave/wave_toy_add.PNG" alt="wave_toy_add" width="200"/> | no error |
+|  | Edit Toy  Page         | <img src="./docs/testing/wave/wave_toy_edit.PNG" alt="wave_toy_edit" width="200"/> | no error |
+|  | Delete Toy  Page         | <img src="./docs/testing/wave/wave_toydelete.PNG" alt="wave_toy_delete" width="200"/> | no error |
+|  | Detail Toy  Page         | <img src="./docs/testing/wave/wave_toydetail.PNG" alt="wave_toy_detail" width="200"/> | no error |
+|  | Toys Overview  Page         | <img src="./docs/testing/wave/wave_toy_overview.PNG" alt="wave_toy_overview" width="200"/> | no error |
 
+[Back to the content](#testing--validation)
 
 ## Lighthouse
 The Lighthouse in Chrome DevTools evaluates the webpage for performance, accessibility, best practices, and SEO. The pages with the main content were evaluated, meaning the pages with forms were not considered as they are produce mainly form The evaluation did not reveal any big issues. The detailed reports can be viewed at:

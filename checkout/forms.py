@@ -39,3 +39,4 @@ class OrderForm(forms.ModelForm):
             css_style = 'stripe-style-input rounded-0'
             self.fields[field].widget.attrs['class'] = css_style
             self.fields[field].label = False
+            self.fields[field].widget.attrs['aria-label'] = field
