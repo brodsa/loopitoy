@@ -11,9 +11,9 @@ from .views import (
 
 
 urlpatterns = [
-    path('', Index.as_view(),name='home'),
-    path('how-it-works', HowItWorks.as_view(),name='how'),
-    path('privacy-policy', PrivacyPolicy.as_view(),name='privacy'),
-    path('return-and-refund', ReturnAndRefund.as_view(),name='return'),
-    path('terms-and-conditions', TermsAndConditions.as_view(),name='terms'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', Index.as_view(), name='home'),
+    path('how-it-works', HowItWorks.as_view(), name='how'),
+    path('privacy-policy', PrivacyPolicy.as_view(), name='privacy'),
+    path('return-and-refund', ReturnAndRefund.as_view(), name='return'),
+    path('terms-and-conditions', TermsAndConditions.as_view(), name='terms'),
+]

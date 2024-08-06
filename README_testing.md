@@ -137,6 +137,9 @@ To validate the Python code in terms of PEP8, the [CI Python Linter](https://pep
 | | `models.py`          | <img src="./docs/testing/python/py_contact_models.PNG" alt="loopitoy_contact_models" width="200"/> | no error |
 |  | `urls.py`          | <img src="./docs/testing/python/py_contact_urls.PNG" alt="loopitoy_contact_urls" width="200"/> | no error |
 | | `views.py`          | <img src="./docs/testing/python/py_contact_views.PNG" alt="loopitoy_contact_views" width="200"/> | no error |
+| `home` | `urls.py`          | <img src="./docs/testing/python/py_home_urls.PNG" alt="loopitoy_home_urls" width="200"/> | no error |
+| | `views.py`          | <img src="./docs/testing/python/py_home_views.PNG" alt="loopitoy_home_views" width="200"/> | no error |
+
 
 
 
