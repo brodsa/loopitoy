@@ -1,18 +1,18 @@
 <div class="nav-top-mobile btn-group">
     <a class="nav-link dropdown d-inline-block mt-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <div class="text-center">
-            <span><i class="fas fa-search"></i></span>
+            <i class="fas fa-search"></i>
+            <span class="hide-mobile"> Search </span>
         </div>
     </a>
     <div class="dropdown-menu search">
         <form class="form" method="GET" action="{% url 'toys' %}">
             <div class="input-group w-100">
-                <input class="form-control rounded-0" type="text" name="q" placeholder="Search our site">
+                <input class="form-control rounded-0" type="text" name="q" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
                     <button class="form-control form-control btn  border border-black rounded-0" type="submit">
-                        <span class="icon">
                             <i class="fas fa-search"></i>
-                        </span>
+                            <span class="hide-mobile"> Search </span>
                     </button>
                 </div>
             </div>

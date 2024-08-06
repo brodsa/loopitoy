@@ -159,7 +159,7 @@ The [WAVE](https://wave.webaim.org/) web-based tool was considered for the evalu
 
 | Category | Page Report | Results |
 |----------|-------------|---------|
-| Homepage | [Home](https://wave.webaim.org/report#/https://findme-readme-10d0bfb3ba28.herokuapp.com/) | no errors
+| Homepage | [Home](https://wave.webaim.org/report#/https://loopitoy-2943fdc3b2bc.herokuapp.com/) | no errors
 
 
 ## Lighthouse

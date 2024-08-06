@@ -24,7 +24,7 @@ html {
     /* Colors */
     --primary-color: rgb(48, 89, 44);
     --secondary-color:#74301A;
-    --ternary-color: rgb(180, 149, 50);
+    --ternary-color: rgb(148, 120, 30);
     --last-color: #1C304A;
     --white: #fff;
     --black: #555555;
@@ -204,6 +204,10 @@ footer{
     font-weight: bold;
 }
 
+.hide-mobile{
+    display: none;
+}
+
  /* +++++++++++++ general style classes +++++++++++++ */
 .btn{
     background-color: var(--primary-color);
@@ -266,7 +270,6 @@ footer{
 }
 
 .bg-color-sec{
-    background-color: var(--secondary-color);
     background-color: var(--secondary-color);
 }
 
@@ -355,8 +358,6 @@ footer{
 }
 
 .how__subtitle{
-    border: solid var(--secondary-color) 2px;
-    background-color: var(--secondary-color) ;
     text-align: center;
     color: var(--white);
     padding: 1rem;
@@ -836,6 +837,7 @@ th.menu__item.th-right{
     .container{
         margin-top: 100px;
     }
+
     /* +++++++++++ How it works ++++++++++++++ */
     .how-card{
         max-width: 400px;
