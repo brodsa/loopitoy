@@ -1,9 +1,9 @@
 from django.urls import path, include
 
-from .views import AddContact
+from .views import AddContact, ThankYouContact
 
 
 urlpatterns = [
     path('', AddContact.as_view(), name='contact'),
-    path('home', include('home.urls'), name='home'),
+    path('thank_you/', ThankYouContact.as_view(), name='thank_you'),
 ]

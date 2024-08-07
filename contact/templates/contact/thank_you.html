@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Thank You{% endblock %}
+
+{% block page_header %}
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="contact-container form-account">
+    <h1 class="form__title">Thank you for contacting us</h1>
+  
+    <p class="text-center">Happy to hear from you. We have received your message. We will contact you very soon!</p>
+
+    <!-- Buttons -->
+    <div class="d-flex flex-column flex-md-row gap-md-2">
+        <a class= "btn form__button form__button--secondary w-100 flex-grow-1" href="{% url 'home' %}"> Home </a>
+    </div>
+  
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'includes/footer.html' %}
+{% endblock %}
