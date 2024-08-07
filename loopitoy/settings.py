@@ -136,7 +136,6 @@ WSGI_APPLICATION = 'loopitoy.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 if 'DEVELOPMENT' in os.environ:
-    print('DEV')
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -144,7 +143,6 @@ if 'DEVELOPMENT' in os.environ:
         }
     }
 else:
-    print('PROD')
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
      }
@@ -199,7 +197,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 if 'AWS_USE' in os.environ:
-    print('AWS')
     # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
