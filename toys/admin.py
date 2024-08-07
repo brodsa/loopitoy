@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Toys, Category
+from .models import Toys, Category, Brand
 
 
 @admin.register(Toys)
@@ -15,6 +15,7 @@ class ToysAdmin(admin.ModelAdmin):
         'quality',
         'age',
         'category',
+        'brand',
         'status',
         'user',
     )
@@ -32,6 +33,19 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'friendly_name'
+    )
+
+    search_fields = ('name',)
+
+
+@admin.register(Brand)
+class BrandAdmin(admin.ModelAdmin):
+    """
+    A Class to add and customize toys on admin panel
+    """
+    list_display = (
+        'name',
+        'url'
     )
 
     search_fields = ('name',)

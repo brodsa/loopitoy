@@ -49,6 +49,14 @@
                 <p><i class="fas fa-star mr-1"></i> {{ toy.get_quality_display }}</p>
 
                 <p>{{ toy.description }}</p>
+
+                <p>Brand: 
+                    {% if toy.brand %}
+                    <a class="copyright__link" href="{{ toy.brand.url }}" target="_blank"  rel="noopener nofollow" aria-label="Web side of {{ toy.brand }} is opened in a new tab" >{{ toy.brand }} </a>
+                    {% else %}
+                    Unkown
+                    {% endif %}
+                </p>
                 
                 {% if toy.status == 'in_bag' %}
                 <p> <strong>INFO</strong>: This toy is currently in the shopping bag of yours or someone else!</p>

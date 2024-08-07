@@ -48,6 +48,16 @@ class Category(models.Model):
         return self.friendly_name
 
 
+class Brand(models.Model):
+    """A model to create and manage toys brands"""
+    name = models.CharField(max_length=254)
+    url = models.CharField(max_length=254)
+
+    def __str__(self):
+        return str(self.name)
+
+
+
 class Toys(models.Model):
     """A model to create and manage toy products"""
     number = models.CharField(max_length=30)
@@ -64,6 +74,11 @@ class Toys(models.Model):
         Category,
         related_name='toy_category',
         default='toys',
+        null=True, blank=True,
+        on_delete=models.SET_NULL)
+    brand = models.ForeignKey(
+        Brand,
+        related_name='toy_brand',
         null=True, blank=True,
         on_delete=models.SET_NULL)
     image = ResizedImageField(
