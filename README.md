@@ -3,7 +3,7 @@
 # Content
 - [UX Design](#ux)
     - [Strategy: User Stories](#strategy)
-    - [Structure: ERD Model & App Logic Flow ](#structure)
+    - [Structure: ERD Model](#structure)
     - [Skeleton: Wireframes](#skeleton)
     - [Surface: Fonts & Colors & Images](#surface)
 - [Features](#Features)
@@ -130,10 +130,27 @@ Wireframes were prepared for both mobile and desktop devices using balsamiqo pro
 
 
 ### Structure 
-
-#### Logic Flow
+The loopIToy project was developed using python Django framework. The project contains seven applications:
+- `bag` manages content of the shopping bag, i.e. add or remove items.
+- `checkout` manages secured payments using stripe.
+- `home` allows to pages containing mainly information, such as landing page or different types of polices.
+- `profiles` allows to save delivery info into profile and access the history orders or sells.
+- `toys` manages toys that are displayed on the e-shop.
+- `allauth` allows to manage authentication proccesses - default django app.
+- `contact` manages contact message from the site visitors.
 
 #### ERD Model
+The user inputs from all forms are stored in elephantSQL cloud-based database. There are seven database tables:
+- `toys_toys` stores information about each toy.
+- `toys_category` contains all toy categories.
+- `checkout_order` keeps order information and delivery information.
+- `checkout_orderlineitem` contains information about each toy in the order.
+- `profiles_userprofile` stores information about users, mainly default delivery information.
+- `auth_user` contains informtion about the user authentication - default django app.
+- `contact_contact` stores contact message from site visitors.
+
+The ER Diagram shows the relations between all tables. ![ERD](./docs/ux/ux_erd.PNG)
+
 
 ### Surface
 
@@ -255,6 +272,33 @@ Several bugs were releaved during the development. Bellow, all complex bugs that
 
 ## Technologies Used
 - Python
+    - asgiref==3.8.1
+    - boto3==1.34.120
+    - botocore==1.34.120
+    - crispy-bootstrap5==0.7
+    - cryptography==42.0.7
+    - dj-database-url==0.5.0
+    - Django==3.2.25
+    - django-allauth==0.53.0
+    - django-countries==7.2.1
+    - django-crispy-forms==1.14.0
+    - django-resized==1.0.2
+    - django-storages==1.14.3
+    - gunicorn==20.1.0
+    - jmespath==1.0.1
+    - oauthlib==3.2.2
+    - pillow==10.3.0
+    - psycopg2==2.9.9
+    - PyJWT==2.8.0
+    - python3-openid==3.2.0
+    - pytz==2024.1
+    - requests-oauthlib==2.0.0
+    - s3transfer==0.10.1
+    - setuptools==70.0.0
+    - sqlparse==0.5.0
+    - stripe==9.12.0
+    - typing_extensions==4.12.0
+    - urllib3==2.2.1
 - HTML was used to create templates for the webpage.
 - CSS was used to style the webpage in addition to Bootstrap.
 - JavaScript
