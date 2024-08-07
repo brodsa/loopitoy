@@ -1,5 +1,13 @@
 # loopitoy
 
+
+loopitoy is an Austrian eCommerce platform to buy second-hand toys. The platform aims at supporting a circle economy for toys as it offers to buy and sell toys that are not used anymore. This website is the final project at Code Institute. The website is built mainly in Python, using Django framework.  
+
+The deployed website can be viewed [here](https://loopitoy-2943fdc3b2bc.herokuapp.com/).
+
+![Mockup](./docs/mockup.PNG)
+
+
 # Content
 - [UX Design](#ux)
     - [Strategy: User Stories](#strategy)
@@ -107,13 +115,13 @@ To manage user stories and epics, a Kanban board was created as GitHub Project, 
 Each user story was prioritized and implemented in 2 weeks long iterations. The Priorities as well as Epics are shown as labels .The iterations are defined as GitHub Milestones. The first iterations were mainly focused on the core features to ensure MVP functionality. During the later iterations additional features were implemented. The developer is aware of the fact that there should be a mix of all type of features within one iterations but due to the time pressure a different strategy was setup.
 
 ### Scope
-- Purpose: The purpose of the website is to provide a platform for users to share the highlight of their day, fostering gratitude and a positive outlook on life. The website aims to create a supportive online community where users can connect, inspire and uplift each other.
-- Target Audience: The target audience includes individuals who are interested in personal development, mindfulness, and self-improvement. This may include a diverse range of demographics, including young adults, professionals, parents, and students, who share a common interest in cultivating gratitude and positivity.
+- Purpose: The purpose of the website is to provide a platform for users to buy and sell second-hand toys. The website aims at creating a supportive platform for the circle economy where users buy toys of a guaranteed quality to offer fun for their children with a minimum of waste and carbon footprint.
+- Target Audience: The target audience includes individuals who have children around and are interested in climate change and protecting our planet for future generations. This may include parents, family members, or friends who share the same philosophy about nature protection.
 - Core Functionality:
-    - Highlight sharing: Users can easily post and share the highlights of their day, including text descriptions, images, categories and things to improve your day.
-    - Interactive features: The website enables users to engage with each others highlights through likes and comments, fostering a sense of community and connection.
-    - Search and Discovery: Robust search functionality allows users to search for highlights by content, category, or user.
-    - User profiles: Users can view each others profiles and comment on individual highlights.
+    - Purchasing & Checkout: Users can easily add toys to their shopping bags and proceed with checkout.
+    - Search and Filter: Robust search and filter functionality allows users to search for toys by content, category, age, and name.
+    - User profiles: Users can view order history and deliver information in personal profiles.
+    - Toy Management: Site Owner can manage toys on e-shop by creating, editing, or deleting toys.
 
 
 
@@ -246,23 +254,25 @@ The advantage over other second-hand platform lies in the concept that toys are 
 Users can enjoy intuitive shopping with a user-friendly and minimalistic interface that is ensure on both mobile and desktop devices. To increase the credibility of e-shop, loopitoy uses secure payments with stripe that is one of the most trusted payment gateways. 
 
 ### SEO
-- SEO (keywords, robots.txt, sitemap.xml)
+- A meta description and keyword tags were added to all pages of the site for SEO purposes. Both short and long keywords were selected using google search suggestions and wordtracer.
+- Products descriptions were added to each toy page. However, some improvements could be conducted.
+- Two files for SEO were created:  robots.txt, sitemap.xml 
 
-About 
-
-Hi, my name is Sarka and am glad that you come accross loopitoy. ... continue from How it works.
-
-
-title Story Behind 
-The orginal impulse to create loopitoy came from the Course. As in case of all other projects, I wanted to create something meanigfull. In Austria, we have a platform to buy second-hand products including toys, called Willhaben. Cool! But users are the one, who sells products not the platform. This means you have to pay delivery cost for each product separetely if they are sold by different users. In addition, the estimation of the product quality might differ accross various users. Sooo! 
-
-Here comes loopitoy - the platform with all toys centerilzed, with delivery cost payed once, with one quality estimation rule. Everything in one place, in Austria. 
-
-My Inspirations: hrej si, circle toy. 
 
 ### Marketing
-- Social
-- Newsletter
+
+**Social**
+
+A fictional Facebook business page was set up for marketing purposes: 
+- Increased visibility is one of the biggest advantage as Facebook is one of the most popular social media platforms.
+- loopIToy can directly interact and comunicate with customers by sharing news or react on customers comments. 
+- It is a opportunity to present the e-shop values related to sustainability and to educate more users about this topic
+- Site Owner can immediatelly see users reacations and can adopt the marketing strategies appropriatly. ![Facebook](./docs/marketing/facebook.PNG)
+
+**Newsletter**
+
+A newsletter was implemented with MailChimp. The form to subscribe is visible on the footer of every page in order to increase the chance that customers will notice it. Implementing newsletter has similar advantage as having social accounts. It offers a direct communication and presenting more complex information in comparison to Facebook. Site Owner can present 
+updates, promotions, or other relevant content from loopIToy.
 
 ## Testing & Validation
 
