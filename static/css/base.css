@@ -208,6 +208,7 @@ footer{
     display: none;
 }
 
+
  /* +++++++++++++ general style classes +++++++++++++ */
 .btn{
     background-color: var(--primary-color);
@@ -310,7 +311,35 @@ footer{
     color:var(--secondary-color);
 }
 
+/* Customize mailchimp style */
+#mc-embedded-subscribe input {
+    background-color: var(--primary-color) !important;
+    color:var(--white) !important;
+    border-radius: 0 !important;
+    border: 1px solid var(--primary-color) !important;
 
+}
+
+#mc-embedded-subscribe:hover{
+    background-color: var(--white) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    border-radius: 0 !important;
+}
+
+#mc_embed_signup {
+    width: 250px !important; /* TODO */
+}
+
+.refferal_badge {
+    display: none !important; /* TODO */
+}
+
+#mc_embed_signup input{
+    border-radius: 0 !important;
+    border-color: var(--primary-color) !important;
+    width: 250px !important; /* TODO */
+}
 
 
 /* ***************** Home  ************** */
@@ -836,6 +865,10 @@ th.menu__item.th-right{
 
     .container{
         margin-top: 100px;
+    }
+
+    .hide-pc{
+        display: none;
     }
 
     /* +++++++++++ How it works ++++++++++++++ */

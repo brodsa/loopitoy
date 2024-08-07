@@ -318,6 +318,7 @@ Several bugs were releaved during the development. Bellow, all complex bugs that
 - Chrome LightHouse extension  was used for validating the webpage.
 - [Chrome WAVE Evaluation Tool extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) was used to evaluate accessibility of the webpage.
 - [Termify](https://termify.io/) was used to generate all the polices and terms.
+- [mailchimp](https://us14.admin.mailchimp.com/) to get subscribe input field for Newsletter.
 
 ## Deployment & Forking & Cloning
 [Visual Studio Code](https://code.visualstudio.com/) and [GitHub](https://github.com/) have been used to build the web page. Make sure you have them installed or similar programs.
