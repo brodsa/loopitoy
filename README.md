@@ -232,6 +232,7 @@ The core authentication pages includes:
 - About Us
 - Login with Social Media using allauth.cocialaccount and django.contrib.site apps
 - Unique Form style
+- After sending contact form, user should be redirected to the home page.
 
 ## Business Model
 loopitoy is B2C type of e-commerce application as it sells second-hand toys. It is a platform which supports circular economy for toys. Customers can both buy and sell toys using secure single payment transactions.
