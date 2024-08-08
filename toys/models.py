@@ -57,7 +57,6 @@ class Brand(models.Model):
         return str(self.name)
 
 
-
 class Toys(models.Model):
     """A model to create and manage toy products"""
     number = models.CharField(max_length=30)
