@@ -328,17 +328,24 @@ footer{
 }
 
 #mc_embed_signup {
-    width: 250px !important; /* TODO */
+    width: 200px !important;
 }
 
 .refferal_badge {
-    display: none !important; /* TODO */
+    display: none !important;
 }
 
 #mc_embed_signup input{
     border-radius: 0 !important;
     border-color: var(--primary-color) !important;
-    width: 250px !important; /* TODO */
+    width: 200px !important;
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -870,6 +877,12 @@ th.menu__item.th-right{
     .hide-pc{
         display: none;
     }
+
+    #mc_embed_signup,
+    #mc_embed_signup input{
+        width: 280px !important;
+    }
+    
 
     /* +++++++++++ How it works ++++++++++++++ */
     .how-card{
