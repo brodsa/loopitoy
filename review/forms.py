@@ -18,14 +18,14 @@ class ReviewForm(forms.ModelForm):
             'want_replay',
         ]
 
-         widgets = {
+        widgets = {
             "review": forms.Textarea(attrs={"cols": 3, "rows": 4}),
             "reviewer_name": forms.TextInput(attrs={'autofocus': True})
         }
 
-        placeholder = {
+        labels = {
             'reviewer_name': 'Name',
-            'reviewer_email': 'Email'
+            'reviewer_email': 'Email',
             'rating': 'Select Rating Stars',
             'review': 'Write your review',
             'want_replay': 'Do you whish to be contacted back?'

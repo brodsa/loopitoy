@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block title %}About{% endblock %}
+
+{% block page_header %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<section id="about">
+    <h2 class="toys__title">About</h2>
+
+    <div class="about">
+        <div class="picture"></div>
+        <div class="text"></div>
+    </div>
+
+    <div class="reviews">
+        <h3 class="toys__title">Said About Us</h3>
+        {% for review in reviews %}
+            {% if review.approved %}
+                {{ review.review }}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <a href="{% url 'add_review' %}"> Add Review</a>
+</section>
+
+{% endblock %}
+
+
+{% block footer %}
+    {% include 'includes/footer.html' %}
+{% endblock %}

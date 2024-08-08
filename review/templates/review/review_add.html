@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
 
-{% block title %}Contact Us{% endblock %}
+
+{% block title %}Add Review{% endblock %}
 
 {% block page_header %}
 <div class="container">
@@ -9,15 +9,15 @@
         <div class="col"></div>
     </div>
 </div>
-
 {% endblock %}
 
 {% block content %}
-<section id="contact">
-    <div class="contact-container form-account">
-        <h1 class="form__title">Contact Us</h1>
 
-        <p class="text-center"> We are glad to hear from you! Leave us message if you have any questions, feedback to provide or any other matter. </p>
+<section id="about">
+    <div class="contact-container form-account">
+        <h1 class="form__title">Add Review</h1>
+
+        <p class="text-center">We highly appreciate your opinion about loopIToy. Please provide your review below. </p>
         
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
@@ -30,7 +30,9 @@
         </form>
     </div>
 </section>
+
 {% endblock %}
+
 
 {% block footer %}
     {% include 'includes/footer.html' %}
