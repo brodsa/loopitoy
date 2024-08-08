@@ -15,23 +15,73 @@
 {% block content %}
 
 <section id="about">
-    <h2 class="toys__title">About</h2>
+    <div class="wrapper">
+    <h2 class="about__title">About</h2>
 
     <div class="about">
-        <div class="picture"></div>
-        <div class="text"></div>
+        <div class="picture">
+            <div class="toy-detail__picture rounded">
+                <img class="img-fluid rounded" src="/media/profile.webp"  alt="Profile picture of founder">
+            </div>
+        </div>
+        <div class="text m-4">
+            <p>Hi, my name is Sarka, and I am the founder of LoopIToy. I am very glad that you find the way here. Everything started when we welcomed our son. I wanted to support his development and joy to discover the word as every other parent. The very intuitive way to do that is to buy toys. But at the same time, I and my husband were aware of climate change and the impact of humans on nature. Therefore, we decided that every toy we are going to buy for our little son needs to be second-hand and, in the best case, out of wood. </p>
+
+            <p>In Austria, we have a platform for second-hand products, <a href="https://www.willhaben.at/iad" class="copyright__link" target="_blank" rel="noopener nofollow" aria-label="Link to Willhaben opens in a new tab" >willhaben</a>. So great, so let´s have a look. After a while, I got a bit frustrated as I spent a lot of time trying to find the right toys. The idea behind willhaben is that people can sell their second-hand products there but not on the platform. This means there are different types of information provided about products, such as description, age, or even quality. Besides, the delivery cost can get higher when your selected products are from different people. And there it came—the idea of loopIToy—a platform to buy and sell toys. A platform with guaranteed standards for less money and for a better planet for our children.</p>
+        </div>
     </div>
 
-    <div class="reviews">
-        <h3 class="toys__title">Said About Us</h3>
-        {% for review in reviews %}
-            {% if review.approved %}
-                {{ review.review }}
-            {% endif %}
+    <div class="reviews pt-4 mb-4">
+        <p class="text-center m-3">Tell us, what you think about our idea and what we have built so for...</p>
+        <div class="d-flex justify-content-center">
+            <a class="btn btn-box" href="{% url 'add_review' %}"> Send Review</a>
+        </div>
+        <p class="text-center pb-1 pt-2 mt-4">... read what others said.</p>
+        <div class="reviewers">
+            {% for review in reviews %}
+                <div class="review">
+                    <p>{{ review.review }}</p>
+                    <p>
+                        {% if review.rating == 'one' %}
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        {% elif review.rating == 'two' %}
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        {% elif review.rating == 'three' %}
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        {% elif review.rating == 'four' %}
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        {% elif review.rating == 'five' %}
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        {% endif %}
+                    </p>
+                    <p class="text-end fst-italic">{{review.reviewer_name}}</p>
+                </div>
         {% endfor %}
+        </div>
+        
     </div>
-
-    <a href="{% url 'add_review' %}"> Add Review</a>
+</div>
+    
 </section>
 
 {% endblock %}

@@ -14,7 +14,6 @@ class ReviewAdmin(admin.ModelAdmin):
         'rating',
         'review',
         'want_replay',
-        'approved'
     )
 
     search_fields = ('reviewer_name',)

@@ -16,7 +16,7 @@ class AddReview(CreateView):
     template_name = 'review/review_add.html'
     model = Review
     form_class = ReviewForm
-    success_url = '/review/about/'
+    success_url = '/review/'
 
     def form_valid(self, form):
 

@@ -18,7 +18,6 @@ class Review(models.Model):
     rating = models.CharField(choices=RATING, max_length=150)
     review = models.TextField()
     want_replay = models.BooleanField(default=False)
-    approved = models.BooleanField(default=False)
 
     def __str__(self):
         return str(self.reviewer_name)

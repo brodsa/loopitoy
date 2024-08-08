@@ -229,6 +229,10 @@ footer{
     border-color: var(--white);
 }
 
+.btn-box{
+    box-shadow: var(--box-shadow);
+}
+
 .icon {
     color: var(--white);
     align-items: center;
@@ -242,7 +246,7 @@ footer{
     color: var(--primary-color);
 }
 
-.text-primary-color
+.text-primary-color,
 .icon-primary-color{
     color: var(--primary-color);
 }
@@ -846,6 +850,70 @@ th.menu__item.th-right{
 }
 
 
+/* ++++++++++++++ Review ++++++++++++++ */
+.about__title{
+    margin: 80px 0 40px;
+}
+
+.reviews{
+    margin: 0 10px;
+}
+
+.reviewers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.review{
+    border: 2px solid var(--secondary-color);
+    padding: 10px;
+    width: 230px;
+    font-style: italic;
+
+}
+
+.review i{
+    width: 13px;
+    height: 13px;
+    color: var(--primary-color);
+    border-radius: 50%;
+    padding: 2px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.reviewers div:nth-child(2){
+    border: 2px solid var(--ternary-color);
+}
+
+.reviewers div:nth-child(3){
+    border: 2px solid var(--last-color);
+}
+
+.reviewers div:nth-child(4){
+    border: 2px solid var(--primary-color);
+}
+
+
+/* +++++++++++ Media Query from 570px and higher ++++++++++++++ */
+@media screen and  (min-width: 570px){
+
+    .about{
+        display: flex;
+        flex-direction: row;
+        padding: 0 20px;
+    }
+
+    .picture div{
+        width: 200px;
+        padding-top: 30px;
+    }
+}
+
+
 /* +++++++++++ Media Query from 767px and higher ++++++++++++++ */
 @media screen and  (min-width: 767px){
     /* +++++++++++ Header ++++++++++++++ */
@@ -1013,6 +1081,27 @@ th.menu__item.th-right{
     /* ++++++++++ Contact ++++++++++++++++*/
     .contact-container{
         max-width: 400px;
+    }
+
+    /* ++++++++++++++ Review ++++++++++++++ */
+    .about__title{
+        margin: 100px 0 20px;
+    }
+
+    #about .wrapper{
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    .picture div{
+        width: 250px;
+        padding-top: 30px;
+    }
+
+    .reviewers{
+        flex-direction: row;
+        flex-wrap: wrap;
+
     }
     
 }
