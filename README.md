@@ -136,7 +136,9 @@ Wireframes were prepared for both mobile and desktop devices using balsamiqo pro
 | Toys Pages | <img src="./docs/ux/ux_wireframe_toys_mobile.PNG" alt="ux_toys_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_toys_desktop.PNG" alt="ux_toys_desktop" width="200"/> |
 | Purchasing Pages | <img src="./docs/ux/ux_wireframe_purchase_mobile.PNG" alt="ux_purchase_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_purchase_desktop.PNG" alt="ux_purchase_desktop" width="200"/> |
 | Authentication Pages | <img src="./docs/ux/ux_wireframe_authentication_mobile.PNG" alt="ux_authentication_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_authentication_desktop.PNG" alt="ux_authentication_desktop" width="200"/> |
-| Profile Pages | <img src="./docs/ux/ux_wireframe_profile_mobile.PNG" alt="ux_authentication_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_profile_desktop.PNG" alt="ux_authentication_desktop" width="200"/> |
+| Profile Pages | <img src="./docs/ux/ux_wireframe_profile_mobile.PNG" alt="ux_profile_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_profile_desktop.PNG" alt="ux_profile_desktop" width="200"/> |
+| Contact Page | <img src="./docs/ux/ux_wireframe_contact_mobile.PNG" alt="ux_contact_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_contact_desktop.PNG" alt="ux_contact_desktop" width="200"/> |
+| Review Pages | <img src="./docs/ux/ux_wireframe_review_mobile.PNG" alt="ux_review_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_review_desktop.PNG" alt="ux_review_desktop" width="200"/> |
 
 
 ### Structure 
@@ -234,6 +236,9 @@ The core authentication pages includes:
 - **Checkout Page** shows the summary order and displays displays form to fill out delivery and billing information. There are also two buttons to either return or to complete order. ![Checkout](./docs/features/features_checkout.png).
 
 - **Checkout - Thank You Page** shows the summary order  with delivery and billing information. User is also informed about receiving the confirmation email. In order to return to Homepage, there is a button. ![Checkout - Thank you](./docs/features/features_checkout_success.png).
+
+### Review Pages
+- **Add Review Page** presents review form to send user opinion. [Add Review](./docs/features/feature_review_add.PNG)
 
 ### Hidden Error & Policy Pages
 - **Hidden Error Pages** displayes the error status code, name and message. In addition, there is a button to return to the landing page. There are three pages implemented for the unexpected situations: Permission denied (`status=403`), Page not found (`status=404`), Server Error (`status=500`). The layout of all hidden pages is the same - it displayes the message code, text and button to return home. ![Hidden Page](./docs/features/feature_hidden_page.PNG).

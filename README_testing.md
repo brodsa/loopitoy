@@ -190,7 +190,7 @@ The webpage was validated from several perspectives:
 
 
 ### HTML 
-The [Nu Html Checker](https://validator.w3.org/nu/) web-based tool by W3 was used to validate the pages of the webpage. **The Checker did not reveal any errors.** The source code of pages requiring login was checked directly via text input. Other pages were tested via provided page URL. The validation detected several errors in the snippet code to Subscribe. This code was copied directly from [mailchimp](https://us14.admin.mailchimp.com/). The below detailed reports ignore the errors from mailchimp tool:
+The [Nu Html Checker](https://validator.w3.org/nu/) web-based tool by W3 was used to validate the pages of the webpage. The source code of pages was checked directly via text input or  via provided page URL. The validation detected several errors in the snippet code for the newsletter subscribtion. This code was copied directly from [mailchimp](https://us14.admin.mailchimp.com/). The below detailed reports ignore the errors from mailchimp tool:
 
 | Page Group | Page | Report | Results |
 |------------|------|--------|---------|

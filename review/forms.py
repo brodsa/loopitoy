@@ -1,24 +1,29 @@
-from django.db import models
+from django import forms
+from .models import Review
 
-# Create your models here.
+class ReviewForm(forms.ModelForm):
+    """ A form to add review """
+    class Meta:
+        """ Define model, field, widget and labels"""
+        model = Review
+        fields = [
+            'reviewer_name',
+            'reviewer_email',
+            'rating',
+            'review',
+            'want_replay',
+        ]
 
-RATING = [
-    ('one', 1),
-    ('two', 2),
-    ('three', 3),
-    ('four', 4),
-    ('five', 5),
-]
+        widgets = {
+            "review": forms.Textarea(attrs={"cols": 3, "rows": 4}),
+            "reviewer_name": forms.TextInput(attrs={'autofocus': True})
+        }
 
+        labels = {
+            'reviewer_name': 'Name',
+            'reviewer_email': 'Email',
+            'rating': 'Select Rating Stars',
+            'review': 'Write your review',
+            'want_replay': 'Do you whish to be contacted back?'
+        }
 
-class Review(models.Model):
-    """A model to create and manage toys brands"""
-    reviewer_name = models.CharField(max_length=254)
-    reviewer_email = models.EmailField(null=False, blank=False)
-    rating = models.CharField(choices=RATING, max_length=150)
-    review = models.TextField()
-    want_replay = models.BooleanField(default=False)
-    approved = models.BooleanField(default=False)
-
-    def __str__(self):
-        return str(self.reviewer_name)
