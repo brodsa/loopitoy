@@ -11,7 +11,8 @@
 ## Responsiveness Testing
 All pages were tested in terms of responsivness to ensure that the conent reacts on various screen size, ranging from 280px up to 1200px. To test the responsiveness the following devices were considered in addition to DevTools.
   - Dell Latitude (DevTool) 
-  - iPhone 8 (iOS 16.5)
+  - Think Pad (DevTool)
+  - iPhone 8
   - Samsung Galaxy A52
 
 
@@ -45,9 +46,10 @@ All pages were tested in terms of responsivness to ensure that the conent reacts
 
 ## Browser Compatibility Testing
 The website was tested on different browser (see the list below) to assure that features and responsiveness work accordingly.
-- Safari
-- Chrome
-- Edge
+- Safari tested on iPhone without any problems.
+- Chrome tested on iPhone, Dell Latitute and ThinkPad without any problems.
+- Edge test on Dell Latitude without any issues.
+- Mozila Firefox tested on ThinkPad without any troubles but on Samsung A52 some issues discovered. Colors and white color background are not displayed. This will be solved in next iterations.
 
 
 ## User Stories Testing
@@ -105,6 +107,7 @@ The testing was grouped according to the epics to which user story belongs.
 | #37                            | Store Owner   | implement some SEO techniques                                      | increase the chance to purchase on my e-shop                                                                      | meta tags are fill out<br>sitemap is created<br>robots.txt is created                                                                                                                                                                                                 | PASS   |
 | #38                            | Site User     | see favicon in the browser tab                                     | easily find the e-shop                                                                                            | favicon is created<br>favicon is included                                                                                                                                                                                                                             | PASS   |
 | #39                            | Site User     | read about Terms & Conditions                                      | know what to except when selling the toys                                                                         | Terms & Conditions are created                                                                                                                                                                                                                                        | PASS   |
+| #39                            | Site User     | have the possibility to provide review                                      | support and make the e-shop more reliable                                                                         |  review app is set up<br>form to provide review is created<br>page with all proved reviews is displayed createdcreated                                                                                                                                                                                                                                        | PASS   |
 
 
 [Back to the content](#testing--validation-report)
@@ -114,7 +117,7 @@ The features testing was also conducted group-wise. The outcome and testing step
 
 | ID  | Test Case                                 | Steps                                                                                                                                                                                                     | Expected                                                                                                                                                                                                                                                                                               | Result |
 | --- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
-| F1  | Navigation Items                          | Go to My Profile > Click on Register<br>Go to My Account > Click on Login<br>Login > Go to My Profile > Click on Logout<br>Go to How it Works<br>Go to Toys > All Products<br>Go to My Profile            | Form to register is displayed<br>Form to Login is displayed<br>Question to Logout or Stay is displayed<br>User is redirected to How It Works Page<br>User is redirected to page with all toys<br>User is redirected to My Profile Page                                                                 | PASS   |
+| F1  | Navigation Items                          | Go to My Profile > Click on Register<br>Go to My Account > Click on Login<br>Login > Go to My Profile > Click on Logout<br>Go to How it Works<br>Go to Toys Category > All Products<br> Go to My Profile <br> Go to About <br> Go to Contact            | Form to register is displayed<br>Form to Login is displayed<br>Question to Logout or Stay is displayed<br>User is redirected to How It Works Page<br>User is redirected to page with all toys<br>User is redirected to My Profile Page <br> About Page is displayed <br>Contact Form is displayed                                                                | PASS   |
 | F2  | Navigation Items Hover effect             | Go each item in navigation menu and check the hove effect                                                                                                                                                 | Each item should change the font weight to bold                                                                                                                                                                                                                                                        | PASS   |
 | F3  | Footer - Social Links                     | Go to Footer<br>Click on Facebook Icon<br>Click on Instagram Icon<br>Click on Email Icon                                                                                                                  | The corresponding social media platform is open in a new tab.<br>The Email Editor is open to contact e-shop.                                                                                                                                                                                           | PASS   |
 | F4  | Footer - Polices & Terms                  | Go to Footer<br>Click on Privacy Policy<br>Click on Return & Refund<br>Click on Terms & Conditions                                                                                                        | The user is redirected to the corresponding page.                                                                                                                                                                                                                                                      | PASS   |
@@ -157,6 +160,8 @@ The features testing was also conducted group-wise. The outcome and testing step
 | F41 | Newsletter                                | Scroll down to footer on any but landing page<br>Fill out email for subscription                                                                                                                          | Message is show that email was saved for subscription                                                                                                                                                                                                                                                  | PASS   |
 | F42 | Hidden Page - 404                         | Extend the url and add /test in the end                                                                                                                                                                   | 404 Page is shown                                                                                                                                                                                                                                                                                      | PASS   |
 | F43 | Hidden Page - 403                         | Login as admin<br>Extend the url and add /toys/add                                                                                                                                                        | 403 Page is shon                                                                                                                                                                                                                                                                                       | PASS   |
+| F46 | About Page                         | Click on About in Navigation Menu<br>Continue by clicking on Provide Review                                                                                                                                                         | Page about is displayed<br>There are reviews on the page<br>User is redirected to the Review Form                                                                                                                                                                                                                                                                                       | PASS   |
+| F47 | About Page - Review                        | Continue from the previous About Page<br>Fill out the Form<br>Send the review form Review                                                                                                                                                         | Review form is send and user is informed about it by the message tost.                                                                                                                                                                                                                                                                                        | PASS   |
 
 [Back to the content](#testing--validation)
 
@@ -209,6 +214,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) web-based tool by W3 was use
 | Polices | Privacy Policy | [Online-Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Fprivacy-policy)| no errors |
 | | Return & Refund | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Freturn-and-refund) | no errors |
 | | Terms & Conditions | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Fterms-and-conditions) | no errors |
+| Review | Add Review Page | [Report](./docs/testing/html/html_review_add.PNG)| no errors |
 
 [Back to the content](#testing--validation)
 
@@ -268,6 +274,12 @@ To validate the Python code in terms of PEP8, the [CI Python Linter](https://pep
 | | `models.py`          | <img src="./docs/testing/python/py_toys_models.PNG" alt="loopitoy_toys_models" width="200"/> | no error |
 | | `urls.py`          | <img src="./docs/testing/python/py_toys_urls.PNG" alt="loopitoy_toys_urls" width="200"/> | no error |
 | | `views.py`          | <img src="./docs/testing/python/py_toys_views.PNG" alt="loopitoy_toys_views" width="200"/> | no error |
+| `review` | `admin.py` | <img src="./docs/testing/python/py_review_admin.PNG" alt="loopitoy_review_admin" width="200"/> | no error |
+|  | `forms.py` | <img src="./docs/testing/python/py_review_forms.PNG" alt="loopitoy_review_forms" width="200"/> | no error |
+| | `models.py`          | <img src="./docs/testing/python/py_toys_models.PNG" alt="loopitoy_toys_models" width="200"/> | no error |
+| | `urls.py`          | <img src="./docs/testing/python/py_review_urls.PNG" alt="loopitoy_review_urls" width="200"/> | no error |
+| | `views.py`          | <img src="./docs/testing/python/py_review_views.PNG" alt="loopitoy_review_views" width="200"/> | no error |
+
 
 [Back to the content](#testing--validation)
 
@@ -294,6 +306,7 @@ The chrome extension [WAVE Evaluation Tool](https://chromewebstore.google.com/de
 |  | Delete Toy  Page         | <img src="./docs/testing/wave/wave_toydelete.PNG" alt="wave_toy_delete" width="200"/> | no error |
 |  | Detail Toy  Page         | <img src="./docs/testing/wave/wave_toydetail.PNG" alt="wave_toy_detail" width="200"/> | no error |
 |  | Toys Overview  Page         | <img src="./docs/testing/wave/wave_toy_overview.PNG" alt="wave_toy_overview" width="200"/> | no error |
+| Review Pages | Add Review Page         | <img src="./docs/testing/wave/wave_review_add.PNG" alt="wave_review_add" width="200"/> | no error |
 
 [Back to the content](#testing--validation)
 

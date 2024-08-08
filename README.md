@@ -40,12 +40,14 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 <details>
 <summary>EPIC 2: SEO & Marketing</summary>
+
 - [#6](https://github.com/brodsa/loopitoy/issues/6): As a Site User I want to read delivery information so that I know what to expect regarding delivery and refund.
 - [#7](https://github.com/brodsa/loopitoy/issues/7) :As a role I want to know how my date are used so that I can decide which personal detail I provide.
 - [#8](https://github.com/brodsa/loopitoy/issues/8): As a Store Owner I want to send updates and new arrivals to my customers so that I can regular inform them and motivate to purchase.
 - [#37](https://github.com/brodsa/loopitoy/issues/37): As a Site Owner I want to use some SEO techniques so that I can increase the chance to purchase on my e-shop. 
 - [#38](https://github.com/brodsa/loopitoy/issues/38): As a Site User I want to see favicon in the browser tab so that I can easily find the e-shop in my browser.
 - [#39](https://github.com/brodsa/loopitoy/issues/39): As a Site User I want to read about Terms and Conditions so that I know what to expect when selling toys.
+- [#41](https://github.com/brodsa/loopitoy/issues/41): As a Site User I want to have the possibility to provide review so that I can support and make the e-shop more reliable
 
 </details>
 
@@ -146,6 +148,7 @@ The loopIToy project was developed using python Django framework. The project co
 - `toys` manages toys that are displayed on the e-shop.
 - `allauth` allows to manage authentication proccesses - default django app.
 - `contact` manages contact message from the site visitors.
+- `review`allows to provide review for the e-shop.
 
 #### ERD Model
 The user inputs from all forms are stored in elephantSQL cloud-based database. There are seven database tables:
@@ -156,6 +159,7 @@ The user inputs from all forms are stored in elephantSQL cloud-based database. T
 - `profiles_userprofile` stores information about users, mainly default delivery information.
 - `auth_user` contains informtion about the user authentication - default django app.
 - `contact_contact` stores contact message from site visitors.
+- `review_review` stores provided reviews from visitors.
 
 The ER Diagram shows the relations between all tables. ![ERD](./docs/ux/ux_erd.PNG)
 
@@ -280,6 +284,7 @@ updates, promotions, or other relevant content from loopIToy.
 Several bugs were releaved during the development. Bellow, all complex bugs that required more time, searching, trying to be solved:
 - Filter category toys: useing category names to filter out displayed category buttons shows incorect category name. Solution: use pk of categories to filter out the displayed category. SOLVED
 - Handler500: error message - (urls.E007) The custom handler500 view 'loopitoy.views.handler500' does not take the correct number of arguments (request). Solution found on stackoverflow  [Django wrong amount of arguments in custom handler](https://stackoverflow.com/questions/60507625/django-wrong-amount-of-arguments-in-custom-handler). SOLVED
+- Mozila Firefox on Samsung A52: Colors and white color background are not displayed. NOT SOLVED YET
 
 ## Technologies Used
 - Python

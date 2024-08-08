@@ -18,4 +18,3 @@ class ReviewAdmin(admin.ModelAdmin):
     )
 
     search_fields = ('reviewer_name',)
-

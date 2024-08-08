@@ -10,11 +10,12 @@ RATING = [
     ('five', 5),
 ]
 
+
 class Review(models.Model):
     """A model to create and manage toys brands"""
     reviewer_name = models.CharField(max_length=254)
     reviewer_email = models.EmailField(null=False, blank=False)
-    rating = models.CharField(choices=RATING,max_length=150)
+    rating = models.CharField(choices=RATING, max_length=150)
     review = models.TextField()
     want_replay = models.BooleanField(default=False)
     approved = models.BooleanField(default=False)
