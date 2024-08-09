@@ -158,6 +158,7 @@ The loopIToy project was developed using python Django framework. The project co
 The user inputs from all forms are stored in elephantSQL cloud-based database. There are seven database tables:
 - `toys_toys` stores information about each toy.
 - `toys_category` contains all toy categories.
+- `toys_brand` stores toys brand with homepage url.
 - `checkout_order` keeps order information and delivery information.
 - `checkout_orderlineitem` contains information about each toy in the order.
 - `profiles_userprofile` stores information about users, mainly default delivery information.
@@ -186,10 +187,13 @@ The final image by [Susan Holt Sumpson](https://unsplash.com/@shs521?utm_content
 The features of the web page were planned using Agile methodology to ensure Minimum Value Product and to address planned User Stories. The core features of this django-base webpage includes CRUD functionality for both Site Users and Site Owner, so that users can create, read, update and delete records. In additon, messages are displayed after each CRUD activity.
 
 The sites of e-shop are categorized into several groups:
-- **Landing & Informative Pages** includes Landing and How it Works Pages.
-- **Account & Profile Pages** includes all sites related to allauth app, i.e. authentication app, or profile app.
-- **Toys Pages** includes all pages related to toy app, e.g. overview of toys, toy detail.
-- **Purchasing Pages** includes both Shopping Bag and Checkout Pages. 
+- **Landing & Informative Pages** include Landing and How it Works Pages.
+- **Account & Profile Pages** include all sites related to allauth app, i.e. authentication app, or profile app.
+- **Toys Pages** include all pages related to toy app, e.g. overview of toys, toy detail.
+- **Purchasing Pages** include both Shopping Bag and Checkout Pages. 
+- **Hidden Pages and Polices** include all error hidden pages and pages with various polices, terms and conditions.
+- **Review Pages** include pages related to providing and presenting customer feedback
+- **Contact Page** includes contacting form.
 
 The entire web page is also designed to be responsive to ensure that the e-shop is properly displayed on different devices (e.g. a mobile, a desktop). The designed follows common best practice of e-shop development. Each site has mutual components, i.e. header with a navigation menu and footer. The mutual components ensure that the user to easily navigates through the content of the e-shop.
 
@@ -210,9 +214,8 @@ The entire web page is also designed to be responsive to ensure that the e-shop 
 
 - **How It Works Page** outlines the core sell procedure and offers users to register for selling toys.![How It Works Page](./docs/features/feature_how_it_works.PNG) 
 
-- **Contact Page** serves for contacting Site Owner and it displays the contact form. After sending a message a thank you page is displayed with the button to return home. ![Contact](./docs/features/features_contact.PNG)
-
 ### Account & Profile Pages
+
 The core authentication pages includes:
 - **Login Page** contains a form to log in via username or email into to the platform. Moreover, a user can choose to remember the login data. ![Login](./docs/features/feature_account_login.PNG)
 - **Sign Up Page** contains a form to create an account. User have to register using both username and email.![Sign Up](./docs/features/feature_account_register.PNG)
@@ -239,19 +242,31 @@ The core authentication pages includes:
 
 - **Checkout - Thank You Page** shows the summary order  with delivery and billing information. User is also informed about receiving the confirmation email. In order to return to Homepage, there is a button. ![Checkout - Thank you](./docs/features/features_checkout_success.png).
 
-### Review Pages
-- **Add Review Page** presents review form to send user opinion. [Add Review](./docs/features/feature_review_add.PNG)
 
 ### Hidden Error & Policy Pages
-- **Hidden Error Pages** displayes the error status code, name and message. In addition, there is a button to return to the landing page. There are three pages implemented for the unexpected situations: Permission denied (`status=403`), Page not found (`status=404`), Server Error (`status=500`). The layout of all hidden pages is the same - it displayes the message code, text and button to return home. ![Hidden Page](./docs/features/feature_hidden_page.PNG).
-- **Policy Pages** displays information about various polices and terms, such as Privacy Policy, Return & Refund, Terms & Conditions. The layout of such pages is the same. ![Polices](./docs/features/feature_polices.PNG)
+
+- **Hidden Error Pages** display the error status code, name and message. In addition, there is a button to return to the landing page. There are three pages implemented for the unexpected situations: Permission denied (`status=403`), Page not found (`status=404`), Server Error (`status=500`). The layout of all hidden pages is the same - it displayes the message code, text and button to return home. ![Hidden Page](./docs/features/feature_hidden_page.PNG).
+- **Policy Pages** display information about various polices and terms, such as Privacy Policy, Return & Refund, Terms & Conditions. The layout of such pages is the same. ![Polices](./docs/features/feature_polices.PNG)
+
+
+
+### Review Pages
+
+- **About Page** presents the idea behind the e-shop, button to send feedback. The page also displays customer feedbacks. ![About](./docs/features/feature_review_about.PNG)
+- **Add Review Page** presents review form to send user opinion. ![Add Review](./docs/features/feature_review_add.PNG)
+
+
+
+### Contact Page
+- **Contact Us Page** serves for contacting Site Owner and it displays the contact form. After sending a message a thank you toast message is displayed. ![Contact](./docs/features/features_contact.PNG)
 
 
 ### Future & Left Features
-- About Us
+- Extending the Site Owner functionality through the e-shop, managing brands, categories, etc.
+- Inhancing Sell Features by including the form to request money. In the form, User can which toys he/she wants to pay. There should be probably a new app and model that stores such information and in addition the bank data to send money.
+- Implementation of sorting functionality.
 - Login with Social Media using allauth.cocialaccount and django.contrib.site apps
-- Unique Form style
-- After sending contact form, user should be redirected to the home page.
+- Unique Form Style and general refactoring to have all views defined as class-based view.
 
 ## Business Model
 loopitoy is B2C type of e-commerce application as it sells second-hand toys. It is a platform which supports circular economy for toys. Customers can both buy and sell toys using secure single payment transactions.
@@ -286,6 +301,8 @@ A newsletter was implemented with MailChimp. The form to subscribe is visible on
 updates, promotions, or other relevant content from loopIToy.
 
 ## Testing & Validation
+The results of testing and validation are presented in the separated document, see [Testing & Validation](https://github.com/brodsa/loopitoy/blob/main/README_testing.md).
+
 
 ### Bugs
 Several bugs were releaved during the development. Bellow, all complex bugs that required more time, searching, trying to be solved:

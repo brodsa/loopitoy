@@ -40,6 +40,8 @@ All pages were tested in terms of responsivness to ensure that the conent reacts
 | R20 | Terms & Conditions   | Click on Terms & Conditions link in footer. Inspect the webpage via DevTools and listed devices. Test the side for responsiveness and look at the layout.                                                                       | The content of the Terms & Conditions is readable on all listed devices                                                                                                                                                                                                                                    | PASS   |
 | R21 | Return & Refund      | Click on Return & Refund link in footer. Inspect the webpage via DevTools and listed devices. Test the side for responsiveness and look at the layout.                                                                          | The content of the Return & Refund is readable on all listed devices                                                                                                                                                                                                                                       | PASS   |
 | R22 | Hidden Pages         | Extend the url and add /test in the end. Inspect the webpage via DevTools and listed devices. Test the side for responsiveness and look at the layout of the hidden pages                                                       | The content of the Hidden Pages  is readable and fully displayed                                                                                                                                                                                                                                           | PASS   |
+| R23 | About Page         | Go to About in Navigation Menu. Inspect the webpage via DevTools and listed devices. Test the side for responsiveness and look at the layout of text, image, button and review boxes.                                                       | The content of the page is center and displayed in a column on small devices. On large, the picture is shown next to the text. The boxes are in rows.                                                                                                                                                                                                                                           | PASS   |
+| R24 | Add Review Page         | Go to About in Navigation Menu and click on Send Review. Inspect the webpage via DevTools and listed devices. Test the side for responsiveness and look the review form                                                       | The form is centered and readable on all devices.                                                                                                                                                                                                                                           | PASS   |
 
 
 [Back to the content](#testing--validation)
@@ -190,7 +192,7 @@ The webpage was validated from several perspectives:
 
 
 ### HTML 
-The [Nu Html Checker](https://validator.w3.org/nu/) web-based tool by W3 was used to validate the pages of the webpage. The source code of pages was checked directly via text input or  via provided page URL. The validation detected several errors in the snippet code for the newsletter subscribtion. This code was copied directly from [mailchimp](https://us14.admin.mailchimp.com/). The below detailed reports ignore the errors from mailchimp tool:
+The [Nu Html Checker](https://validator.w3.org/nu/) web-based tool by W3 was used to validate the pages of the webpage. The source code of pages was checked directly via text input or  via provided page URL. The validation detected several errors in the snippet code for the newsletter subscribtion. This code was copied directly from [mailchimp](https://us14.admin.mailchimp.com/). The below detailed reports ignore the [errors from mailchimp tool](./docs/testing/html/html_newsletter.PNG):
 
 | Page Group | Page | Report | Results |
 |------------|------|--------|---------|
@@ -215,6 +217,9 @@ The [Nu Html Checker](https://validator.w3.org/nu/) web-based tool by W3 was use
 | | Return & Refund | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Freturn-and-refund) | no errors |
 | | Terms & Conditions | [On-line Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Floopitoy-2943fdc3b2bc.herokuapp.com%2Fterms-and-conditions) | no errors |
 | Review | Add Review Page | [Report](./docs/testing/html/html_review_add.PNG)| no errors |
+|  | About & Review Page | [Report](./docs/testing/html/html_review_about.PNG)| no errors |
+|  Contact | Contact Us Page | [Report](./docs/testing/html/html_contact.PNG)| no errors |
+
 
 [Back to the content](#testing--validation)
 
@@ -307,6 +312,8 @@ The chrome extension [WAVE Evaluation Tool](https://chromewebstore.google.com/de
 |  | Detail Toy  Page         | <img src="./docs/testing/wave/wave_toydetail.PNG" alt="wave_toy_detail" width="200"/> | no error |
 |  | Toys Overview  Page         | <img src="./docs/testing/wave/wave_toy_overview.PNG" alt="wave_toy_overview" width="200"/> | no error |
 | Review Pages | Add Review Page         | <img src="./docs/testing/wave/wave_review_add.PNG" alt="wave_review_add" width="200"/> | no error |
+|  | About & Review Page         | <img src="./docs/testing/wave/wave_review_about.PNG" alt="wave_review_about" width="200"/> | no error |
+| Contact Pages  | Contact Us Page         | <img src="./docs/testing/wave/wave_contact.PNG" alt="wave_contact" width="200"/> | no error |
 
 [Back to the content](#testing--validation)
 
