@@ -62,7 +62,7 @@ class Toys(models.Model):
     number = models.CharField(max_length=30)
     name = models.CharField(max_length=254, null=False, blank=False)
     description = models.TextField(null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2,null=True, blank=True)
     new_price = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)
     quality = models.CharField(

@@ -134,3 +134,20 @@ class DetailToy(DetailView):
     template_name = 'toys/toy_detail.html'
     model = Toys
     context_object_name = 'toy'
+
+
+class SellToy(CreateView, LoginRequiredMixin):
+    """ Sell Toy View """
+    template_name = 'toys/sell_toy.html'
+    model = Toys
+    form_class = ToyForm
+    success_url = '/toys/'
+
+    def form_valid(self, form):
+
+        messages.success(
+            self.request,
+            f'Successfully send toy for sell. The sell request is being proccessed. Check your profile for updates.'
+        )
+
+        return super(SellToy, self).form_valid(form)
