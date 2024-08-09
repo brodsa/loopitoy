@@ -9,137 +9,177 @@
 
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/accounts/login/</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/bag/</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=cars,dolls,cuddle</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=books,puzzles</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=fine_motor,gross_motor</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=accessories,furniture</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?age=newbor_infant</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?age=toodler</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?age=preschooler</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?age=schooler</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/how-it-works</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/privacy-policy</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/review/</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/contact/</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/sell/</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/8/</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/privacy-policy</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/6/</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/return-and-refund</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/terms-and-conditions</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=puzzles</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=books</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/12/</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/4/</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/3/</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/11/</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/5/</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/7/</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=cars</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=cuddle</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=dolls</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=gross_motor</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/10/</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=fine_motor</loc>
-  <lastmod>2024-07-26T10:27:27+00:00</lastmod>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=gross_motor</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/8/</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/2/</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/3/</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/?category=accessories</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/toys/detail/7/</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://loopitoy-2943fdc3b2bc.herokuapp.com/review/add/</loc>
+  <lastmod>2024-08-09T08:46:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
