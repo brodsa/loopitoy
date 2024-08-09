@@ -20,14 +20,14 @@
     <div class="toy-container">
         <div class="toy-detail__header" >
             <!-- Book Image: Default Image has to be set manually due to cloudinary -->
-            {% if toy.image == 'media/placeholder.placeholder.webp' %}
+            {% if toy.picture == 'media/placeholder.webp' %}
            
             <div class="toy-detail__picture align-self-center">
                 <img class="img-fluid rounded" src="/media/placeholder.webp" alt="{{ toy.name }}">
             </div>
                 {% else %}
             <div class="toy-detail__picture rounded">
-                <img class="img-fluid rounded" src="{{ toy.image.url }}" alt="{{ toy.name }}">
+                <img class="img-fluid rounded" src="{{ toy.picture.url }}" alt="{{ toy.name }}">
             </div>
             {% endif %}
         </div>

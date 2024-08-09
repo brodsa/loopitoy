@@ -4,13 +4,13 @@
 
         <div class="card position-relative">
             <!-- Book Image: Default Image has to be set manually due to cloudinary -->
-            {% if toy.image == 'media/placeholder.placeholder.webp' %}
+            {% if toy.picture == 'media/placeholderplaceholder.webp' %}
                 <div class="card-img-container align-self-center">
                     <img src="/media/placeholder.webp" alt=" Image of {{ toy.name }}">
                 </div>
             {% else %}
                 <div class="card-img-container">
-                    <img src="{{ toy.image.url }}" class="card-img-top" alt=" Image of {{ toy.name }}">
+                    <img src="{{ toy.picture.url }}" class="card-img-top" alt=" Image of {{ toy.name }}">
                 </div>
             {% endif %}
             

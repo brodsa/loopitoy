@@ -18,27 +18,28 @@ class ToyForm(forms.ModelForm):
             'age',
             'quality',
             'category',
-            'image',
+            'picture',
             'status',
         ]
 
         exclude = ('number', 'created_on')
 
         widgets = {
-            "description": forms.Textarea(attrs={"cols": 3, "rows": 3}),
+            "description": forms.Textarea(
+                attrs={"cols": 3, "rows": 3},
+                ),
             "name": forms.TextInput(attrs={'autofocus': True})
         }
 
-        placeholders = {
+        labels = {
             'name': 'Toy Name *',
-            'description':
-                'Provide information about toy, e.g. brand or material',
+            'description': 'Toy Description',
             'price': 'Price *',
             'new_price': 'New Price for discounts',
             'age': 'Select age category*',
             'quality': 'Select quality category*',
             'category': 'Select toy category',
-            'image': 'Upload toy image',
+            'picture': 'Upload toy image',
             'status': 'Toy status*',
         }
 

@@ -80,13 +80,13 @@ class Toys(models.Model):
         related_name='toy_brand',
         null=True, blank=True,
         on_delete=models.SET_NULL)
-    image = ResizedImageField(
+    picture = ResizedImageField(
         size=[400, None],
         quality=75,
         upload_to="media/toys",
         force_format="WEBP",
-        default='media/placeholder.placeholder.webp',
-        blank=True
+        default='media/placeholder.webp',
+        null=False, blank=False
     )
     status = models.CharField(
         max_length=50, choices=TOY_STATUS, default='open')

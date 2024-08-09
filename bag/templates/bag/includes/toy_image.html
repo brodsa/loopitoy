@@ -1,6 +1,6 @@
 
-{% if item.toy.image == 'media/placeholder.placeholder.webp' %}
-<img class="img-fluid img-bag rounded" src="{{ MEDIA_URL }}placeholder.webp" alt="{{ item.toy.name }}">
+{% if item.toy.picture == 'media/placeholder.placeholder.webp' %}
+<img class="img-fluid img-bag rounded" src="{{ MEDIA_URL }}/placeholder.webp" alt="{{ item.toy.name }}">
 {% else %}
-<img class="img-fluid img-bag rounded" src="{{ item.toy.image.url }}" alt="{{ item.toy.name }}">
+<img class="img-fluid img-bag rounded" src="{{ item.toy.picture.url }}" alt="{{ item.toy.name }}">
 {% endif %}
