@@ -8,14 +8,15 @@
       <!-- Products-->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Toys Category
+            Toys
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="{% url 'toys' %}?category=cars,dolls,cuddle">Toys</a></li>
+          <li><a class="dropdown-item" href="{% url 'toys' %}">All Toys</a></li>
+          <li><a class="dropdown-item" href="{% url 'toys' %}?category=cars,dolls,cuddle">Cars & Dolls</a></li>
           <li><a class="dropdown-item" href="{% url 'toys' %}?category=books,puzzles">Books & Puzzles</a></li>
           <li><a class="dropdown-item" href="{% url 'toys' %}?category=fine_motor,gross_motor">Motor Activities</a></li>
           <li><a class="dropdown-item" href="{% url 'toys' %}?category=accessories,furniture">Accessories & Furniture</a></li>
-          <li><a class="dropdown-item" href="{% url 'toys' %}">All Products</a></li>
+          
         </ul>
       </li>
 
@@ -34,7 +35,7 @@
 
       <!-- Sell Toys -->
       <li class="nav-item">
-        <a class="nav-link {% if url_name == 'sell' %}active{% endif %}" href="{% url 'home' %}">Sell Toys</a>
+        <a class="nav-link {% if url_name == 'sell' %}active{% endif %}" href="{% url 'sell_toy' %}">Sell Toys</a>
       </li>
       
       <!-- How It Works -->
