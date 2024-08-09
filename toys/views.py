@@ -100,7 +100,8 @@ class EditToy(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return self.request.user.is_superuser
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
+        profile = get_object_or_404(UserProfile, user=self.request.user)
+        form.instance.user_profile = profile
 
         messages.success(
             self.request,

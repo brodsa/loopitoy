@@ -18,6 +18,7 @@ class ToyForm(forms.ModelForm):
             'age',
             'quality',
             'category',
+            'brand',
             'picture',
             'status',
         ]
@@ -32,15 +33,16 @@ class ToyForm(forms.ModelForm):
         }
 
         labels = {
-            'name': 'Toy Name *',
+            'name': 'Toy Name',
             'description': 'Toy Description',
-            'price': 'Price *',
-            'new_price': 'New Price for discounts',
-            'age': 'Select age category*',
-            'quality': 'Select quality category*',
-            'category': 'Select toy category',
-            'picture': 'Upload toy image',
-            'status': 'Toy status*',
+            'price': 'Price',
+            'new_price': 'New Price',
+            'age': 'Age category',
+            'quality': 'Quality category',
+            'category': 'Toy category',
+            'brand': 'Brand',
+            'picture': 'Upload image',
+            'status': 'Status',
         }
 
     def __init__(self, *args, **kwargs):
