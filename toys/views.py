@@ -22,7 +22,7 @@ from django.contrib.auth.mixins import (
 
 from .models import Toys, Category
 from profiles.models import UserProfile
-from .forms import ToyForm
+from .forms import ToyForm, SellToyForm
 
 
 def all_toys(request):
@@ -137,14 +137,16 @@ class DetailToy(DetailView):
     context_object_name = 'toy'
 
 
-class SellToy(CreateView, LoginRequiredMixin):
+class SellToy(LoginRequiredMixin, CreateView):
     """ Sell Toy View """
     template_name = 'toys/sell_toy.html'
     model = Toys
-    form_class = ToyForm
-    success_url = '/toys/'
+    form_class = SellToyForm
+    success_url = '/'
 
     def form_valid(self, form):
+        profile = get_object_or_404(UserProfile, user=self.request.user)
+        form.instance.user_profile = profile
 
         messages.success(
             self.request,
