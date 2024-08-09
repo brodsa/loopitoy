@@ -34,7 +34,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 - [#1](https://github.com/brodsa/loopitoy/issues/1): As a developer I want to plan the development of the e-shop so that I can smoothly develop the web page.
 - [#2](https://github.com/brodsa/loopitoy/issues/2): As a developer I want to document the webpage and the development so that the provided solution is transparent and everybody can follow the development.
 - [#3](https://github.com/brodsa/loopitoy/issues/3): As a developer I want to test and validate my webpage so that I can guarantee full functionality and development according to best practice.
-- [#4](https://github.com/brodsa/loopitoy/issues/4): As a developer I wan to deploy the page so that I can guarantee that the web page is accessible to everyone.
+- [#4](https://github.com/brodsa/loopitoy/issues/4): As a developer I want to deploy the page so that I can guarantee that the web page is accessible to everyone.
 
 </details>
 
@@ -81,6 +81,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 <details>
 <summary>EPIC 5: Sorting & Searching</summary>
+
 - [#20](https://github.com/brodsa/loopitoy/issues/20): As a Shopper I want to filter for specific toys categories so that I can easily find and see what I have searched for.
 - [#21](https://github.com/brodsa/loopitoy/issues/21): As a Shopper I want to search for toys by name or description so that I can find a specific toy I would like to purchase.
 - [#22](https://github.com/brodsa/loopitoy/issues/22): As a Shopper I want to easily add/delete a toy when purchasing it so that I can ensure that I select the correct toy.
@@ -88,6 +89,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 <details>
 <summary>EPIC 6: Purchasing & Checkout</summary>
+
 - [#23](https://github.com/brodsa/loopitoy/issues/23): As a Shopper I want to view my shopping bag so that I can identify the total cost of my purchase and all toys I will receive.
 - [#25](https://github.com/brodsa/loopitoy/issues/25): As a Shopper I want to easily enter my payment information so that I can checkout quickly and with no hassies.
 - [#26](https://github.com/brodsa/loopitoy/issues/26): As a Shopper I want to feel my personal and payment Information is safe and secure so that I can confidently provide the needed information to make a purchase.
