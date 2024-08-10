@@ -101,7 +101,10 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 <details>
 <summary>EPIC 7: Selling</summary>
--todo
+
+- [#30](https://github.com/brodsa/loopitoy/issues/30): As a Seller I want to provide all information about toys so that Site Owner can sell toys for me.
+- [#31](https://github.com/brodsa/loopitoy/issues/31): As a Seller I want to see all sells in my user profile so that I can view sell history and the status of each sell.
+- [#32](https://github.com/brodsa/loopitoy/issues/32): As a role I want to capability so that I can benefit.
 </details>
 
 
@@ -141,6 +144,7 @@ Wireframes were prepared for both mobile and desktop devices using balsamiqo pro
 | Profile Pages | <img src="./docs/ux/ux_wireframe_profile_mobile.PNG" alt="ux_profile_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_profile_desktop.PNG" alt="ux_profile_desktop" width="200"/> |
 | Contact Page | <img src="./docs/ux/ux_wireframe_contact_mobile.PNG" alt="ux_contact_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_contact_desktop.PNG" alt="ux_contact_desktop" width="200"/> |
 | Review Pages | <img src="./docs/ux/ux_wireframe_review_mobile.PNG" alt="ux_review_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_review_desktop.PNG" alt="ux_review_desktop" width="200"/> |
+| Sell Pages | <img src="./docs/ux/ux_wireframe_sell_mobile.PNG" alt="ux_sell_mobile" width="200"/> | <img src="./docs/ux/ux_wireframe_sell_desktop.PNG" alt="ux_sell_desktop" width="200"/> |
 
 
 ### Structure 
@@ -194,6 +198,7 @@ The sites of e-shop are categorized into several groups:
 - **Hidden Pages and Polices** include all error hidden pages and pages with various polices, terms and conditions.
 - **Review Pages** include pages related to providing and presenting customer feedback
 - **Contact Page** includes contacting form.
+- **Sell Pages** include a form to sell a toy and a page with the status.
 
 The entire web page is also designed to be responsive to ensure that the e-shop is properly displayed on different devices (e.g. a mobile, a desktop). The designed follows common best practice of e-shop development. Each site has mutual components, i.e. header with a navigation menu and footer. The mutual components ensure that the user to easily navigates through the content of the e-shop.
 
@@ -256,15 +261,25 @@ The core authentication pages includes:
 - **Add Review Page** presents review form to send user opinion. ![Add Review](./docs/features/feature_review_add.PNG)
 
 
-
 ### Contact Page
 - **Contact Us Page** serves for contacting Site Owner and it displays the contact form. After sending a message a thank you toast message is displayed. ![Contact](./docs/features/features_contact.PNG)
 
 
+### Sell Pages
+
+-**Sell Toy Page** displays the form to sell the toy. User has to provide information. The toy needs to be first approved in order to be send it to the platform. ![Sell Toy](./docs/features/feature_sell.PNG)
+-**Toy Status Page** shows the status of the toy that a user would like to sell. There 5 status that can be shown: 
+    - OPEN - Site Owner has to first approved it. 
+    - DECLAIM - the toy was not approved for e-shop. 
+    - E-SHOP - the toy is on e-sho and user has to wait till it is sold.
+    - SOLD - the toy was sold and user can request money.
+    - PAID - the money were paid for the toy. ![Status](./docs/features/feature_sell_history.PNG)
+
+
 ### Future & Left Features
-- Extending the Site Owner functionality through the e-shop, managing brands, categories, etc.
-- Inhancing Sell Features by including the form to request money. In the form, User can which toys he/she wants to pay. There should be probably a new app and model that stores such information and in addition the bank data to send money.
-- Implementation of sorting functionality.
+Two planned features related to sorting are going to be implemented in next iterations, see [#18](https://github.com/brodsa/loopitoy/issues/18) and  [#19](https://github.com/brodsa/loopitoy/issues/19). Future extentions of the e-shop includes:
+- Extending the Site Owner functionality directly on the e-shop by creating Manager board. Site owner could directly managing brands, received toys, categories, etc.
+- Inhancing Sell Features by including the form to request money. In the form, User can specifiy which toys he/she wants to be paid. There should be probably a new app and model that stores such information and in addition the bank data to send money.
 - Login with Social Media using allauth.cocialaccount and django.contrib.site apps
 - Unique Form Style and general refactoring to have all views defined as class-based view.
 
