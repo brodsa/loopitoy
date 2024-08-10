@@ -1,9 +1,9 @@
 # Testing & Validation 
  
-  - [Responsivness Testing](#responsivness-testing)
+  - [Responsivness Testing](#responsiveness-testing)
   - [Browser Compatibility Testing](#browser-compatibility-testing)
   - [User Stories Testing](#user-stories-testing)
-  - [Features Testing (Manual Testing)](#feature-testing)
+  - [Features Testing (Manual Testing)](#features-testing)
   - [Code Validation](#code-validation)
   - [Lighthouse Testing](#lighthouse)
 
@@ -328,10 +328,32 @@ The chrome extension [WAVE Evaluation Tool](https://chromewebstore.google.com/de
 [Back to the content](#testing--validation)
 
 ## Lighthouse
-The Lighthouse in Chrome DevTools evaluates the webpage for performance, accessibility, best practices, and SEO. The pages with the main content were evaluated, meaning the pages with forms were not considered as they are produce mainly form The evaluation did not reveal any big issues. The detailed reports can be viewed at:
+The Lighthouse in Chrome DevTools evaluates the webpage for performance, accessibility, best practices, and SEO. The evaluation revealed slight issues with the performance on mobile, probably due to loading external css or js file. The issue will be investigated in a next iteration. The detailed reports can be viewed at:
 
 | Page            | Desktop | Mobile | 
 |-------------------|--------|------------------|
-| Home | <img src="./docs/testing/lighthouse/desktop_home.PNG" alt="desktop_home" width="200"/> | <img src="./docs/testing/lighthouse/mobile_home.PNG" alt="mobile_home" width="200"/> |
+| Home | <img src="./docs/testing/lighthouse/lighthouse_landing_desktop.PNG" alt="desktop_home" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_landing_mobile.PNG" alt="mobile_home" width="200"/> |
+| How it works | <img src="./docs/testing/lighthouse/lighthouse_ing_desktop.PNG" alt="desktop_how" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_how_mobile.PNG" alt="mobile_how" width="200"/> |
+| Toy - Toys | <img src="./docs/testing/lighthouse/lighthouse_toys_desktop.PNG" alt="desktop_toy" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_toys_mobile.PNG" alt="mobile_toys" width="200"/> |
+| Toy - Toy Detail | <img src="./docs/testing/lighthouse/lighthouse_toy_detail_desktop.PNG" alt="desktop_toy_detail" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_toy_detail_mobile.PNG" alt="mobile_toy_detail" width="200"/> |
+| Toy - Add Toy | <img src="./docs/testing/lighthouse/lighthouse_toy_add_desktop.PNG" alt="desktop_toy_add" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_toy_add_mobile.PNG" alt="mobile_toy_add" width="200"/> |
+| Toy - Edit Toy | <img src="./docs/testing/lighthouse/lighthouse_toy_edit_desktop.PNG" alt="desktop_toy_edit" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_toy_edit_mobile.PNG" alt="mobile_toy_edit" width="200"/> |
+| Toy - Delete Toy | <img src="./docs/testing/lighthouse/lighthouse_toy_delete_desktop.PNG" alt="desktop_toy_delete" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_toy_delete_mobile.PNG" alt="mobile_toy_delete" width="200"/> |
+| Account - Login | <img src="./docs/testing/lighthouse/lighthouse_account_login_desktop.PNG" alt="desktop_account_login" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_account_login_mobile.PNG" alt="mobile_account_login" width="200"/> |
+| Account - Logout | <img src="./docs/testing/lighthouse/lighthouse_account_logout_desktop.PNG" alt="desktop_account_logout" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_account_logout_mobile.PNG" alt="mobile_account_logout" width="200"/> |
+| Account - Register | <img src="./docs/testing/lighthouse/lighthouse_account_register_desktop.PNG" alt="desktop_account_register" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_account_register_mobile.PNG" alt="mobile_account_register" width="200"/> |
+| Sell - Sell Toy | <img src="./docs/testing/lighthouse/lighthouse_sell_desktop.PNG" alt="desktop_sell" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_sell_mobile.PNG" alt="mobile_sell" width="200"/> |
+| Sell - Status Toy | <img src="./docs/testing/lighthouse/lighthouse_sell_status_desktop.PNG" alt="desktop_sell_status" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_sell_status_mobile.PNG" alt="mobile_sell_status" width="200"/> |
+| Purchuse - Bag | <img src="./docs/testing/lighthouse/lighthouse_bag_desktop.PNG" alt="desktop_bag" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_bag_mobile.PNG" alt="mobile_bag" width="200"/> |
+| Purchuse - Checkout | <img src="./docs/testing/lighthouse/lighthouse_checkout_desktop.PNG" alt="desktop_checkout" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_checkout_mobile.PNG" alt="mobile_checkout" width="200"/> |
+| Purchuse - Checkout Confirmation | <img src="./docs/testing/lighthouse/lighthouse_checkout_confirmation_desktop.PNG" alt="desktop_checkout_confirmation" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_checkout_confirmation_mobile.PNG" alt="mobile_checkout_confirmation" width="200"/> |
+| Profile  | <img src="./docs/testing/lighthouse/lighthouse_profile_desktop.PNG" alt="desktop_profile" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_profile_mobile.PNG" alt="mobile_profile" width="200"/> |
+| Contact  | <img src="./docs/testing/lighthouse/lighthouse_contact_desktop.PNG" alt="desktop_contact" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_contact_mobile.PNG" alt="mobile_contact" width="200"/> |
+| Review  | <img src="./docs/testing/lighthouse/lighthouse_review_desktop.PNG" alt="desktop_review" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_review_mobile.PNG" alt="mobile_review" width="200"/> |
+| Review  - About | <img src="./docs/testing/lighthouse/lighthouse_review_about_desktop.PNG" alt="desktop_review_about" width="200"/> | <img src="./docs/testing/lighthouse/lighthouse_review_about_mobile.PNG" alt="mobile_review_about" width="200"/> |
+
+
+
+
 
 [Back to the content](#testing--validation-report)
