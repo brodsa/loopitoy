@@ -6,7 +6,7 @@ from .views import (
     EditToy,
     DeleteToy,
     DetailToy,
-    SellToy
+    SellToy,
 )
 
 urlpatterns = [

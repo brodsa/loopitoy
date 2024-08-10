@@ -84,7 +84,9 @@ class SellToyForm(forms.ModelForm):
                 attrs={
                     "cols": 3,
                     "rows": 3,
-                    "placeholder": "Please provide as much as informatiou about your toy, e.g. brand or suitable aga"},
+                    "placeholder":
+                        "Please provide as much as informatiou \
+                        about your toy, e.g. brand or suitable age"},
                 ),
             "name": forms.TextInput(attrs={'autofocus': True})
         }

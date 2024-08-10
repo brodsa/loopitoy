@@ -27,14 +27,13 @@ def profile(request):
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
     sells = profile.sells.all()
-    toys_open = Toys.objects.filter(status='open')
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
         'sells': sells,
-        'toys_open': toys_open,
+        'profile': profile,
         'on_profile_page': True
     }
 
@@ -56,6 +55,32 @@ def order_history(request, order_number):
     context = {
         'order': order,
         'from_profile': True,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def sell_history(request, sell_number):
+    toy = get_object_or_404(Toys, number=sell_number)
+    if str(request.user) != str(toy.user):
+        raise PermissionDenied("Permission denied.")
+
+    if toy.price is None:
+        price, revenue, tax, to_pay = (0, 0, 0, 0)
+    else:
+        price = toy.new_price if toy.new_price else toy.price
+        revenue = float(price)/2
+        tax = round(revenue * 0.15, 2)
+        to_pay = revenue - tax
+
+    template = 'profiles/sell_history.html'
+    context = {
+        'sell': toy,
+        'price': price,
+        'revenue': revenue,
+        'tax': tax,
+        'to_pay': to_pay
     }
 
     return render(request, template, context)

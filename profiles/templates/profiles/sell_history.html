@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Toy Status {{ toy.name }}{% endblock %}
+
+{% block page_header %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<section id="toy">
+<div class="toy-detail">
+    <div class="toy-container">
+        <div class="toy-detail__header" >
+            <!-- Book Image: Default Image has to be set manually due to cloudinary -->
+            {% if toy.picture == 'media/placeholder.webp' %}
+            <div class="toy-detail__picture align-self-center">
+                <img class="img-fluid rounded" src="/media/placeholder.webp" alt="{{ sell.name }}">
+            </div>
+                {% else %}
+            <div class="toy-detail__picture rounded">
+                <img class="img-fluid rounded" src="{{ sell.picture.url }}" alt="{{ sell.name }}">
+            </div>
+            {% endif %}
+        </div>
+        <!--Book Detail -->
+        <div class="toy-detail__panel">
+            <div class="toy-detail__info">
+                <h2 class="text-center pt-3 pb-0 mb-0">{{sell.name}}</h2>
+                <p>Toy Number: {{ sell.number }}</p>
+                <p class="mb-0">Price: {{ price }}€</p>
+                <p class="mb-0">Brutto: {{ revenue }}€</p>
+                <p class="mb-0">Tax: {{ tax }}€</p>
+                <p class="fw-bold">Revenue: {{ to_pay }}€</p>
+                
+
+                <p class="card-text-lg mt-2 mb-0">Status: {{sell.get_status_display}}</p>
+
+                {% if sell.status == 'sold' %}
+                    <p>You can request your money. Please, send us email with the toy number and your payment data. 
+                        <a id="id-request-money" href="mailto:sarka.grubner@loopitoy.com?subject=Request:{{sell.number}}&body=Number:{{ sell.number}}" class="copyright__link">
+                            Request Money
+                        </a>
+                    </p>
+                {% elif sell.status == 'paid' %}
+                    <p>You have already received the revenue.</p>
+                {% elif sell.status == 'declaim' %}
+                    <p>We are sorry but the toy was not approved.</p>
+                {% elif sell.status in 'eshop,in_bag' %}
+                    <p>Your toy is waiting for the new home.</p>
+                {% else %}
+                    <p>Your sell request has been not yet processed.</p>
+                {% endif %}
+                
+            </div>
+
+        </div>
+    </div> 
+</div>
+</section>
+{% endblock %}
+
+{% block footer %}
+    {% include 'includes/footer.html' %}
+{% endblock %}

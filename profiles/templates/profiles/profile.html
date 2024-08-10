@@ -25,7 +25,6 @@
         <h2 class="text-center">
             Your Profile 
         </h2>
-        {{ profile }}
         <div class="checkout__content">
             <!-- Summary checkout -->
             <div class="checkout__summary">
@@ -58,13 +57,6 @@
                                 </tr>
                             {% endfor %}
                         </table>
-                        <div class="text-center">
-                            {% if orders|length >= 4 %}
-                            <a class="copyright__link" href="#">
-                                See older orders
-                            </a>
-                            {% endif %}
-                        </div>
                         {% else %}
                             <p>You have no orders yet.</p>
                         {% endif %} 
@@ -85,9 +77,10 @@
                                 {% for sell in sells  %}
                                     <tr>
                                         <td class="">
-                                            <a href="#"
+                                            <a href="{% url 'sell_history' sell.number %}"
                                             title="{{ sell.number }}">
                                             {{ sell.number|truncatechars:7 }}
+                                            {{ sell.}}
                                             </a>
                                         </td>
                                         <td class=" th-hide">
@@ -100,13 +93,6 @@
                                         
                                 {% endfor %}
                             </table>
-                            <div class="text-center">
-                                {% if sells|length >= 4 %}
-                                <a class="copyright__link" href="#">
-                                    See older sells
-                                </a>
-                                {% endif %}
-                            </div>
                         {% else %}
                             <p>There are no sells yet.</p>
                         {% endif %}
