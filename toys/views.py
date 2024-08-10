@@ -151,8 +151,8 @@ class SellToy(LoginRequiredMixin, CreateView):
         messages.success(
             self.request,
             f'Successfully send toy for sell. \
-            The sell request is being proccessed. \
-            Check your profile for updates.'
+            We will contact you about the further steps \
+            You can also check your profile for updates.'
         )
 
         return super(SellToy, self).form_valid(form)

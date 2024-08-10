@@ -16,6 +16,7 @@
 {% block content %}
 <div class="form-container form-toys">
   <h1 class="form__title">Sell Toy</h1>
+  <p class="text-center">Please fill out the form if you wish to sell a toy, read more <a class="copyright__link" href="{% url 'how' %}">information</a> about the entire process.</p>
   <div>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
