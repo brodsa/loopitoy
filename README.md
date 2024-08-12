@@ -1,7 +1,7 @@
 # loopitoy
 
 
-loopitoy is an Austrian eCommerce platform to buy second-hand toys. The platform aims at supporting a circle economy for toys as it offers to buy and sell toys that are not used anymore. This website is the final project at Code Institute. The website is built mainly in Python, using Django framework.  
+loopitoy is an Austrian eCommerce platform to buy second-hand toys. The platform aims at supporting a circle economy for toys as it also offers to sell toys that are not used anymore. This website is the final project at Code Institute. The website is built mainly in Python, using the Django framework.  
 
 The deployed website can be viewed [here](https://loopitoy-2943fdc3b2bc.herokuapp.com/).
 
@@ -119,7 +119,7 @@ To plan all features and functionalities of the e-shop, the agile methodology wa
 
 To manage user stories and epics, a Kanban board was created as GitHub Project, see [here](https://github.com/users/brodsa/projects/6). The board has three columns, where the user stories are categorized into groups: Todo, In progress, or Done, as shown below. ![board](./docs/board.PNG)
 
-Each user story was prioritized and implemented in 2 weeks long iterations. The Priorities as well as Epics are shown as labels .The iterations are defined as GitHub Milestones. The first iterations were mainly focused on the core features to ensure MVP functionality. During the later iterations additional features were implemented. The developer is aware of the fact that there should be a mix of all type of features within one iterations but due to the time pressure a different strategy was setup.
+Each user story was prioritized and implemented in 2 weeks long iterations. The Priorities as well as Epics are shown as labels .The iterations are defined as GitHub Milestones. The first iterations were mainly focused on the core features to ensure MVP functionality. During the later iterations additional features were implemented. The developer is aware of the fact that there should be a mix of all type of features within one iterations. But due to the time pressure caused by sickness and family reasons, the important features for MPV were mainly implemented in first iterations while others later on.
 
 ### Scope
 - Purpose: The purpose of the website is to provide a platform for users to buy and sell second-hand toys. The website aims at creating a supportive platform for the circle economy where users buy toys of a guaranteed quality to offer fun for their children with a minimum of waste and carbon footprint.
@@ -529,10 +529,11 @@ To clone repository or to collaborate, following steps are required:
 
 
 
-## Credits & Inspiration
+## Credits & Acknowledgement
+The website is in the shape that I though I will never manage to do. This last project was really hard to finish - not because of the technology used but because all the family and healthy issues I have been coping with since last year. Therefore, at the first place, I would like to thank to my self - as it might sounds egoistic - that I found the energy and a bit of motivation to finish this project. I hope that it will be paid off one day. I am also thankfull for support of my husband and other people from CI who responded to all my questions.
 
-- [Django Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) by Daisy McGeer was helpful to understand the Django in general and to make development much easier
+My sources for inspirations and code issues are listed bellow.
+- [Django Tutorial](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) by Daisy McGeer was helpful to understand the Django in general and to make development much easier.
 - [Butique Ado](https://github.com/ckz8780/boutique_ado_v1) by CI and all study material provided by CI was benefitial to setup Stripe and Webhook
 - [Stack Overflow: Overwrite Save](https://stackoverflow.com/questions/69365764/django-i-want-to-create-a-self-generated-code-based-on-previous-records-and-a-s)
 - [Privacy Policy Generator](https://termify.io/dashboard/)
-- [w3schools](https://www.w3schools.com/css/css_tooltip.asp) for code inspiration for info hover affect.
